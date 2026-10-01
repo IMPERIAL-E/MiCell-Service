@@ -1,6 +1,8 @@
-# ReparaCel – Solicitudes de reparación de celulares
+# MiCell-Service
 
-Proyecto de la materia **Interacción Humano-Computadora (IHC)**. Sitio web demostrativo donde un cliente puede solicitar la reparación de su teléfono: elige marca y modelo, marca los servicios que necesita, describe el problema, agenda la entrega y paga (simulado) con tarjeta o efectivo. Cada orden se envía por correo al taller.
+Este proyecto web es una demostración visual y funcional de un servicio en línea para solicitar reparaciones de teléfonos celulares. Su objetivo es facilitar y gestionar las solicitudes de cualquier persona que necesite reparar su equipo: desde elegir la marca y el modelo hasta describir el problema, simular el pago y recibir la confirmación de su orden.
+
+Proyecto de la materia **Interacción Humano-Computadora (IHC)**. Cada orden se envía por correo al taller.
 
 - **Tecnologías:** HTML, CSS y JavaScript puro (módulos ES y clases), sin frameworks ni backend.
 - **Datos:** catálogo en archivos JSON dentro del proyecto (`data/`).
