@@ -1,1 +1,3 @@
-Plataforma web para solicitar reparaciones y servicios técnicos de celulares. Permite elegir entre 36 marcas y sus modelos, describir la falla, iniciar sesión, simular el pago en efectivo o con tarjeta y generar tickets de servicio que se envían por correo al taller.
+MiCell-Service
+
+Este proyecto web es una demostración visual y funcional de un servicio en línea para solicitar reparaciones de teléfonos celulares. Su objetivo es facilitar y gestionar las solicitudes de cualquier persona que necesite reparar su equipo: desde elegir la marca y el modelo hasta describir el problema, simular el pago y recibir la confirmación de su orden.
