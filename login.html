@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Iniciar sesión – ReparaCel</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <script type="module" src="js/paginas/login.js"></script>
+</head>
+<body>
+  <header id="encabezado"></header>
+
+  <main class="contenedor">
+    <div class="acceso tarjeta">
+      <div class="pestanas" role="tablist">
+        <button type="button" role="tab" id="tab-entrar" aria-selected="true" aria-controls="form-entrar">Iniciar sesión</button>
+        <button type="button" role="tab" id="tab-registro" aria-selected="false" aria-controls="form-registro">Crear cuenta</button>
+      </div>
+
+      <div id="mensaje-volver" class="alerta oculto">Inicia sesión o crea una cuenta para continuar con tu solicitud. No perderás lo que ya elegiste.</div>
+
+      <form id="form-entrar" role="tabpanel" aria-labelledby="tab-entrar" novalidate>
+        <h1 class="solo-lectores">Iniciar sesión</h1>
+        <div class="grupo">
+          <label for="entrar-email">Correo electrónico</label>
+          <input class="campo" type="email" id="entrar-email" autocomplete="email" required>
+        </div>
+        <div class="grupo">
+          <label for="entrar-password">Contraseña</label>
+          <input class="campo" type="password" id="entrar-password" autocomplete="current-password" required>
+        </div>
+        <label class="casilla"><input type="checkbox" id="entrar-recordar" checked> Recordarme en este equipo</label>
+        <p class="error-form alerta alerta--error oculto" role="alert"></p>
+        <button class="boton boton--primario boton--bloque" type="submit">Entrar</button>
+
+        <div class="cuentas-demo alerta">
+          <strong>Cuentas de demostración</strong><br>
+          Cliente: <code>demo@reparacel.demo</code> / <code>Demo1234</code><br>
+          Administrador: <code>admin@reparacel.demo</code> / <code>Admin123</code>
+        </div>
+      </form>
+
+      <form id="form-registro" role="tabpanel" aria-labelledby="tab-registro" class="oculto" novalidate>
+        <div class="grupo">
+          <label for="reg-nombre">Nombre completo</label>
+          <input class="campo" type="text" id="reg-nombre" autocomplete="name" required>
+          <span class="error"></span>
+        </div>
+        <div class="grupo">
+          <label for="reg-email">Correo electrónico</label>
+          <input class="campo" type="email" id="reg-email" autocomplete="email" required>
+          <span class="error"></span>
+        </div>
+        <div class="grupo">
+          <label for="reg-telefono">Teléfono</label>
+          <input class="campo" type="tel" id="reg-telefono" autocomplete="tel" placeholder="809-555-0000" required>
+          <span class="error"></span>
+        </div>
+        <div class="grupo">
+          <label for="reg-password">Contraseña</label>
+          <input class="campo" type="password" id="reg-password" autocomplete="new-password" required>
+          <span class="ayuda">Mínimo 8 caracteres, con al menos una letra y un número.</span>
+          <span class="error"></span>
+        </div>
+        <div class="grupo">
+          <label for="reg-password2">Repite la contraseña</label>
+          <input class="campo" type="password" id="reg-password2" autocomplete="new-password" required>
+          <span class="error"></span>
+        </div>
+        <p class="error-form alerta alerta--error oculto" role="alert"></p>
+        <button class="boton boton--primario boton--bloque" type="submit">Crear cuenta</button>
+      </form>
+    </div>
+  </main>
+
+  <footer id="pie"></footer>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Administración – ReparaCel</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <script type="module" src="js/paginas/admin.js"></script>
+</head>
+<body>
+  <header id="encabezado"></header>
+
+  <main class="contenedor">
+    <div class="pagina-titulo">
+      <h1>Panel de administración</h1>
+      <p>Todas las órdenes recibidas. Cambia el estado para que el cliente lo vea en “Mis solicitudes”.</p>
+    </div>
+
+    <div class="estadisticas" id="estadisticas"></div>
+
+    <div class="filtros">
+      <label class="solo-lectores" for="buscar">Buscar</label>
+      <input class="campo" type="search" id="buscar" placeholder="Buscar por orden, cliente o equipo">
+      <label class="solo-lectores" for="filtro-estado">Filtrar por estado</label>
+      <select class="campo" id="filtro-estado">
+        <option value="">Todos los estados</option>
+      </select>
+    </div>
+
+    <div class="tarjeta tabla-envoltura" style="padding:0">
+      <table class="tabla">
+        <thead>
+          <tr><th>Orden</th><th>Cliente</th><th>Equipo</th><th>Entrega</th><th>Pago</th><th class="numero">Total</th><th>Estado</th><th></th></tr>
+        </thead>
+        <tbody id="tabla-ordenes"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer id="pie"></footer>
+</body>
+</html>

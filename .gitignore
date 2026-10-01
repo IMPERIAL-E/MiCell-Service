@@ -1,0 +1,20 @@
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# Vercel
+.vercel
+
+# Dependencias (por si se agregan herramientas más adelante)
+node_modules/
+
+# Archivos locales
+*.log
+.env
+.env.local

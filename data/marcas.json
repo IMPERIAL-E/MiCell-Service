@@ -1,0 +1,461 @@
+{
+  "version": "1.0",
+  "nota": "Características aproximadas por serie; un modelo puede sobrescribirlas. Claves: puerto (usb-c | lightning | micro-usb), jack, microsd, inalambrica, huella (pantalla | lateral | trasera | boton | faceid | ninguna), tapa (vidrio | plastico | metal), plegable, gama (basica | media | alta | premium).",
+  "marcas": [
+    {
+      "id": "apple",
+      "nombre": "Apple",
+      "sistema": "ios",
+      "color": "#1d1d1f",
+      "caracteristicas": { "puerto": "lightning", "jack": false, "microsd": false, "inalambrica": true, "huella": "faceid", "tapa": "vidrio", "plegable": false },
+      "series": [
+        { "nombre": "iPhone 17", "gama": "premium", "caracteristicas": { "puerto": "usb-c" }, "modelos": ["iPhone 17 Pro Max", "iPhone 17 Pro", "iPhone Air", "iPhone 17"] },
+        { "nombre": "iPhone 16", "gama": "premium", "caracteristicas": { "puerto": "usb-c" }, "modelos": ["iPhone 16 Pro Max", "iPhone 16 Pro", "iPhone 16 Plus", "iPhone 16", { "nombre": "iPhone 16e", "gama": "alta" }] },
+        { "nombre": "iPhone 15", "gama": "premium", "caracteristicas": { "puerto": "usb-c" }, "modelos": ["iPhone 15 Pro Max", "iPhone 15 Pro", { "nombre": "iPhone 15 Plus", "gama": "alta" }, { "nombre": "iPhone 15", "gama": "alta" }] },
+        { "nombre": "iPhone 14", "gama": "alta", "modelos": [{ "nombre": "iPhone 14 Pro Max", "gama": "premium" }, { "nombre": "iPhone 14 Pro", "gama": "premium" }, "iPhone 14 Plus", "iPhone 14"] },
+        { "nombre": "iPhone 13", "gama": "alta", "modelos": ["iPhone 13 Pro Max", "iPhone 13 Pro", "iPhone 13", "iPhone 13 mini"] },
+        { "nombre": "iPhone 12", "gama": "alta", "modelos": ["iPhone 12 Pro Max", "iPhone 12 Pro", "iPhone 12", "iPhone 12 mini"] },
+        { "nombre": "iPhone 11", "gama": "media", "modelos": [{ "nombre": "iPhone 11 Pro Max", "gama": "alta" }, { "nombre": "iPhone 11 Pro", "gama": "alta" }, "iPhone 11"] },
+        { "nombre": "iPhone X / XS / XR", "gama": "media", "modelos": ["iPhone XS Max", "iPhone XS", "iPhone XR", "iPhone X"] },
+        { "nombre": "iPhone SE", "gama": "basica", "caracteristicas": { "huella": "boton" }, "modelos": ["iPhone SE (3ª generación, 2022)", "iPhone SE (2ª generación, 2020)", { "nombre": "iPhone SE (1ª generación, 2016)", "inalambrica": false, "jack": true, "tapa": "metal" }] },
+        { "nombre": "iPhone 8 / 7 / 6", "gama": "basica", "caracteristicas": { "huella": "boton" }, "modelos": ["iPhone 8 Plus", "iPhone 8", { "nombre": "iPhone 7 Plus", "inalambrica": false, "tapa": "metal" }, { "nombre": "iPhone 7", "inalambrica": false, "tapa": "metal" }, { "nombre": "iPhone 6s Plus", "inalambrica": false, "tapa": "metal", "jack": true }, { "nombre": "iPhone 6s", "inalambrica": false, "tapa": "metal", "jack": true }, { "nombre": "iPhone 6 Plus", "inalambrica": false, "tapa": "metal", "jack": true }, { "nombre": "iPhone 6", "inalambrica": false, "tapa": "metal", "jack": true }] }
+      ]
+    },
+    {
+      "id": "samsung",
+      "nombre": "Samsung",
+      "sistema": "android",
+      "color": "#1428a0",
+      "caracteristicas": { "puerto": "usb-c", "jack": false, "microsd": false, "inalambrica": true, "huella": "pantalla", "tapa": "vidrio", "plegable": false },
+      "series": [
+        { "nombre": "Galaxy S", "gama": "premium", "modelos": ["Galaxy S25 Ultra", "Galaxy S25 Edge", "Galaxy S25+", "Galaxy S25", "Galaxy S24 Ultra", "Galaxy S24+", "Galaxy S24", "Galaxy S23 Ultra", "Galaxy S23+", "Galaxy S23", "Galaxy S22 Ultra", "Galaxy S22+", "Galaxy S22", { "nombre": "Galaxy S21 Ultra", "gama": "alta" }, { "nombre": "Galaxy S21+", "gama": "alta" }, { "nombre": "Galaxy S21", "gama": "alta" }, { "nombre": "Galaxy S20 Ultra", "gama": "alta", "microsd": true }, { "nombre": "Galaxy S20+", "gama": "alta", "microsd": true }, { "nombre": "Galaxy S20", "gama": "alta", "microsd": true }] },
+        { "nombre": "Galaxy S FE", "gama": "alta", "modelos": ["Galaxy S25 FE", "Galaxy S24 FE", "Galaxy S23 FE", "Galaxy S21 FE", { "nombre": "Galaxy S20 FE", "microsd": true }] },
+        { "nombre": "Galaxy S clásicos", "gama": "media", "caracteristicas": { "jack": true, "microsd": true }, "modelos": ["Galaxy S10+", "Galaxy S10", { "nombre": "Galaxy S10e", "huella": "lateral" }, { "nombre": "Galaxy S9+", "huella": "trasera" }, { "nombre": "Galaxy S9", "huella": "trasera" }, { "nombre": "Galaxy S8+", "huella": "trasera" }, { "nombre": "Galaxy S8", "huella": "trasera" }] },
+        { "nombre": "Galaxy Z (plegables)", "gama": "premium", "caracteristicas": { "plegable": true, "huella": "lateral" }, "modelos": ["Galaxy Z Fold7", "Galaxy Z Flip7", "Galaxy Z Flip7 FE", "Galaxy Z Fold6", "Galaxy Z Flip6", "Galaxy Z Fold5", "Galaxy Z Flip5", "Galaxy Z Fold4", "Galaxy Z Flip4", "Galaxy Z Fold3", "Galaxy Z Flip3", "Galaxy Z Fold2", "Galaxy Z Flip", "Galaxy Fold"] },
+        { "nombre": "Galaxy Note", "gama": "alta", "modelos": ["Galaxy Note20 Ultra", "Galaxy Note20", { "nombre": "Galaxy Note10+", "microsd": true }, "Galaxy Note10", { "nombre": "Galaxy Note9", "jack": true, "microsd": true, "huella": "trasera" }, { "nombre": "Galaxy Note8", "jack": true, "microsd": true, "huella": "trasera" }] },
+        { "nombre": "Galaxy A (gama media)", "gama": "media", "caracteristicas": { "microsd": true, "inalambrica": false, "tapa": "plastico" }, "modelos": ["Galaxy A56", { "nombre": "Galaxy A55", "tapa": "vidrio" }, { "nombre": "Galaxy A54", "tapa": "vidrio" }, "Galaxy A53", { "nombre": "Galaxy A52s", "jack": true }, { "nombre": "Galaxy A52", "jack": true }, { "nombre": "Galaxy A51", "jack": true }, { "nombre": "Galaxy A50", "jack": true }, "Galaxy A36", "Galaxy A35", "Galaxy A34", { "nombre": "Galaxy A33", "jack": false }, { "nombre": "Galaxy A32", "jack": true }, { "nombre": "Galaxy A31", "jack": true }, { "nombre": "Galaxy A30", "jack": true }, { "nombre": "Galaxy A73", "jack": false }, { "nombre": "Galaxy A72", "jack": true }, { "nombre": "Galaxy A71", "jack": true }, { "nombre": "Galaxy A70", "jack": true }, { "nombre": "Galaxy A80", "microsd": false }] },
+        { "nombre": "Galaxy A (gama de entrada)", "gama": "basica", "caracteristicas": { "microsd": true, "inalambrica": false, "jack": true, "huella": "lateral", "tapa": "plastico" }, "modelos": ["Galaxy A26", "Galaxy A25", "Galaxy A24", "Galaxy A23", "Galaxy A22", "Galaxy A21s", { "nombre": "Galaxy A20", "huella": "trasera" }, "Galaxy A17", "Galaxy A16", "Galaxy A15", "Galaxy A14", "Galaxy A13", { "nombre": "Galaxy A12", "huella": "lateral" }, { "nombre": "Galaxy A11", "huella": "trasera" }, { "nombre": "Galaxy A10", "huella": "ninguna", "puerto": "micro-usb" }, "Galaxy A06", "Galaxy A05s", { "nombre": "Galaxy A05", "huella": "ninguna" }, { "nombre": "Galaxy A04", "huella": "ninguna" }, { "nombre": "Galaxy A03", "huella": "ninguna" }, { "nombre": "Galaxy A02s", "huella": "ninguna" }, { "nombre": "Galaxy A01", "huella": "ninguna" }] },
+        { "nombre": "Galaxy M", "gama": "media", "caracteristicas": { "microsd": true, "inalambrica": false, "tapa": "plastico", "huella": "lateral", "jack": true }, "modelos": [{ "nombre": "Galaxy M55", "jack": false }, { "nombre": "Galaxy M54", "jack": false }, { "nombre": "Galaxy M53", "jack": false }, "Galaxy M35", "Galaxy M34", "Galaxy M33", { "nombre": "Galaxy M32", "huella": "trasera" }, { "nombre": "Galaxy M31", "huella": "trasera" }, { "nombre": "Galaxy M21", "huella": "trasera" }, { "nombre": "Galaxy M15", "gama": "basica" }, { "nombre": "Galaxy M14", "gama": "basica" }, { "nombre": "Galaxy M12", "gama": "basica" }] },
+        { "nombre": "Galaxy XCover (resistentes)", "gama": "media", "caracteristicas": { "microsd": true, "inalambrica": false, "tapa": "plastico", "huella": "lateral", "jack": true }, "modelos": ["Galaxy XCover7", "Galaxy XCover6 Pro", "Galaxy XCover 5"] },
+        { "nombre": "Galaxy J", "gama": "basica", "caracteristicas": { "puerto": "micro-usb", "microsd": true, "inalambrica": false, "jack": true, "huella": "trasera", "tapa": "metal" }, "modelos": ["Galaxy J7 Prime", "Galaxy J7 Pro", "Galaxy J6", { "nombre": "Galaxy J5 Prime", "huella": "boton" }, { "nombre": "Galaxy J4+", "huella": "lateral", "tapa": "plastico" }, { "nombre": "Galaxy J2 Prime", "huella": "ninguna", "tapa": "plastico" }] }
+      ]
+    },
+    {
+      "id": "xiaomi",
+      "nombre": "Xiaomi",
+      "sistema": "android",
+      "color": "#ff6900",
+      "caracteristicas": { "puerto": "usb-c", "jack": false, "microsd": false, "inalambrica": true, "huella": "pantalla", "tapa": "vidrio", "plegable": false },
+      "series": [
+        { "nombre": "Xiaomi (insignia)", "gama": "premium", "modelos": ["Xiaomi 15 Ultra", "Xiaomi 15", "Xiaomi 14 Ultra", "Xiaomi 14", "Xiaomi 13 Pro", "Xiaomi 13", "Xiaomi 12 Pro", "Xiaomi 12", { "nombre": "Mi 11 Ultra", "gama": "alta" }, { "nombre": "Mi 11", "gama": "alta" }, { "nombre": "Mi 10", "gama": "alta" }, { "nombre": "Mi 9", "gama": "media" }] },
+        { "nombre": "Xiaomi T", "gama": "alta", "caracteristicas": { "inalambrica": false }, "modelos": ["Xiaomi 15T Pro", "Xiaomi 15T", "Xiaomi 14T Pro", "Xiaomi 14T", "Xiaomi 13T Pro", "Xiaomi 13T", "Xiaomi 12T Pro", "Xiaomi 12T", "Xiaomi 11T Pro", "Xiaomi 11T", "Mi 10T Pro", { "nombre": "Mi 10T", "huella": "lateral" }] },
+        { "nombre": "Xiaomi Lite", "gama": "media", "caracteristicas": { "inalambrica": false }, "modelos": ["Xiaomi 13 Lite", "Xiaomi 12 Lite", { "nombre": "Xiaomi 11 Lite 5G NE", "huella": "lateral" }, { "nombre": "Mi 11 Lite", "huella": "lateral" }] },
+        { "nombre": "Xiaomi Mix (plegables)", "gama": "premium", "caracteristicas": { "plegable": true, "huella": "lateral", "inalambrica": false }, "modelos": ["Xiaomi Mix Flip"] }
+      ]
+    },
+    {
+      "id": "redmi",
+      "nombre": "Redmi",
+      "sistema": "android",
+      "color": "#e4002b",
+      "caracteristicas": { "puerto": "usb-c", "jack": true, "microsd": true, "inalambrica": false, "huella": "lateral", "tapa": "plastico", "plegable": false },
+      "series": [
+        { "nombre": "Redmi Note 14", "gama": "media", "modelos": [{ "nombre": "Redmi Note 14 Pro+ 5G", "huella": "pantalla", "jack": false, "tapa": "vidrio" }, { "nombre": "Redmi Note 14 Pro 5G", "huella": "pantalla", "tapa": "vidrio" }, { "nombre": "Redmi Note 14 Pro", "huella": "pantalla", "tapa": "vidrio" }, "Redmi Note 14 5G", "Redmi Note 14"] },
+        { "nombre": "Redmi Note 13", "gama": "media", "modelos": [{ "nombre": "Redmi Note 13 Pro+ 5G", "huella": "pantalla", "jack": false, "tapa": "vidrio" }, { "nombre": "Redmi Note 13 Pro 5G", "huella": "pantalla", "tapa": "vidrio" }, { "nombre": "Redmi Note 13 Pro", "huella": "pantalla", "tapa": "vidrio" }, { "nombre": "Redmi Note 13 5G", "huella": "pantalla" }, { "nombre": "Redmi Note 13", "huella": "pantalla" }] },
+        { "nombre": "Redmi Note 12", "gama": "media", "modelos": [{ "nombre": "Redmi Note 12 Pro+ 5G", "jack": false, "tapa": "vidrio" }, { "nombre": "Redmi Note 12 Pro 5G", "tapa": "vidrio" }, "Redmi Note 12 Pro", "Redmi Note 12S", "Redmi Note 12 5G", "Redmi Note 12"] },
+        { "nombre": "Redmi Note 11", "gama": "media", "modelos": ["Redmi Note 11 Pro+ 5G", "Redmi Note 11 Pro 5G", "Redmi Note 11 Pro", "Redmi Note 11S", "Redmi Note 11"] },
+        { "nombre": "Redmi Note 10 y anteriores", "gama": "basica", "modelos": ["Redmi Note 10 Pro", "Redmi Note 10S", "Redmi Note 10 5G", "Redmi Note 10", "Redmi Note 9 Pro", "Redmi Note 9S", { "nombre": "Redmi Note 9", "huella": "trasera" }, { "nombre": "Redmi Note 8 Pro", "huella": "trasera" }, { "nombre": "Redmi Note 8 (2021)", "huella": "trasera" }, { "nombre": "Redmi Note 8", "huella": "trasera" }, { "nombre": "Redmi Note 7", "huella": "trasera" }] },
+        { "nombre": "Redmi (numérica)", "gama": "basica", "modelos": ["Redmi 15C", "Redmi 14C", "Redmi 13C", "Redmi 13", { "nombre": "Redmi 12C", "puerto": "micro-usb", "huella": "trasera" }, "Redmi 12", "Redmi 10C", { "nombre": "Redmi 10A", "puerto": "micro-usb", "huella": "trasera" }, "Redmi 10", { "nombre": "Redmi 9T", "huella": "lateral" }, { "nombre": "Redmi 9C", "puerto": "micro-usb", "huella": "trasera" }, { "nombre": "Redmi 9A", "puerto": "micro-usb", "huella": "ninguna" }, { "nombre": "Redmi 9", "huella": "trasera" }] },
+        { "nombre": "Redmi A", "gama": "basica", "caracteristicas": { "huella": "ninguna" }, "modelos": ["Redmi A5", "Redmi A3", { "nombre": "Redmi A2", "puerto": "micro-usb" }, { "nombre": "Redmi A1", "puerto": "micro-usb" }] }
+      ]
+    },
+    {
+      "id": "poco",
+      "nombre": "Poco",
+      "sistema": "android",
+      "color": "#ffd100",
+      "caracteristicas": { "puerto": "usb-c", "jack": false, "microsd": false, "inalambrica": false, "huella": "pantalla", "tapa": "vidrio", "plegable": false },
+      "series": [
+        { "nombre": "Poco F", "gama": "alta", "modelos": [{ "nombre": "Poco F7 Ultra", "gama": "premium", "inalambrica": true }, "Poco F7 Pro", "Poco F7", "Poco F6 Pro", "Poco F6", { "nombre": "Poco F5 Pro", "inalambrica": true }, "Poco F5", { "nombre": "Poco F4 GT", "huella": "lateral" }, { "nombre": "Poco F4", "huella": "lateral" }, { "nombre": "Poco F3", "huella": "lateral" }, { "nombre": "Poco F2 Pro", "jack": true }, { "nombre": "Pocophone F1", "jack": true, "microsd": true, "huella": "trasera", "tapa": "plastico", "gama": "media" }] },
+        { "nombre": "Poco X", "gama": "media", "modelos": ["Poco X7 Pro", "Poco X7", "Poco X6 Pro", "Poco X6", { "nombre": "Poco X5 Pro", "huella": "lateral", "jack": true }, { "nombre": "Poco X5", "huella": "lateral", "jack": true, "microsd": true }, { "nombre": "Poco X4 Pro 5G", "huella": "lateral", "jack": true, "microsd": true }, { "nombre": "Poco X4 GT", "huella": "lateral" }, { "nombre": "Poco X3 Pro", "huella": "lateral", "jack": true, "microsd": true }, { "nombre": "Poco X3 NFC", "huella": "lateral", "jack": true, "microsd": true }, { "nombre": "Poco X3 GT", "huella": "lateral" }] },
+        { "nombre": "Poco M", "gama": "basica", "caracteristicas": { "huella": "lateral", "jack": true, "microsd": true, "tapa": "plastico" }, "modelos": ["Poco M7 Pro", "Poco M6 Pro", "Poco M6", "Poco M5s", "Poco M5", "Poco M4 Pro", "Poco M4 5G", "Poco M3 Pro 5G", { "nombre": "Poco M3", "huella": "lateral" }] },
+        { "nombre": "Poco C", "gama": "basica", "caracteristicas": { "huella": "lateral", "jack": true, "microsd": true, "tapa": "plastico" }, "modelos": ["Poco C75", "Poco C71", "Poco C65", { "nombre": "Poco C61", "huella": "trasera" }, { "nombre": "Poco C55", "puerto": "micro-usb", "huella": "trasera" }, { "nombre": "Poco C51", "puerto": "micro-usb", "huella": "trasera" }, { "nombre": "Poco C40", "huella": "trasera" }] }
+      ]
+    },
+    {
+      "id": "motorola",
+      "nombre": "Motorola",
+      "sistema": "android",
+      "color": "#5c88da",
+      "caracteristicas": { "puerto": "usb-c", "jack": true, "microsd": true, "inalambrica": false, "huella": "lateral", "tapa": "plastico", "plegable": false },
+      "series": [
+        { "nombre": "Motorola Edge", "gama": "alta", "caracteristicas": { "jack": false, "microsd": false, "huella": "pantalla", "tapa": "vidrio" }, "modelos": [{ "nombre": "Edge 60 Pro", "inalambrica": false }, "Edge 60 Fusion", "Edge 60", { "nombre": "Edge 50 Ultra", "gama": "premium", "inalambrica": true }, { "nombre": "Edge 50 Pro", "inalambrica": true }, "Edge 50 Fusion", "Edge 50", "Edge 50 Neo", { "nombre": "Edge 40 Pro", "gama": "premium", "inalambrica": true }, { "nombre": "Edge 40", "inalambrica": true }, "Edge 40 Neo", { "nombre": "Edge 30 Ultra", "gama": "premium", "inalambrica": true }, { "nombre": "Edge 30 Pro", "inalambrica": true, "huella": "lateral" }, "Edge 30 Fusion", "Edge 30 Neo", "Edge 30", { "nombre": "Edge 20 Pro", "huella": "lateral" }, { "nombre": "Edge 20", "huella": "lateral" }, { "nombre": "Edge 20 Lite", "huella": "lateral", "jack": true, "microsd": true, "gama": "media" }, { "nombre": "Edge (2023)", "inalambrica": true }, { "nombre": "Edge+ (2023)", "gama": "premium", "inalambrica": true }] },
+        { "nombre": "Motorola Razr (plegables)", "gama": "premium", "caracteristicas": { "plegable": true, "jack": false, "microsd": false, "tapa": "vidrio", "inalambrica": true }, "modelos": ["razr 60 Ultra", "razr 60", "razr 50 Ultra", "razr 50", "razr 40 Ultra", "razr 40", "razr 2022", { "nombre": "razr 5G", "huella": "trasera" }, { "nombre": "razr (2019)", "huella": "pantalla", "inalambrica": false }] },
+        { "nombre": "Moto G (recientes)", "gama": "media", "modelos": [{ "nombre": "Moto g86", "tapa": "vidrio" }, { "nombre": "Moto g85", "jack": false }, { "nombre": "Moto g84", "jack": false }, "Moto g75", "Moto g73", "Moto g72", "Moto g56", "Moto g55", "Moto g54", "Moto g53", "Moto g52", "Moto g42", { "nombre": "Moto g35", "gama": "basica" }, { "nombre": "Moto g34", "gama": "basica" }, { "nombre": "Moto g32", "gama": "basica" }, { "nombre": "Moto g24 Power", "gama": "basica" }, { "nombre": "Moto g24", "gama": "basica" }, { "nombre": "Moto g23", "gama": "basica" }, { "nombre": "Moto g22", "gama": "basica" }, { "nombre": "Moto g15", "gama": "basica" }, { "nombre": "Moto g14", "gama": "basica" }, { "nombre": "Moto g13", "gama": "basica" }, { "nombre": "Moto g05", "gama": "basica" }, { "nombre": "Moto g04", "gama": "basica" }, "Moto g Stylus (2024)", "Moto g Stylus 5G (2023)", "Moto g Power 5G (2024)", { "nombre": "Moto g Play (2024)", "gama": "basica" }] },
+        { "nombre": "Moto G (anteriores)", "gama": "basica", "modelos": [{ "nombre": "Moto g200", "gama": "media", "jack": false }, { "nombre": "Moto g100", "gama": "media", "jack": true }, "Moto g60", "Moto g50", "Moto g31", { "nombre": "Moto g30", "huella": "trasera" }, { "nombre": "Moto g20", "huella": "trasera" }, { "nombre": "Moto g10", "huella": "trasera" }, { "nombre": "Moto g9 Plus", "huella": "lateral" }, { "nombre": "Moto g9 Play", "huella": "trasera" }, { "nombre": "Moto g8 Power", "huella": "trasera" }, { "nombre": "Moto g8", "huella": "trasera" }, { "nombre": "Moto g Power (2021)", "huella": "trasera" }, { "nombre": "Moto g7 Plus", "huella": "trasera", "tapa": "vidrio" }, { "nombre": "Moto g7", "huella": "trasera", "tapa": "vidrio" }, { "nombre": "Moto g7 Power", "huella": "trasera" }, { "nombre": "Moto g6 Plus", "huella": "boton", "tapa": "vidrio" }, { "nombre": "Moto g6", "huella": "boton", "tapa": "vidrio" }, { "nombre": "Moto g6 Play", "huella": "trasera", "puerto": "micro-usb" }] },
+        { "nombre": "Moto E", "gama": "basica", "caracteristicas": { "huella": "trasera" }, "modelos": ["Moto e40", "Moto e32", "Moto e22", "Moto e20", { "nombre": "Moto e15", "huella": "ninguna" }, { "nombre": "Moto e14", "huella": "ninguna" }, "Moto e13", { "nombre": "Moto e7 Plus", "puerto": "micro-usb" }, { "nombre": "Moto e7", "puerto": "micro-usb" }, { "nombre": "Moto e6s", "puerto": "micro-usb" }, { "nombre": "Moto e6 Plus", "puerto": "micro-usb" }] },
+        { "nombre": "Moto One y Z", "gama": "media", "caracteristicas": { "huella": "trasera" }, "modelos": ["Moto One Fusion+", "Moto One Vision", "Moto One Macro", { "nombre": "Moto Z4", "huella": "pantalla", "tapa": "vidrio" }, { "nombre": "Moto Z3 Play", "huella": "lateral", "jack": false, "tapa": "vidrio" }] }
+      ]
+    },
+    {
+      "id": "huawei",
+      "nombre": "Huawei",
+      "sistema": "android",
+      "color": "#cf0a2c",
+      "caracteristicas": { "puerto": "usb-c", "jack": false, "microsd": false, "inalambrica": true, "huella": "pantalla", "tapa": "vidrio", "plegable": false },
+      "series": [
+        { "nombre": "Huawei Pura / P", "gama": "premium", "modelos": ["Pura 80 Ultra", "Pura 70 Ultra", "Pura 70 Pro", "Pura 70", "P60 Pro", "P60", "P50 Pro", { "nombre": "P50 Pocket", "plegable": true, "huella": "lateral" }, "P40 Pro+", "P40 Pro", { "nombre": "P40", "gama": "alta", "inalambrica": false }, { "nombre": "P30 Pro", "gama": "alta" }, { "nombre": "P30", "gama": "alta", "inalambrica": false, "jack": true }, { "nombre": "P20 Pro", "gama": "alta", "inalambrica": false, "huella": "boton" }, { "nombre": "P20", "gama": "alta", "inalambrica": false, "huella": "boton" }] },
+        { "nombre": "Huawei P Lite", "gama": "media", "caracteristicas": { "inalambrica": false, "jack": true, "microsd": true }, "modelos": [{ "nombre": "P40 Lite", "huella": "lateral" }, { "nombre": "P30 Lite", "huella": "trasera" }, { "nombre": "P20 Lite", "huella": "trasera" }] },
+        { "nombre": "Huawei Mate", "gama": "premium", "modelos": [{ "nombre": "Mate XT (triple plegable)", "plegable": true, "huella": "lateral" }, { "nombre": "Mate X6", "plegable": true, "huella": "lateral" }, { "nombre": "Mate X5", "plegable": true, "huella": "lateral" }, { "nombre": "Mate X3", "plegable": true, "huella": "lateral" }, "Mate 60 Pro", "Mate 50 Pro", "Mate 40 Pro", "Mate 30 Pro", { "nombre": "Mate 20 Pro", "gama": "alta" }, { "nombre": "Mate 20 Lite", "gama": "media", "inalambrica": false, "jack": true, "microsd": true, "huella": "trasera" }] },
+        { "nombre": "Huawei nova", "gama": "media", "caracteristicas": { "inalambrica": false, "huella": "lateral" }, "modelos": [{ "nombre": "nova 13 Pro", "huella": "pantalla" }, { "nombre": "nova 13", "huella": "pantalla" }, "nova 12 SE", { "nombre": "nova 12s", "huella": "pantalla" }, { "nombre": "nova 11 Pro", "huella": "pantalla" }, { "nombre": "nova 11", "huella": "pantalla" }, { "nombre": "nova 10 Pro", "huella": "pantalla" }, { "nombre": "nova 10", "huella": "pantalla" }, "nova 9 SE", { "nombre": "nova 9", "huella": "pantalla" }, { "nombre": "nova 8i", "jack": true }, { "nombre": "nova 7i", "jack": true }, "nova 5T", { "nombre": "nova Y91", "gama": "basica", "jack": true }, { "nombre": "nova Y90", "gama": "basica", "jack": true }, { "nombre": "nova Y72", "gama": "basica", "jack": true }, { "nombre": "nova Y70", "gama": "basica", "jack": true }, { "nombre": "nova Y61", "gama": "basica", "jack": true }] },
+        { "nombre": "Huawei Y", "gama": "basica", "caracteristicas": { "inalambrica": false, "jack": true, "microsd": true, "tapa": "plastico", "huella": "trasera" }, "modelos": [{ "nombre": "Y9s", "huella": "lateral" }, "Y9 Prime 2019", "Y9 2019", { "nombre": "Y7a", "huella": "lateral" }, { "nombre": "Y7 2019", "puerto": "micro-usb" }, { "nombre": "Y6p", "puerto": "micro-usb" }, { "nombre": "Y6 2019", "puerto": "micro-usb" }, { "nombre": "Y5p", "puerto": "micro-usb", "huella": "ninguna" }] }
+      ]
+    },
+    {
+      "id": "honor",
+      "nombre": "Honor",
+      "sistema": "android",
+      "color": "#0b6efd",
+      "caracteristicas": { "puerto": "usb-c", "jack": false, "microsd": false, "inalambrica": false, "huella": "pantalla", "tapa": "vidrio", "plegable": false },
+      "series": [
+        { "nombre": "Honor Magic", "gama": "premium", "modelos": [{ "nombre": "Magic7 Pro", "inalambrica": true }, { "nombre": "Magic7 Lite", "gama": "media" }, { "nombre": "Magic6 Pro", "inalambrica": true }, { "nombre": "Magic6 Lite", "gama": "media" }, { "nombre": "Magic5 Pro", "inalambrica": true }, { "nombre": "Magic5 Lite", "gama": "media" }, { "nombre": "Magic4 Pro", "inalambrica": true }, { "nombre": "Magic4 Lite", "gama": "media", "huella": "lateral" }] },
+        { "nombre": "Honor Magic V (plegables)", "gama": "premium", "caracteristicas": { "plegable": true, "huella": "lateral" }, "modelos": [{ "nombre": "Magic V3", "inalambrica": true }, "Magic V2"] },
+        { "nombre": "Honor numérica", "gama": "alta", "modelos": ["Honor 400 Pro", "Honor 400", { "nombre": "Honor 400 Lite", "gama": "media" }, "Honor 200 Pro", "Honor 200", { "nombre": "Honor 200 Lite", "gama": "media" }, { "nombre": "Honor 90", "gama": "media" }, { "nombre": "Honor 90 Lite", "gama": "media", "huella": "lateral" }, { "nombre": "Honor 70", "gama": "media" }, { "nombre": "Honor 50", "gama": "media" }] },
+        { "nombre": "Honor X", "gama": "basica", "caracteristicas": { "huella": "lateral", "jack": true, "microsd": true, "tapa": "plastico" }, "modelos": [{ "nombre": "Honor X9c", "gama": "media", "jack": false }, { "nombre": "Honor X9b", "gama": "media", "jack": false }, { "nombre": "Honor X9a", "gama": "media", "jack": false }, "Honor X8c", "Honor X8b", "Honor X8a", "Honor X8", "Honor X7c", "Honor X7b", "Honor X7a", "Honor X7", "Honor X6c", "Honor X6b", "Honor X6a", "Honor X6", { "nombre": "Honor X5 Plus", "huella": "ninguna" }, { "nombre": "Honor X5b", "huella": "ninguna" }] }
+      ]
+    },
+    {
+      "id": "oppo",
+      "nombre": "Oppo",
+      "sistema": "android",
+      "color": "#046a38",
+      "caracteristicas": { "puerto": "usb-c", "jack": false, "microsd": false, "inalambrica": false, "huella": "pantalla", "tapa": "vidrio", "plegable": false },
+      "series": [
+        { "nombre": "Oppo Find X", "gama": "premium", "caracteristicas": { "inalambrica": true }, "modelos": ["Find X8 Pro", "Find X8", "Find X5 Pro", "Find X5", { "nombre": "Find X5 Lite", "gama": "media", "inalambrica": false }, "Find X3 Pro", { "nombre": "Find X3 Neo", "gama": "alta" }, { "nombre": "Find X3 Lite", "gama": "media", "inalambrica": false }, "Find X2 Pro"] },
+        { "nombre": "Oppo Find N (plegables)", "gama": "premium", "caracteristicas": { "plegable": true, "huella": "lateral" }, "modelos": [{ "nombre": "Find N5", "inalambrica": true }, "Find N3", "Find N3 Flip", "Find N2 Flip"] },
+        { "nombre": "Oppo Reno", "gama": "media", "modelos": [{ "nombre": "Reno14 Pro", "gama": "alta", "inalambrica": true }, "Reno14 F", "Reno14", { "nombre": "Reno13 Pro", "gama": "alta" }, "Reno13 F", "Reno13", { "nombre": "Reno12 Pro", "gama": "alta" }, "Reno12 F", "Reno12", { "nombre": "Reno11 Pro", "gama": "alta" }, "Reno11 F", "Reno11", { "nombre": "Reno10 Pro+", "gama": "alta" }, { "nombre": "Reno10 Pro", "gama": "alta" }, "Reno10", { "nombre": "Reno8 Pro", "gama": "alta" }, { "nombre": "Reno8 T", "jack": true, "microsd": true }, "Reno8", { "nombre": "Reno7", "jack": true, "microsd": true }, { "nombre": "Reno6", "jack": true }, { "nombre": "Reno5", "jack": true, "microsd": true }] },
+        { "nombre": "Oppo A", "gama": "basica", "caracteristicas": { "huella": "lateral", "jack": true, "microsd": true, "tapa": "plastico" }, "modelos": [{ "nombre": "Oppo A5 Pro", "gama": "media" }, { "nombre": "Oppo A3 Pro", "gama": "media" }, "Oppo A3x", "Oppo A3", { "nombre": "Oppo A80", "gama": "media" }, "Oppo A79", { "nombre": "Oppo A78", "huella": "pantalla" }, "Oppo A60", "Oppo A58", "Oppo A57", "Oppo A38", "Oppo A18", "Oppo A17", "Oppo A16", "Oppo A15", { "nombre": "Oppo A98", "gama": "media", "huella": "pantalla" }, { "nombre": "Oppo A96", "gama": "media" }, { "nombre": "Oppo A94", "gama": "media", "huella": "pantalla" }, "Oppo A77", "Oppo A76", { "nombre": "Oppo A74", "huella": "pantalla" }, { "nombre": "Oppo A54", "huella": "lateral" }, { "nombre": "Oppo A53", "huella": "trasera" }, "Oppo A40"] }
+      ]
+    },
+    {
+      "id": "vivo",
+      "nombre": "Vivo",
+      "sistema": "android",
+      "color": "#415fff",
+      "caracteristicas": { "puerto": "usb-c", "jack": false, "microsd": false, "inalambrica": false, "huella": "pantalla", "tapa": "vidrio", "plegable": false },
+      "series": [
+        { "nombre": "Vivo X", "gama": "premium", "caracteristicas": { "inalambrica": true }, "modelos": ["X200 Pro", { "nombre": "X200 FE", "gama": "alta", "inalambrica": false }, "X200", "X100 Pro", "X100", "X90 Pro", "X80 Pro", "X60 Pro", { "nombre": "X Fold3 Pro", "plegable": true, "huella": "lateral" }] },
+        { "nombre": "Vivo V", "gama": "media", "modelos": [{ "nombre": "V50", "gama": "alta" }, "V50 Lite", { "nombre": "V40 Pro", "gama": "alta" }, "V40", "V40 Lite", { "nombre": "V30 Pro", "gama": "alta" }, "V30", "V30 Lite", "V29", "V27", "V25", { "nombre": "V23", "jack": false }, { "nombre": "V21", "jack": false }] },
+        { "nombre": "Vivo Y", "gama": "basica", "caracteristicas": { "huella": "lateral", "jack": true, "microsd": true, "tapa": "plastico" }, "modelos": ["Vivo Y39", "Vivo Y38", "Vivo Y29", "Vivo Y28", "Vivo Y19s", "Vivo Y18", "Vivo Y17s", "Vivo Y16", "Vivo Y36", "Vivo Y35", "Vivo Y27", "Vivo Y22", "Vivo Y21", "Vivo Y20", "Vivo Y15s", { "nombre": "Vivo Y12", "puerto": "micro-usb", "huella": "trasera" }, { "nombre": "Vivo Y11", "puerto": "micro-usb", "huella": "trasera" }, { "nombre": "Vivo Y04", "huella": "ninguna" }, { "nombre": "Vivo Y03", "huella": "ninguna" }] }
+      ]
+    },
+    {
+      "id": "realme",
+      "nombre": "Realme",
+      "sistema": "android",
+      "color": "#f5c400",
+      "caracteristicas": { "puerto": "usb-c", "jack": true, "microsd": true, "inalambrica": false, "huella": "lateral", "tapa": "plastico", "plegable": false },
+      "series": [
+        { "nombre": "Realme GT", "gama": "alta", "caracteristicas": { "jack": false, "microsd": false, "huella": "pantalla", "tapa": "vidrio" }, "modelos": [{ "nombre": "GT 7 Pro", "gama": "premium" }, "GT 7", "GT 6", "GT 6T", "GT Neo 3", { "nombre": "GT 2 Pro", "gama": "premium" }, "GT 2", "GT Master Edition", "GT"] },
+        { "nombre": "Realme numérica", "gama": "media", "modelos": [{ "nombre": "Realme 14 Pro+", "jack": false, "microsd": false, "huella": "pantalla" }, { "nombre": "Realme 14 Pro", "jack": false, "huella": "pantalla" }, "Realme 14", "Realme 14x", { "nombre": "Realme 13 Pro+", "jack": false, "microsd": false, "huella": "pantalla" }, { "nombre": "Realme 13 Pro", "jack": false, "huella": "pantalla" }, { "nombre": "Realme 13+", "huella": "pantalla" }, "Realme 13", { "nombre": "Realme 12 Pro+", "jack": false, "huella": "pantalla" }, { "nombre": "Realme 12 Pro", "jack": false, "huella": "pantalla" }, { "nombre": "Realme 12+", "huella": "pantalla" }, "Realme 12", "Realme 12x", { "nombre": "Realme 11 Pro+", "jack": false, "huella": "pantalla" }, { "nombre": "Realme 11 Pro", "jack": false, "huella": "pantalla" }, "Realme 11", "Realme 11x", { "nombre": "Realme 10 Pro+", "jack": false, "huella": "pantalla" }, "Realme 10 Pro", { "nombre": "Realme 10", "huella": "lateral" }, { "nombre": "Realme 9 Pro+", "huella": "pantalla" }, "Realme 9 Pro", "Realme 9i", { "nombre": "Realme 9", "huella": "pantalla" }, { "nombre": "Realme 8 Pro", "huella": "pantalla" }, "Realme 8i", { "nombre": "Realme 8", "huella": "pantalla" }, "Realme 7 Pro", "Realme 7i", "Realme 7", "Realme 6 Pro", "Realme 6"] },
+        { "nombre": "Realme C y Note", "gama": "basica", "modelos": ["Realme C75", "Realme C67", "Realme C65", "Realme C63", "Realme C61", "Realme C55", "Realme C53", "Realme C51", "Realme C35", "Realme C33", "Realme C31", { "nombre": "Realme C30", "huella": "ninguna" }, { "nombre": "Realme C25Y", "huella": "trasera" }, { "nombre": "Realme C21Y", "huella": "trasera", "puerto": "micro-usb" }, { "nombre": "Realme C21", "huella": "trasera", "puerto": "micro-usb" }, { "nombre": "Realme C15", "huella": "trasera", "puerto": "micro-usb" }, { "nombre": "Realme C11", "huella": "ninguna", "puerto": "micro-usb" }, "Realme Note 60", "Realme Note 50"] },
+        { "nombre": "Realme Narzo", "gama": "basica", "modelos": [{ "nombre": "Narzo 70 Pro", "gama": "media", "huella": "pantalla" }, "Narzo 60", "Narzo 50"] }
+      ]
+    },
+    {
+      "id": "oneplus",
+      "nombre": "OnePlus",
+      "sistema": "android",
+      "color": "#eb0029",
+      "caracteristicas": { "puerto": "usb-c", "jack": false, "microsd": false, "inalambrica": false, "huella": "pantalla", "tapa": "vidrio", "plegable": false },
+      "series": [
+        { "nombre": "OnePlus (insignia)", "gama": "premium", "modelos": [{ "nombre": "OnePlus 13", "inalambrica": true }, { "nombre": "OnePlus 13R", "gama": "alta" }, { "nombre": "OnePlus 12", "inalambrica": true }, { "nombre": "OnePlus 12R", "gama": "alta" }, "OnePlus 11", { "nombre": "OnePlus 11R", "gama": "alta" }, { "nombre": "OnePlus 10 Pro", "inalambrica": true }, { "nombre": "OnePlus 10T", "gama": "alta" }, { "nombre": "OnePlus 10R", "gama": "alta" }, { "nombre": "OnePlus 9 Pro", "inalambrica": true }, { "nombre": "OnePlus 9", "gama": "alta" }, { "nombre": "OnePlus 9RT", "gama": "alta" }, { "nombre": "OnePlus 8 Pro", "inalambrica": true, "gama": "alta" }, { "nombre": "OnePlus 8T", "gama": "alta" }, { "nombre": "OnePlus 8", "gama": "alta" }, { "nombre": "OnePlus 7T Pro", "gama": "alta" }, { "nombre": "OnePlus 7T", "gama": "alta" }, { "nombre": "OnePlus 7 Pro", "gama": "alta" }, { "nombre": "OnePlus 7", "gama": "media" }, { "nombre": "OnePlus 6T", "gama": "media" }, { "nombre": "OnePlus 6", "gama": "media", "jack": true, "huella": "trasera" }] },
+        { "nombre": "OnePlus Open (plegable)", "gama": "premium", "caracteristicas": { "plegable": true, "huella": "lateral" }, "modelos": ["OnePlus Open"] },
+        { "nombre": "OnePlus Nord", "gama": "media", "modelos": ["Nord 5", "Nord CE5", "Nord 4", "Nord CE4", { "nombre": "Nord CE4 Lite", "huella": "lateral", "jack": true, "microsd": true }, "Nord 3", { "nombre": "Nord CE3", "jack": false }, { "nombre": "Nord CE3 Lite", "huella": "lateral", "jack": true, "microsd": true, "gama": "basica" }, "Nord 2T", "Nord 2", { "nombre": "Nord CE 2", "jack": true, "microsd": true }, { "nombre": "Nord CE 2 Lite", "huella": "lateral", "jack": true, "microsd": true, "gama": "basica" }, { "nombre": "Nord CE", "jack": true }, { "nombre": "Nord N30", "huella": "lateral", "jack": true, "microsd": true, "gama": "basica" }, { "nombre": "Nord N20", "jack": true, "microsd": true, "gama": "basica" }, { "nombre": "Nord N10", "huella": "trasera", "jack": true, "microsd": true, "gama": "basica" }, { "nombre": "Nord N100", "huella": "trasera", "jack": true, "microsd": true, "gama": "basica" }, "Nord"] }
+      ]
+    },
+    {
+      "id": "google",
+      "nombre": "Google",
+      "sistema": "android",
+      "color": "#4285f4",
+      "caracteristicas": { "puerto": "usb-c", "jack": false, "microsd": false, "inalambrica": true, "huella": "pantalla", "tapa": "vidrio", "plegable": false },
+      "series": [
+        { "nombre": "Pixel 10", "gama": "premium", "modelos": [{ "nombre": "Pixel 10 Pro Fold", "plegable": true, "huella": "lateral" }, "Pixel 10 Pro XL", "Pixel 10 Pro", "Pixel 10"] },
+        { "nombre": "Pixel 9", "gama": "premium", "modelos": [{ "nombre": "Pixel 9 Pro Fold", "plegable": true, "huella": "lateral" }, "Pixel 9 Pro XL", "Pixel 9 Pro", "Pixel 9", { "nombre": "Pixel 9a", "gama": "media", "inalambrica": true, "tapa": "plastico" }] },
+        { "nombre": "Pixel 8 / 7 / Fold", "gama": "alta", "modelos": [{ "nombre": "Pixel 8 Pro", "gama": "premium" }, "Pixel 8", { "nombre": "Pixel 8a", "gama": "media", "tapa": "plastico" }, { "nombre": "Pixel Fold", "gama": "premium", "plegable": true, "huella": "lateral" }, "Pixel 7 Pro", "Pixel 7", { "nombre": "Pixel 7a", "gama": "media", "tapa": "plastico" }] },
+        { "nombre": "Pixel 6 / 5 / 4", "gama": "media", "modelos": [{ "nombre": "Pixel 6 Pro", "gama": "alta" }, "Pixel 6", { "nombre": "Pixel 6a", "inalambrica": false, "tapa": "plastico" }, { "nombre": "Pixel 5", "huella": "trasera", "tapa": "metal" }, { "nombre": "Pixel 5a", "huella": "trasera", "jack": true, "inalambrica": false, "tapa": "metal" }, { "nombre": "Pixel 4a 5G", "huella": "trasera", "jack": true, "inalambrica": false, "tapa": "plastico" }, { "nombre": "Pixel 4a", "huella": "trasera", "jack": true, "inalambrica": false, "tapa": "plastico", "gama": "basica" }, { "nombre": "Pixel 4 XL", "huella": "faceid" }, { "nombre": "Pixel 4", "huella": "faceid" }] },
+        { "nombre": "Pixel 3 / 2 / original", "gama": "basica", "caracteristicas": { "huella": "trasera" }, "modelos": [{ "nombre": "Pixel 3a XL", "jack": true, "inalambrica": false, "tapa": "plastico" }, { "nombre": "Pixel 3a", "jack": true, "inalambrica": false, "tapa": "plastico" }, "Pixel 3 XL", "Pixel 3", { "nombre": "Pixel 2 XL", "inalambrica": false, "tapa": "metal" }, { "nombre": "Pixel 2", "inalambrica": false, "tapa": "metal" }, { "nombre": "Pixel XL", "inalambrica": false, "jack": true, "tapa": "metal" }, { "nombre": "Pixel", "inalambrica": false, "jack": true, "tapa": "metal" }] }
+      ]
+    },
+    {
+      "id": "sony",
+      "nombre": "Sony",
+      "sistema": "android",
+      "color": "#000000",
+      "caracteristicas": { "puerto": "usb-c", "jack": true, "microsd": true, "inalambrica": false, "huella": "lateral", "tapa": "vidrio", "plegable": false },
+      "series": [
+        { "nombre": "Xperia 1", "gama": "premium", "caracteristicas": { "inalambrica": true }, "modelos": ["Xperia 1 VII", "Xperia 1 VI", "Xperia 1 V", "Xperia 1 IV", "Xperia 1 III", "Xperia 1 II", { "nombre": "Xperia 1", "jack": false, "inalambrica": false }] },
+        { "nombre": "Xperia 5", "gama": "alta", "modelos": ["Xperia 5 V", "Xperia 5 IV", "Xperia 5 III", "Xperia 5 II", { "nombre": "Xperia 5", "jack": false }] },
+        { "nombre": "Xperia 10", "gama": "media", "caracteristicas": { "tapa": "plastico" }, "modelos": ["Xperia 10 VI", "Xperia 10 V", "Xperia 10 IV", "Xperia 10 III", "Xperia 10 II", "Xperia 10"] },
+        { "nombre": "Xperia XZ / L", "gama": "basica", "modelos": [{ "nombre": "Xperia XZ3", "huella": "trasera", "jack": false, "inalambrica": true, "gama": "media" }, { "nombre": "Xperia XZ2", "huella": "trasera", "jack": false, "inalambrica": true, "gama": "media" }, { "nombre": "Xperia XZ1", "gama": "media", "tapa": "metal" }, { "nombre": "Xperia XZ Premium", "gama": "media" }, { "nombre": "Xperia L4", "tapa": "plastico" }, { "nombre": "Xperia L3", "tapa": "plastico" }] }
+      ]
+    },
+    {
+      "id": "nokia",
+      "nombre": "Nokia",
+      "sistema": "android",
+      "color": "#124191",
+      "caracteristicas": { "puerto": "usb-c", "jack": true, "microsd": true, "inalambrica": false, "huella": "lateral", "tapa": "plastico", "plegable": false },
+      "series": [
+        { "nombre": "Nokia X / XR", "gama": "media", "modelos": [{ "nombre": "Nokia X30 5G", "huella": "pantalla", "jack": false, "tapa": "metal" }, "Nokia X20", "Nokia X10", { "nombre": "Nokia XR21", "jack": false }, { "nombre": "Nokia XR20", "inalambrica": true }] },
+        { "nombre": "Nokia G", "gama": "basica", "modelos": ["Nokia G60 5G", "Nokia G42 5G", "Nokia G22", "Nokia G21", "Nokia G20", { "nombre": "Nokia G11", "huella": "trasera" }, { "nombre": "Nokia G10", "huella": "trasera" }] },
+        { "nombre": "Nokia C", "gama": "basica", "caracteristicas": { "huella": "trasera" }, "modelos": ["Nokia C32", "Nokia C31", { "nombre": "Nokia C22", "puerto": "micro-usb" }, { "nombre": "Nokia C21 Plus", "puerto": "micro-usb" }, { "nombre": "Nokia C21", "puerto": "micro-usb" }, { "nombre": "Nokia C12 Pro", "puerto": "micro-usb", "huella": "ninguna" }, { "nombre": "Nokia C12", "puerto": "micro-usb", "huella": "ninguna" }, { "nombre": "Nokia C2 2nd Edition", "puerto": "micro-usb", "huella": "ninguna" }] },
+        { "nombre": "Nokia (numérica)", "gama": "basica", "caracteristicas": { "huella": "trasera" }, "modelos": [{ "nombre": "Nokia 8.3 5G", "gama": "media", "huella": "lateral" }, { "nombre": "Nokia 9 PureView", "gama": "media", "huella": "pantalla", "jack": false, "tapa": "vidrio", "inalambrica": true }, { "nombre": "Nokia 8.1", "gama": "media", "tapa": "vidrio" }, { "nombre": "Nokia 7.2", "tapa": "vidrio" }, { "nombre": "Nokia 7 Plus", "tapa": "metal" }, "Nokia 6.2", "Nokia 6.1", "Nokia 5.4", "Nokia 5.3", { "nombre": "Nokia 4.2", "puerto": "micro-usb" }, "Nokia 3.4", { "nombre": "Nokia 2.4", "puerto": "micro-usb" }, { "nombre": "Nokia 1.4", "puerto": "micro-usb" }] }
+      ]
+    },
+    {
+      "id": "lg",
+      "nombre": "LG",
+      "sistema": "android",
+      "color": "#a50034",
+      "caracteristicas": { "puerto": "usb-c", "jack": true, "microsd": true, "inalambrica": false, "huella": "trasera", "tapa": "plastico", "plegable": false },
+      "series": [
+        { "nombre": "LG insignia (Wing, Velvet, V, G)", "gama": "alta", "caracteristicas": { "tapa": "vidrio", "inalambrica": true }, "modelos": [{ "nombre": "LG Wing", "huella": "pantalla" }, { "nombre": "LG Velvet", "huella": "pantalla" }, { "nombre": "LG V60 ThinQ", "huella": "pantalla" }, "LG V50 ThinQ", "LG V40 ThinQ", "LG V30", { "nombre": "LG G8X ThinQ", "huella": "pantalla" }, "LG G8 ThinQ", "LG G7 ThinQ", "LG G6"] },
+        { "nombre": "LG K", "gama": "basica", "modelos": ["LG K92", "LG K62", "LG K61", { "nombre": "LG K52", "huella": "lateral" }, "LG K51S", "LG K50S", { "nombre": "LG K42", "huella": "lateral" }, "LG K41S", "LG K40S", { "nombre": "LG K22", "puerto": "micro-usb", "huella": "ninguna" }, { "nombre": "LG K12+", "puerto": "micro-usb" }] },
+        { "nombre": "LG Stylo y Q", "gama": "basica", "modelos": ["LG Stylo 6", "LG Stylo 5", "LG Q60", { "nombre": "LG Q7", "puerto": "usb-c" }] }
+      ]
+    },
+    {
+      "id": "zte",
+      "nombre": "ZTE",
+      "sistema": "android",
+      "color": "#0066b3",
+      "caracteristicas": { "puerto": "usb-c", "jack": true, "microsd": true, "inalambrica": false, "huella": "lateral", "tapa": "plastico", "plegable": false },
+      "series": [
+        { "nombre": "ZTE Axon", "gama": "alta", "caracteristicas": { "jack": false, "huella": "pantalla", "tapa": "vidrio" }, "modelos": ["Axon 60 Ultra", { "nombre": "Axon 40 Ultra", "gama": "premium" }, { "nombre": "Axon 30 Ultra", "gama": "premium" }, "Axon 30 5G"] },
+        { "nombre": "ZTE Blade V", "gama": "media", "modelos": ["Blade V60", "Blade V50 Vita", "Blade V50 Design", "Blade V40 Pro", "Blade V40", "Blade V40 Vita", "Blade V30", "Blade V30 Vita"] },
+        { "nombre": "ZTE Blade A", "gama": "basica", "modelos": ["Blade A75", "Blade A55", { "nombre": "Blade A54", "huella": "ninguna" }, "Blade A73", "Blade A72", { "nombre": "Blade A53", "huella": "ninguna", "puerto": "micro-usb" }, { "nombre": "Blade A52", "huella": "ninguna", "puerto": "micro-usb" }, { "nombre": "Blade A51", "huella": "trasera", "puerto": "micro-usb" }, "Blade A35", "Blade A34", { "nombre": "Blade A33s", "huella": "ninguna", "puerto": "micro-usb" }, { "nombre": "Blade A31", "huella": "ninguna", "puerto": "micro-usb" }, { "nombre": "Blade A7 2020", "huella": "trasera", "puerto": "micro-usb" }, { "nombre": "Blade A5 2020", "huella": "trasera", "puerto": "micro-usb" }] }
+      ]
+    },
+    {
+      "id": "tecno",
+      "nombre": "Tecno",
+      "sistema": "android",
+      "color": "#0055ff",
+      "caracteristicas": { "puerto": "usb-c", "jack": true, "microsd": true, "inalambrica": false, "huella": "lateral", "tapa": "plastico", "plegable": false },
+      "series": [
+        { "nombre": "Tecno Phantom", "gama": "alta", "caracteristicas": { "jack": false, "microsd": false, "tapa": "vidrio" }, "modelos": [{ "nombre": "Phantom V Fold2", "plegable": true, "gama": "premium" }, { "nombre": "Phantom V Flip2", "plegable": true }, { "nombre": "Phantom V Fold", "plegable": true, "gama": "premium" }, { "nombre": "Phantom V Flip", "plegable": true }, { "nombre": "Phantom X2 Pro", "huella": "pantalla" }, { "nombre": "Phantom X2", "huella": "pantalla" }] },
+        { "nombre": "Tecno Camon", "gama": "media", "modelos": [{ "nombre": "Camon 40 Pro", "huella": "pantalla" }, { "nombre": "Camon 40", "huella": "pantalla" }, { "nombre": "Camon 30 Premier", "huella": "pantalla", "jack": false }, { "nombre": "Camon 30 Pro", "huella": "pantalla" }, { "nombre": "Camon 30", "huella": "pantalla" }, { "nombre": "Camon 20 Premier", "huella": "pantalla", "jack": false }, { "nombre": "Camon 20 Pro", "huella": "pantalla" }, "Camon 20", "Camon 19 Pro", "Camon 19", "Camon 18"] },
+        { "nombre": "Tecno Spark y Pop", "gama": "basica", "modelos": ["Spark 40 Pro", "Spark 40", "Spark 30 Pro", "Spark 30", "Spark 30C", "Spark 20 Pro+", "Spark 20 Pro", "Spark 20", "Spark 20C", "Spark 10 Pro", "Spark 10", "Spark 10C", { "nombre": "Spark Go 2024", "huella": "ninguna" }, { "nombre": "Spark Go 2023", "huella": "ninguna", "puerto": "micro-usb" }, { "nombre": "Spark 9", "huella": "trasera" }, { "nombre": "Spark 8", "huella": "trasera", "puerto": "micro-usb" }, "Pop 9", { "nombre": "Pop 8", "huella": "ninguna" }, { "nombre": "Pop 7", "huella": "trasera", "puerto": "micro-usb" }] },
+        { "nombre": "Tecno Pova", "gama": "basica", "modelos": [{ "nombre": "Pova 6 Pro", "gama": "media", "huella": "pantalla" }, "Pova 6", { "nombre": "Pova 5 Pro", "gama": "media" }, "Pova 5", "Pova 4"] }
+      ]
+    },
+    {
+      "id": "infinix",
+      "nombre": "Infinix",
+      "sistema": "android",
+      "color": "#00a650",
+      "caracteristicas": { "puerto": "usb-c", "jack": true, "microsd": true, "inalambrica": false, "huella": "lateral", "tapa": "plastico", "plegable": false },
+      "series": [
+        { "nombre": "Infinix Zero", "gama": "alta", "caracteristicas": { "jack": false, "huella": "pantalla", "tapa": "vidrio" }, "modelos": [{ "nombre": "Zero 40", "inalambrica": true }, "Zero 30", { "nombre": "Zero Flip", "plegable": true, "huella": "lateral" }, "Zero Ultra"] },
+        { "nombre": "Infinix Note", "gama": "media", "modelos": [{ "nombre": "Note 50 Pro", "huella": "pantalla" }, { "nombre": "Note 40 Pro+", "huella": "pantalla", "inalambrica": true }, { "nombre": "Note 40 Pro", "huella": "pantalla", "inalambrica": true }, { "nombre": "Note 40", "huella": "pantalla" }, { "nombre": "Note 30 Pro", "huella": "pantalla", "inalambrica": true }, "Note 30", { "nombre": "Note 12", "huella": "pantalla" }] },
+        { "nombre": "Infinix GT", "gama": "media", "caracteristicas": { "huella": "pantalla" }, "modelos": ["GT 20 Pro", "GT 10 Pro"] },
+        { "nombre": "Infinix Hot y Smart", "gama": "basica", "modelos": ["Hot 50 Pro+", "Hot 50", "Hot 40 Pro", "Hot 40i", "Hot 40", "Hot 30", "Hot 30i", "Hot 20", "Hot 12", "Smart 9", "Smart 8", { "nombre": "Smart 7", "huella": "trasera", "puerto": "micro-usb" }, { "nombre": "Smart 6", "huella": "trasera", "puerto": "micro-usb" }] }
+      ]
+    },
+    {
+      "id": "itel",
+      "nombre": "Itel",
+      "sistema": "android",
+      "color": "#e60012",
+      "caracteristicas": { "puerto": "usb-c", "jack": true, "microsd": true, "inalambrica": false, "huella": "lateral", "tapa": "plastico", "plegable": false },
+      "series": [
+        { "nombre": "Itel S", "gama": "basica", "modelos": ["Itel S24", "Itel S23+", "Itel S23"] },
+        { "nombre": "Itel P y A", "gama": "basica", "modelos": ["Itel P55+", "Itel P55", { "nombre": "Itel P40", "huella": "trasera" }, "Itel A70", { "nombre": "Itel A60", "huella": "trasera", "puerto": "micro-usb" }, { "nombre": "Itel A50", "huella": "ninguna" }, { "nombre": "Itel A05s", "huella": "ninguna", "puerto": "micro-usb" }] },
+        { "nombre": "Itel Vision", "gama": "basica", "caracteristicas": { "huella": "trasera", "puerto": "micro-usb" }, "modelos": ["Itel Vision 3", "Itel Vision 2"] }
+      ]
+    },
+    {
+      "id": "alcatel",
+      "nombre": "Alcatel",
+      "sistema": "android",
+      "color": "#5b2c83",
+      "caracteristicas": { "puerto": "usb-c", "jack": true, "microsd": true, "inalambrica": false, "huella": "trasera", "tapa": "plastico", "plegable": false },
+      "series": [
+        { "nombre": "Alcatel V3", "gama": "basica", "caracteristicas": { "huella": "lateral" }, "modelos": ["Alcatel V3 Ultra", "Alcatel V3 Pro", "Alcatel V3 Classic"] },
+        { "nombre": "Alcatel 3", "gama": "basica", "modelos": ["Alcatel 3L (2021)", "Alcatel 3X (2020)"] },
+        { "nombre": "Alcatel 1", "gama": "basica", "caracteristicas": { "puerto": "micro-usb", "huella": "ninguna" }, "modelos": [{ "nombre": "Alcatel 1S (2021)", "huella": "trasera" }, { "nombre": "Alcatel 1V (2021)", "huella": "trasera" }, "Alcatel 1B (2022)", "Alcatel 1 (2021)", "Alcatel 1SE", "Alcatel 1L Pro"] },
+        { "nombre": "Alcatel Go Flip (teléfono básico)", "gama": "basica", "caracteristicas": { "huella": "ninguna", "microsd": true }, "modelos": ["Alcatel Go Flip 4"] }
+      ]
+    },
+    {
+      "id": "asus",
+      "nombre": "Asus",
+      "sistema": "android",
+      "color": "#00539b",
+      "caracteristicas": { "puerto": "usb-c", "jack": true, "microsd": false, "inalambrica": false, "huella": "pantalla", "tapa": "vidrio", "plegable": false },
+      "series": [
+        { "nombre": "ROG Phone", "gama": "premium", "modelos": [{ "nombre": "ROG Phone 9 Pro", "inalambrica": true }, { "nombre": "ROG Phone 9", "inalambrica": true }, { "nombre": "ROG Phone 8 Pro", "inalambrica": true }, { "nombre": "ROG Phone 8", "inalambrica": true }, "ROG Phone 7 Ultimate", "ROG Phone 7", "ROG Phone 6", { "nombre": "ROG Phone 5s", "gama": "alta" }, { "nombre": "ROG Phone 5", "gama": "alta" }, { "nombre": "ROG Phone 3", "gama": "alta", "jack": false }] },
+        { "nombre": "Zenfone", "gama": "alta", "caracteristicas": { "huella": "lateral" }, "modelos": [{ "nombre": "Zenfone 12 Ultra", "huella": "pantalla", "inalambrica": true }, { "nombre": "Zenfone 11 Ultra", "huella": "pantalla", "inalambrica": true }, "Zenfone 10", "Zenfone 9", "Zenfone 8", { "nombre": "Zenfone 8 Flip", "microsd": true }, { "nombre": "Zenfone 7 Pro", "microsd": true, "jack": false }, { "nombre": "Zenfone 6", "microsd": true, "huella": "trasera", "gama": "media" }, { "nombre": "Zenfone Max Pro M2", "gama": "basica", "microsd": true, "huella": "trasera", "puerto": "micro-usb", "tapa": "plastico" }, { "nombre": "Zenfone Max Pro M1", "gama": "basica", "microsd": true, "huella": "trasera", "puerto": "micro-usb", "tapa": "metal" }, { "nombre": "Zenfone 5", "gama": "media", "microsd": true, "huella": "trasera" }] }
+      ]
+    },
+    {
+      "id": "lenovo",
+      "nombre": "Lenovo",
+      "sistema": "android",
+      "color": "#e2231a",
+      "caracteristicas": { "puerto": "usb-c", "jack": true, "microsd": true, "inalambrica": false, "huella": "lateral", "tapa": "plastico", "plegable": false },
+      "series": [
+        { "nombre": "Lenovo Legion", "gama": "premium", "caracteristicas": { "jack": false, "microsd": false, "huella": "pantalla", "tapa": "vidrio" }, "modelos": ["Legion Phone Duel 2", "Legion Phone Duel"] },
+        { "nombre": "Lenovo K y Z", "gama": "basica", "modelos": ["Lenovo K14 Plus", "Lenovo K14", "Lenovo K13 Note", { "nombre": "Lenovo K12 Pro", "huella": "trasera" }, { "nombre": "Lenovo K12", "huella": "trasera" }, { "nombre": "Lenovo K10 Note", "huella": "trasera" }, { "nombre": "Lenovo K9", "huella": "trasera", "puerto": "micro-usb" }, { "nombre": "Lenovo Z6 Pro", "gama": "alta", "huella": "pantalla", "tapa": "vidrio" }, { "nombre": "Lenovo Z5s", "gama": "media", "huella": "trasera", "tapa": "vidrio" }, { "nombre": "Lenovo A7", "huella": "trasera", "puerto": "micro-usb" }, { "nombre": "Lenovo A6 Note", "huella": "trasera", "puerto": "micro-usb" }] }
+      ]
+    },
+    {
+      "id": "blu",
+      "nombre": "BLU",
+      "sistema": "android",
+      "color": "#0090d4",
+      "caracteristicas": { "puerto": "usb-c", "jack": true, "microsd": true, "inalambrica": false, "huella": "lateral", "tapa": "plastico", "plegable": false },
+      "series": [
+        { "nombre": "BLU G", "gama": "basica", "modelos": ["BLU G93", "BLU G91 Pro", "BLU G91s", "BLU G73", "BLU G72 Max", "BLU G71+", "BLU G63", "BLU G62", "BLU G53", { "nombre": "BLU G52", "huella": "trasera" }, { "nombre": "BLU G51 Plus", "huella": "trasera", "puerto": "micro-usb" }, { "nombre": "BLU G50 Mega", "huella": "trasera", "puerto": "micro-usb" }, { "nombre": "BLU G40", "huella": "ninguna", "puerto": "micro-usb" }, { "nombre": "BLU G33", "huella": "ninguna", "puerto": "micro-usb" }] },
+        { "nombre": "BLU F y View", "gama": "basica", "modelos": [{ "nombre": "BLU F91 5G", "gama": "media" }, "BLU View 5 Pro", "BLU View 5", { "nombre": "BLU View 4", "puerto": "micro-usb" }, { "nombre": "BLU View 3", "puerto": "micro-usb", "huella": "trasera" }, { "nombre": "BLU View 2", "puerto": "micro-usb", "huella": "ninguna" }] },
+        { "nombre": "BLU Studio y C", "gama": "basica", "caracteristicas": { "puerto": "micro-usb", "huella": "ninguna" }, "modelos": ["BLU Studio X12", "BLU C6L", "BLU C5L"] }
+      ]
+    },
+    {
+      "id": "tcl",
+      "nombre": "TCL",
+      "sistema": "android",
+      "color": "#d7000f",
+      "caracteristicas": { "puerto": "usb-c", "jack": true, "microsd": true, "inalambrica": false, "huella": "lateral", "tapa": "plastico", "plegable": false },
+      "series": [
+        { "nombre": "TCL 50 / 40", "gama": "basica", "modelos": [{ "nombre": "TCL 50 XL", "gama": "media" }, "TCL 50 SE", "TCL 50 5G", { "nombre": "TCL 40 NxtPaper", "gama": "media" }, "TCL 40 XL", "TCL 40 XE", "TCL 40 SE", "TCL 40 R 5G"] },
+        { "nombre": "TCL 30 / 20 / 10", "gama": "basica", "modelos": ["TCL 30 XL", "TCL 30 SE", "TCL 30 V 5G", { "nombre": "TCL 30 5G", "gama": "media", "huella": "pantalla" }, { "nombre": "TCL 30+", "huella": "pantalla" }, "TCL 30 E", { "nombre": "TCL 20 Pro 5G", "gama": "media", "huella": "pantalla", "tapa": "vidrio", "inalambrica": true }, "TCL 20 SE", { "nombre": "TCL 20L", "huella": "trasera" }, "TCL 20 XE", { "nombre": "TCL 10 Pro", "gama": "media", "huella": "pantalla", "tapa": "vidrio" }, { "nombre": "TCL 10L", "huella": "trasera" }, { "nombre": "TCL 10 SE", "huella": "trasera" }, "TCL Stylus 5G"] },
+        { "nombre": "TCL 300 / 400 / 500", "gama": "basica", "modelos": [{ "nombre": "TCL 305", "puerto": "micro-usb", "huella": "ninguna" }, { "nombre": "TCL 306", "puerto": "micro-usb", "huella": "ninguna" }, { "nombre": "TCL 403", "puerto": "micro-usb", "huella": "ninguna" }, "TCL 405", "TCL 406", "TCL 408", "TCL 501", "TCL 502"] }
+      ]
+    },
+    {
+      "id": "nothing",
+      "nombre": "Nothing",
+      "sistema": "android",
+      "color": "#111111",
+      "caracteristicas": { "puerto": "usb-c", "jack": false, "microsd": false, "inalambrica": false, "huella": "pantalla", "tapa": "vidrio", "plegable": false },
+      "series": [
+        { "nombre": "Nothing Phone", "gama": "alta", "modelos": [{ "nombre": "Phone (3)", "gama": "premium", "inalambrica": true }, { "nombre": "Phone (3a) Pro", "gama": "media" }, { "nombre": "Phone (3a)", "gama": "media" }, { "nombre": "Phone (2a) Plus", "gama": "media" }, { "nombre": "Phone (2a)", "gama": "media" }, { "nombre": "Phone (2)", "inalambrica": true }, { "nombre": "Phone (1)", "inalambrica": true }] },
+        { "nombre": "CMF by Nothing", "gama": "basica", "caracteristicas": { "tapa": "plastico", "microsd": true }, "modelos": ["CMF Phone 2 Pro", "CMF Phone 1"] }
+      ]
+    },
+    {
+      "id": "meizu",
+      "nombre": "Meizu",
+      "sistema": "android",
+      "color": "#008cff",
+      "caracteristicas": { "puerto": "usb-c", "jack": false, "microsd": false, "inalambrica": false, "huella": "pantalla", "tapa": "vidrio", "plegable": false },
+      "series": [
+        { "nombre": "Meizu (insignia)", "gama": "alta", "modelos": [{ "nombre": "Meizu 21 Pro", "gama": "premium", "inalambrica": true }, "Meizu 21", { "nombre": "Meizu 20 Pro", "inalambrica": true }, "Meizu 20", "Meizu 20 Infinity", "Meizu 18s Pro", "Meizu 18 Pro", "Meizu 18", "Meizu 17 Pro", "Meizu 17", { "nombre": "Meizu 16s Pro", "gama": "media" }, { "nombre": "Meizu 16th", "gama": "media", "jack": true }] },
+        { "nombre": "Meizu Note y M", "gama": "basica", "caracteristicas": { "jack": true, "microsd": true, "huella": "trasera", "tapa": "plastico" }, "modelos": ["Meizu Note 9", { "nombre": "Meizu M10", "puerto": "micro-usb" }] }
+      ]
+    },
+    {
+      "id": "sharp",
+      "nombre": "Sharp",
+      "sistema": "android",
+      "color": "#e60033",
+      "caracteristicas": { "puerto": "usb-c", "jack": true, "microsd": true, "inalambrica": false, "huella": "lateral", "tapa": "plastico", "plegable": false },
+      "series": [
+        { "nombre": "Aquos R", "gama": "premium", "caracteristicas": { "huella": "pantalla", "tapa": "vidrio", "inalambrica": true, "jack": false }, "modelos": ["Aquos R9 Pro", "Aquos R9", "Aquos R8 Pro", "Aquos R8", "Aquos R7", "Aquos R6"] },
+        { "nombre": "Aquos sense / wish / zero", "gama": "basica", "modelos": [{ "nombre": "Aquos sense9", "gama": "media" }, { "nombre": "Aquos sense8", "gama": "media" }, { "nombre": "Aquos sense7 plus", "gama": "media" }, "Aquos sense7", "Aquos sense6", "Aquos sense5G", "Aquos wish4", "Aquos wish3", "Aquos wish2", "Aquos wish", { "nombre": "Aquos zero6", "gama": "media", "huella": "pantalla", "jack": false }, { "nombre": "Aquos zero5G basic", "gama": "media", "huella": "pantalla" }, { "nombre": "Aquos V", "huella": "trasera" }] }
+      ]
+    },
+    {
+      "id": "kyocera",
+      "nombre": "Kyocera",
+      "sistema": "android",
+      "color": "#d50000",
+      "caracteristicas": { "puerto": "usb-c", "jack": true, "microsd": true, "inalambrica": false, "huella": "lateral", "tapa": "plastico", "plegable": false },
+      "series": [
+        { "nombre": "DuraForce y Torque (resistentes)", "gama": "media", "modelos": [{ "nombre": "DuraForce Ultra 5G", "gama": "alta" }, "DuraForce Pro 3", "DuraForce Pro 2", { "nombre": "DuraForce PRO", "huella": "ninguna" }, "DuraSport 5G", { "nombre": "TORQUE 5G", "gama": "alta" }, "Torque G06"] },
+        { "nombre": "Dura XV / XE (teléfonos de tapa)", "gama": "basica", "caracteristicas": { "huella": "ninguna" }, "modelos": ["DuraXV Extreme+", "DuraXV Extreme", "DuraXE Epic", { "nombre": "Cadence", "puerto": "micro-usb" }] }
+      ]
+    },
+    {
+      "id": "cat",
+      "nombre": "Cat",
+      "sistema": "android",
+      "color": "#ffcd11",
+      "caracteristicas": { "puerto": "usb-c", "jack": true, "microsd": true, "inalambrica": false, "huella": "trasera", "tapa": "plastico", "plegable": false },
+      "series": [
+        { "nombre": "Cat S (resistentes)", "gama": "media", "modelos": [{ "nombre": "Cat S75", "huella": "lateral", "jack": false }, { "nombre": "Cat S53", "huella": "lateral" }, { "nombre": "Cat S62 Pro", "gama": "alta" }, "Cat S62", { "nombre": "Cat S61", "gama": "alta" }, { "nombre": "Cat S52", "jack": false }, { "nombre": "Cat S42 H+", "gama": "basica", "huella": "ninguna" }, { "nombre": "Cat S42", "gama": "basica", "huella": "ninguna", "puerto": "micro-usb" }, { "nombre": "Cat S41", "gama": "basica", "huella": "ninguna" }, { "nombre": "Cat S31", "gama": "basica", "huella": "ninguna", "puerto": "micro-usb" }, { "nombre": "Cat S48c", "huella": "ninguna" }] },
+        { "nombre": "Cat básicos", "gama": "basica", "caracteristicas": { "huella": "ninguna" }, "modelos": ["Cat S22 Flip", { "nombre": "Cat B40", "puerto": "micro-usb" }] }
+      ]
+    },
+    {
+      "id": "ulefone",
+      "nombre": "Ulefone",
+      "sistema": "android",
+      "color": "#f39800",
+      "caracteristicas": { "puerto": "usb-c", "jack": true, "microsd": true, "inalambrica": true, "huella": "lateral", "tapa": "plastico", "plegable": false },
+      "series": [
+        { "nombre": "Ulefone Armor", "gama": "media", "modelos": ["Armor 28 Ultra", "Armor 27T Pro", "Armor 27 Pro", "Armor 26 Ultra", "Armor 25T Pro", "Armor 24", "Armor 23 Ultra", "Armor 22", "Armor 21", "Armor 20WT", "Armor 19T", "Armor 18T Ultra", "Armor 17 Pro", "Armor 16 Pro", { "nombre": "Armor X13", "gama": "basica", "inalambrica": false }, { "nombre": "Armor X12", "gama": "basica", "inalambrica": false }, { "nombre": "Armor X11", "gama": "basica", "inalambrica": false }, { "nombre": "Armor X10", "gama": "basica", "inalambrica": false }] },
+        { "nombre": "Ulefone Power Armor", "gama": "media", "modelos": ["Power Armor 19T", "Power Armor 18T", "Power Armor 16 Pro"] },
+        { "nombre": "Ulefone Note", "gama": "basica", "caracteristicas": { "inalambrica": false, "huella": "trasera" }, "modelos": ["Note 20 Pro", "Note 18 Ultra", "Note 17 Pro", "Note 16 Pro", { "nombre": "Note 15", "huella": "ninguna", "puerto": "micro-usb" }, { "nombre": "Note 14", "huella": "ninguna", "puerto": "micro-usb" }] }
+      ]
+    },
+    {
+      "id": "doogee",
+      "nombre": "Doogee",
+      "sistema": "android",
+      "color": "#ff7a00",
+      "caracteristicas": { "puerto": "usb-c", "jack": true, "microsd": true, "inalambrica": true, "huella": "lateral", "tapa": "plastico", "plegable": false },
+      "series": [
+        { "nombre": "Doogee V (resistentes 5G)", "gama": "media", "modelos": ["V30 Pro", "V30T", "V Max Plus", "V Max", "V31GT", "V20 Pro"] },
+        { "nombre": "Doogee S (resistentes)", "gama": "media", "modelos": ["S200", "S110", "S100 Pro", "S100", "S98 Pro", "S98", "S96 Pro", "S89 Pro", "S88 Pro", { "nombre": "S61 Pro", "gama": "basica", "inalambrica": false }, { "nombre": "S41 Max", "gama": "basica", "inalambrica": false }, { "nombre": "S41 Pro", "gama": "basica", "inalambrica": false }, { "nombre": "S41", "gama": "basica", "inalambrica": false, "huella": "ninguna" }] },
+        { "nombre": "Doogee Blade, N y X", "gama": "basica", "caracteristicas": { "inalambrica": false }, "modelos": ["Blade10 Ultra", "Blade10 Pro", "N50 Pro", "N50", "N40 Pro", { "nombre": "X98 Pro", "huella": "ninguna" }, { "nombre": "X97 Pro", "huella": "ninguna" }] }
+      ]
+    },
+    {
+      "id": "oukitel",
+      "nombre": "Oukitel",
+      "sistema": "android",
+      "color": "#ec6c00",
+      "caracteristicas": { "puerto": "usb-c", "jack": true, "microsd": true, "inalambrica": false, "huella": "lateral", "tapa": "plastico", "plegable": false },
+      "series": [
+        { "nombre": "Oukitel WP (resistentes)", "gama": "media", "modelos": ["WP35", "WP33 Pro", "WP30 Pro", "WP28", "WP27", "WP26", "WP23 Pro", "WP22", "WP21", "WP19 Pro", "WP19", "WP18 Pro", "WP17", "WP16", { "nombre": "WP15", "gama": "basica" }, { "nombre": "WP5 Pro", "gama": "basica", "huella": "trasera" }] },
+        { "nombre": "Oukitel C", "gama": "basica", "caracteristicas": { "huella": "trasera" }, "modelos": ["Oukitel C53", "Oukitel C51", "Oukitel C36", "Oukitel C35", "Oukitel C33", { "nombre": "Oukitel C32", "huella": "ninguna" }] }
+      ]
+    },
+    {
+      "id": "blackview",
+      "nombre": "Blackview",
+      "sistema": "android",
+      "color": "#222222",
+      "caracteristicas": { "puerto": "usb-c", "jack": true, "microsd": true, "inalambrica": false, "huella": "lateral", "tapa": "plastico", "plegable": false },
+      "series": [
+        { "nombre": "Blackview BV / BL (resistentes)", "gama": "media", "modelos": [{ "nombre": "BV9300 Pro", "inalambrica": true }, "BV9300", "BV9200", { "nombre": "BV8900 Pro", "inalambrica": true }, "BV8900", "BV8800", "BV7300", "BV7200", { "nombre": "BV6200 Pro", "gama": "basica" }, { "nombre": "BV6200", "gama": "basica" }, { "nombre": "BV5300 Pro", "gama": "basica" }, { "nombre": "BV4800 Pro", "gama": "basica" }, { "nombre": "BL9000 Pro", "gama": "alta", "inalambrica": true }, "BL8000"] },
+        { "nombre": "Blackview Shark, A y otros", "gama": "basica", "modelos": ["Shark 9", "Shark 8", "A200 Pro", { "nombre": "A100", "huella": "lateral" }, "A96", "A95", { "nombre": "A85", "huella": "ninguna" }, "A55 Pro", "Color 8", "Wave 8", { "nombre": "Hero 10", "plegable": true, "gama": "media" }] }
+      ]
+    },
+    {
+      "id": "fairphone",
+      "nombre": "Fairphone",
+      "sistema": "android",
+      "color": "#3fb27f",
+      "caracteristicas": { "puerto": "usb-c", "jack": false, "microsd": true, "inalambrica": false, "huella": "lateral", "tapa": "plastico", "plegable": false },
+      "series": [
+        { "nombre": "Fairphone (modulares)", "gama": "media", "modelos": ["Fairphone (Gen. 6)", "Fairphone 5", "Fairphone 4", { "nombre": "Fairphone 3+", "jack": true, "huella": "trasera" }, { "nombre": "Fairphone 3", "jack": true, "huella": "trasera" }] }
+      ]
+    },
+    {
+      "id": "htc",
+      "nombre": "HTC",
+      "sistema": "android",
+      "color": "#69be28",
+      "caracteristicas": { "puerto": "usb-c", "jack": true, "microsd": true, "inalambrica": false, "huella": "lateral", "tapa": "vidrio", "plegable": false },
+      "series": [
+        { "nombre": "HTC U", "gama": "alta", "modelos": [{ "nombre": "HTC U24 Pro", "inalambrica": true }, { "nombre": "HTC U23 Pro", "huella": "pantalla", "inalambrica": true }, { "nombre": "HTC U23", "huella": "pantalla", "inalambrica": true }, { "nombre": "HTC U20 5G", "huella": "trasera", "gama": "media" }, { "nombre": "HTC U12+", "jack": false, "huella": "trasera" }, { "nombre": "HTC U12 Life", "huella": "trasera", "gama": "basica", "tapa": "plastico" }, { "nombre": "HTC U11", "jack": false, "huella": "boton" }, { "nombre": "HTC U Ultra", "jack": false, "huella": "boton" }, { "nombre": "HTC 10", "huella": "boton", "tapa": "metal" }] },
+        { "nombre": "HTC Desire", "gama": "media", "caracteristicas": { "tapa": "plastico" }, "modelos": ["Desire 22 Pro", { "nombre": "Desire 21 Pro 5G", "huella": "trasera" }, { "nombre": "Desire 20 Pro", "huella": "trasera" }, { "nombre": "Desire 20+", "huella": "trasera", "gama": "basica" }, { "nombre": "Desire 19+", "huella": "trasera", "gama": "basica", "puerto": "micro-usb" }] }
+      ]
+    }
+  ]
+}

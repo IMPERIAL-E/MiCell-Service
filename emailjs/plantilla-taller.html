@@ -1,0 +1,49 @@
+<!--
+  Plantilla de EmailJS para el TALLER (te llega a ti con cada orden).
+  En EmailJS → Email Templates → Create New Template:
+    Subject:   Nueva orden {{orden_id}} – {{marca}} {{modelo}}
+    To Email:  tu correo personal
+    From Name: {{negocio_nombre}}
+    Reply To:  {{reply_to}}
+  Pega este HTML en el contenido (modo "Code"/HTML).
+  Las variables con tres llaves {{{ }}} se insertan como HTML.
+-->
+<div style="font-family:Arial,Helvetica,sans-serif;max-width:640px;margin:0 auto;color:#0f172a">
+  <div style="background:#2563eb;color:#fff;padding:20px 24px;border-radius:12px 12px 0 0">
+    <h1 style="margin:0;font-size:20px">Nueva orden de reparación</h1>
+    <p style="margin:4px 0 0;font-size:24px;font-weight:bold">{{orden_id}}</p>
+    <p style="margin:4px 0 0;opacity:.9">{{fecha_creacion}} · Estado: {{estado}}</p>
+  </div>
+
+  <div style="border:1px solid #e2e8f0;border-top:none;padding:24px;border-radius:0 0 12px 12px">
+    <h2 style="font-size:16px;margin:0 0 8px">👤 Cliente</h2>
+    <p style="margin:0 0 4px"><strong>{{cliente_nombre}}</strong></p>
+    <p style="margin:0 0 4px">📧 {{cliente_email}}</p>
+    <p style="margin:0 0 4px">📞 {{cliente_telefono}}</p>
+    <p style="margin:0 0 16px;color:#64748b;font-size:13px">Cuenta que hizo la solicitud: {{usuario_cuenta}}</p>
+
+    <h2 style="font-size:16px;margin:0 0 8px">📱 Equipo</h2>
+    <p style="margin:0 0 16px"><strong>{{marca}} {{modelo}}</strong><br>Color: {{color}} · Capacidad: {{capacidad}}</p>
+
+    <h2 style="font-size:16px;margin:0 0 8px">🛠️ Servicios solicitados</h2>
+    {{{servicios_html}}}
+
+    <table style="width:100%;margin-top:8px;font-size:14px">
+      <tr><td style="text-align:right;padding:2px 8px">Subtotal</td><td style="text-align:right;width:120px">{{subtotal}}</td></tr>
+      <tr><td style="text-align:right;padding:2px 8px">Recogida a domicilio</td><td style="text-align:right">{{recargo}}</td></tr>
+      <tr><td style="text-align:right;padding:2px 8px">ITBIS (18 %)</td><td style="text-align:right">{{itbis}}</td></tr>
+      <tr><td style="text-align:right;padding:6px 8px;font-weight:bold">Total estimado</td><td style="text-align:right;font-weight:bold;font-size:16px">{{total}}</td></tr>
+    </table>
+
+    <h2 style="font-size:16px;margin:20px 0 8px">📝 Descripción del problema</h2>
+    <p style="white-space:pre-wrap;background:#f8fafc;border-left:4px solid #2563eb;padding:12px;margin:0 0 16px">{{descripcion}}</p>
+
+    <h2 style="font-size:16px;margin:0 0 8px">🚚 Entrega</h2>
+    <p style="margin:0 0 16px">{{modalidad}}<br>Dirección: {{direccion}}<br>Fecha preferida: {{fecha_preferida}}, {{hora_preferida}}</p>
+
+    <h2 style="font-size:16px;margin:0 0 8px">💳 Pago</h2>
+    <p style="margin:0">{{metodo_pago}}<br>Estado del pago: <strong>{{estado_pago}}</strong></p>
+
+    <p style="margin:24px 0 0;color:#64748b;font-size:12px">Responde a este correo para escribirle directamente al cliente.</p>
+  </div>
+</div>

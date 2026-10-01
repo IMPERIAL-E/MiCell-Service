@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Solicitar reparación – ReparaCel</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <script type="module" src="js/paginas/solicitud.js"></script>
+</head>
+<body>
+  <header id="encabezado"></header>
+
+  <main class="contenedor">
+    <div class="pagina-titulo">
+      <h1>Solicitar reparación</h1>
+      <p>Completa los pasos; puedes volver atrás en cualquier momento sin perder lo que elegiste.</p>
+    </div>
+
+    <ol class="progreso" aria-label="Progreso de la solicitud">
+      <li data-paso="1"><span>1. Equipo</span></li>
+      <li data-paso="2"><span>2. Problema</span></li>
+      <li data-paso="3"><span>3. Entrega</span></li>
+      <li data-paso="4"><span>4. Pago</span></li>
+      <li data-paso="5"><span>5. Listo</span></li>
+    </ol>
+
+    <div class="asistente">
+      <div>
+        <!-- PASO 1: EQUIPO -->
+        <section class="tarjeta paso" data-paso="1" aria-labelledby="titulo-paso-1">
+          <h2 id="titulo-paso-1">¿Qué teléfono tienes?</h2>
+          <p class="paso__bajada">Búscalo por su nombre comercial o elige la marca y luego el modelo.</p>
+
+          <div class="grupo mega__buscador">
+            <label for="buscar-modelo" class="solo-lectores">Buscar modelo</label>
+            <input class="campo" type="search" id="buscar-modelo" placeholder="Ej.: Galaxy S23, iPhone 13, Redmi Note 12…">
+            <ul class="mega__resultados" id="resultados-busqueda"></ul>
+          </div>
+
+          <p class="etiqueta">Marca</p>
+          <div class="rejilla-marcas" id="marcas"></div>
+
+          <div id="zona-modelos" class="oculto">
+            <div class="selector-modelo">
+              <div>
+                <p class="etiqueta" id="titulo-modelos">Modelo</p>
+                <div class="lista-modelos" id="lista-modelos" role="listbox" aria-labelledby="titulo-modelos"></div>
+                <button type="button" class="boton boton--fantasma boton--chico" id="btn-otro-modelo">Mi modelo no aparece</button>
+              </div>
+              <div>
+                <div class="grupo oculto" id="grupo-otro">
+                  <label for="otro-modelo">Escribe tu modelo</label>
+                  <input class="campo" type="text" id="otro-modelo" maxlength="60" placeholder="Ej.: Galaxy A57">
+                  <span class="ayuda">Usa el nombre que aparece en la caja o en Ajustes → Acerca del teléfono.</span>
+                  <span class="error"></span>
+                </div>
+                <div class="grupo">
+                  <label for="color">Color <small>(opcional)</small></label>
+                  <input class="campo" type="text" id="color" maxlength="30" placeholder="Ej.: Negro">
+                </div>
+                <div class="grupo">
+                  <label for="capacidad">Capacidad <small>(opcional)</small></label>
+                  <select class="campo" id="capacidad">
+                    <option value="">No sé / prefiero no decir</option>
+                    <option>32 GB</option><option>64 GB</option><option>128 GB</option>
+                    <option>256 GB</option><option>512 GB</option><option>1 TB</option>
+                  </select>
+                </div>
+                <div class="equipo-elegido oculto" id="equipo-elegido">
+                  <span class="equipo-elegido__icono" aria-hidden="true">📱</span>
+                  <div><strong id="equipo-elegido-nombre"></strong><p id="equipo-elegido-detalle"></p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p class="error" id="error-paso-1" role="alert"></p>
+          <div class="paso__acciones">
+            <a href="index.html" class="boton boton--fantasma">Cancelar</a>
+            <button type="button" class="boton boton--primario" data-siguiente>Continuar</button>
+          </div>
+        </section>
+
+        <!-- PASO 2: PROBLEMA -->
+        <section class="tarjeta paso oculto" data-paso="2" aria-labelledby="titulo-paso-2">
+          <h2 id="titulo-paso-2">¿Qué le pasa a tu <span id="nombre-equipo-paso2">equipo</span>?</h2>
+          <p class="paso__bajada">Marca uno o varios servicios. Solo te mostramos los que aplican a tu modelo. Si no sabes qué tiene, elige “Diagnóstico general”.</p>
+
+          <div id="categorias-servicios"></div>
+
+          <div class="grupo" style="margin-top:1.5rem">
+            <label for="descripcion">Descripción del problema</label>
+            <span class="ayuda">Cuéntanos con tus palabras qué pasó y qué notas. Mientras más detalles, mejor será el diagnóstico.</span>
+            <div class="ejemplos" id="ejemplos" aria-label="Ejemplos para empezar"></div>
+            <textarea class="campo" id="descripcion" maxlength="1000" placeholder="Ej.: Se me cayó y la pantalla quedó en negro, pero vibra cuando me llaman…"></textarea>
+            <div class="contador-caracteres"><span id="contador">0</span> / 1000</div>
+            <span class="error"></span>
+          </div>
+
+          <p class="error" id="error-paso-2" role="alert"></p>
+          <div class="paso__acciones">
+            <button type="button" class="boton boton--fantasma" data-anterior>← Atrás</button>
+            <button type="button" class="boton boton--primario" data-siguiente>Continuar</button>
+          </div>
+        </section>
+
+        <!-- PASO 3: ENTREGA -->
+        <section class="tarjeta paso oculto" data-paso="3" aria-labelledby="titulo-paso-3">
+          <h2 id="titulo-paso-3">Tus datos y la entrega</h2>
+          <p class="paso__bajada">Usaremos estos datos para contactarte sobre tu reparación.</p>
+
+          <div class="fila">
+            <div class="grupo">
+              <label for="contacto-nombre">Nombre completo</label>
+              <input class="campo" type="text" id="contacto-nombre" autocomplete="name">
+              <span class="error"></span>
+            </div>
+            <div class="grupo">
+              <label for="contacto-telefono">Teléfono</label>
+              <input class="campo" type="tel" id="contacto-telefono" autocomplete="tel" placeholder="809-555-0000">
+              <span class="error"></span>
+            </div>
+          </div>
+          <div class="grupo">
+            <label for="contacto-email">Correo electrónico</label>
+            <input class="campo" type="email" id="contacto-email" autocomplete="email">
+            <span class="error"></span>
+          </div>
+
+          <p class="etiqueta">¿Cómo nos entregas el equipo?</p>
+          <div class="opciones-radio">
+            <label class="opcion-radio">
+              <input type="radio" name="modalidad" value="taller" checked>
+              <span><strong>Lo llevo al taller</strong><p>Sin costo adicional.</p></span>
+            </label>
+            <label class="opcion-radio">
+              <input type="radio" name="modalidad" value="domicilio">
+              <span><strong>Recogida a domicilio</strong><p id="texto-recargo">Lo buscamos y te lo devolvemos.</p></span>
+            </label>
+          </div>
+          <div class="grupo oculto" id="grupo-direccion">
+            <label for="direccion">Dirección de recogida</label>
+            <input class="campo" type="text" id="direccion" autocomplete="street-address" placeholder="Calle, número, sector y ciudad">
+            <span class="error"></span>
+          </div>
+
+          <div class="fila">
+            <div class="grupo">
+              <label for="fecha">Fecha preferida</label>
+              <input class="campo" type="date" id="fecha">
+              <span class="ayuda">De lunes a sábado.</span>
+              <span class="error"></span>
+            </div>
+            <div class="grupo">
+              <label for="hora">Hora preferida</label>
+              <select class="campo" id="hora">
+                <option value="">Elige una hora</option>
+                <option>8:00 a. m.</option><option>9:00 a. m.</option><option>10:00 a. m.</option>
+                <option>11:00 a. m.</option><option>12:00 p. m.</option><option>2:00 p. m.</option>
+                <option>3:00 p. m.</option><option>4:00 p. m.</option><option>5:00 p. m.</option>
+              </select>
+              <span class="error"></span>
+            </div>
+          </div>
+
+          <div class="paso__acciones">
+            <button type="button" class="boton boton--fantasma" data-anterior>← Atrás</button>
+            <button type="button" class="boton boton--primario" data-siguiente>Continuar al pago</button>
+          </div>
+        </section>
+
+        <!-- PASO 4: PAGO -->
+        <section class="tarjeta paso oculto" data-paso="4" aria-labelledby="titulo-paso-4">
+          <h2 id="titulo-paso-4">Método de pago</h2>
+          <p class="paso__bajada">Elige cómo quieres pagar. Es una simulación: no se realiza ningún cobro real.</p>
+
+          <div class="opciones-radio">
+            <label class="opcion-radio">
+              <input type="radio" name="metodo" value="efectivo" checked>
+              <span><strong>💵 Efectivo</strong><p>Pagas al recoger tu equipo reparado.</p></span>
+            </label>
+            <label class="opcion-radio">
+              <input type="radio" name="metodo" value="tarjeta">
+              <span><strong>💳 Tarjeta de débito o crédito</strong><p>Visa, Mastercard, American Express o Discover.</p></span>
+            </label>
+          </div>
+
+          <div id="form-tarjeta" class="oculto">
+            <div class="tarjeta-visual" id="tarjeta-visual" aria-hidden="true">
+              <span class="tarjeta-visual__red" id="tv-red">TARJETA</span>
+              <span class="tarjeta-visual__numero" id="tv-numero">•••• •••• •••• ••••</span>
+              <div class="tarjeta-visual__pie"><span id="tv-titular">NOMBRE DEL TITULAR</span><span id="tv-vence">MM/AA</span></div>
+            </div>
+            <div class="grupo">
+              <label for="tarjeta-numero">Número de tarjeta</label>
+              <input class="campo" type="text" id="tarjeta-numero" inputmode="numeric" autocomplete="cc-number" placeholder="1234 5678 9012 3456" maxlength="23">
+              <span class="error"></span>
+            </div>
+            <div class="grupo">
+              <label for="tarjeta-titular">Nombre del titular</label>
+              <input class="campo" type="text" id="tarjeta-titular" autocomplete="cc-name" placeholder="Como aparece en la tarjeta">
+              <span class="error"></span>
+            </div>
+            <div class="fila">
+              <div class="grupo">
+                <label for="tarjeta-vence">Vencimiento</label>
+                <input class="campo" type="text" id="tarjeta-vence" inputmode="numeric" autocomplete="cc-exp" placeholder="MM/AA" maxlength="5">
+                <span class="error"></span>
+              </div>
+              <div class="grupo">
+                <label for="tarjeta-cvv">CVV</label>
+                <input class="campo" type="password" id="tarjeta-cvv" inputmode="numeric" autocomplete="cc-csc" placeholder="123" maxlength="4">
+                <span class="error"></span>
+              </div>
+            </div>
+            <p class="ayuda">🔒 Solo guardamos la red y los últimos 4 dígitos. El número completo y el CVV nunca se almacenan.</p>
+          </div>
+
+          <label class="casilla"><input type="checkbox" id="acepto"> Acepto que los precios son estimados y pueden ajustarse tras el diagnóstico.</label>
+          <p class="error" id="error-paso-4" role="alert"></p>
+
+          <div class="paso__acciones">
+            <button type="button" class="boton boton--fantasma" data-anterior>← Atrás</button>
+            <button type="button" class="boton boton--primario" id="btn-confirmar">Confirmar solicitud</button>
+          </div>
+        </section>
+      </div>
+
+      <!-- RESUMEN -->
+      <aside class="tarjeta resumen" aria-label="Resumen de la solicitud">
+        <h3>Resumen</h3>
+        <p class="resumen__equipo" id="resumen-equipo">Aún no eliges un equipo.</p>
+        <ul class="resumen__lista" id="resumen-servicios"></ul>
+        <p class="resumen__vacio" id="resumen-vacio">Aún no eliges servicios.</p>
+        <dl class="totales">
+          <dt>Subtotal</dt><dd id="total-subtotal">RD$0</dd>
+          <dt id="dt-recargo" class="oculto">Recogida a domicilio</dt><dd id="total-recargo" class="oculto">RD$0</dd>
+          <dt>ITBIS (18 %)</dt><dd id="total-itbis">RD$0</dd>
+          <dt class="total">Total estimado</dt><dd class="total" id="total-total">RD$0</dd>
+        </dl>
+      </aside>
+    </div>
+  </main>
+
+  <footer id="pie"></footer>
+</body>
+</html>

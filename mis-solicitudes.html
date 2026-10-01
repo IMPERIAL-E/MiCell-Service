@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mis solicitudes – ReparaCel</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <script type="module" src="js/paginas/mis-solicitudes.js"></script>
+</head>
+<body>
+  <header id="encabezado"></header>
+
+  <main class="contenedor">
+    <div class="pagina-titulo">
+      <h1>Mis solicitudes</h1>
+      <p>Consulta el estado de tus reparaciones.</p>
+    </div>
+
+    <div class="filtros">
+      <label class="solo-lectores" for="filtro-estado">Filtrar por estado</label>
+      <select class="campo" id="filtro-estado">
+        <option value="">Todos los estados</option>
+      </select>
+      <a href="solicitud.html" class="boton boton--primario">+ Nueva solicitud</a>
+    </div>
+
+    <div class="lista-ordenes" id="lista-ordenes"></div>
+  </main>
+
+  <footer id="pie"></footer>
+</body>
+</html>

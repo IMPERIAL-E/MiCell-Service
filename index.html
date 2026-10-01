@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ReparaCel – Reparación de celulares</title>
+  <meta name="description" content="Solicita la reparación de tu celular en línea: pantallas, baterías, puertos de carga, cámaras, software y más para 36 marcas.">
+  <link rel="stylesheet" href="css/estilos.css">
+  <script type="module" src="js/paginas/inicio.js"></script>
+</head>
+<body>
+  <header id="encabezado"></header>
+
+  <main>
+    <section class="hero">
+      <div class="contenedor hero__contenido">
+        <div>
+          <h1>Tu celular como nuevo, sin complicaciones</h1>
+          <p>Elige tu marca y modelo, cuéntanos qué le pasa y recibe tu número de orden al instante. Puedes pagar con tarjeta o en efectivo al recogerlo.</p>
+          <div class="hero__acciones">
+            <a href="solicitud.html" class="boton boton--primario">Solicitar reparación</a>
+            <a href="#servicios" class="boton boton--secundario">Ver servicios</a>
+          </div>
+        </div>
+        <div class="hero__datos">
+          <div class="hero__dato"><strong id="dato-marcas">36</strong>marcas</div>
+          <div class="hero__dato"><strong id="dato-modelos">+1,000</strong>modelos</div>
+          <div class="hero__dato"><strong id="dato-servicios">50+</strong>servicios</div>
+          <div class="hero__dato"><strong>90</strong>días de garantía</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion contenedor" aria-labelledby="titulo-pasos">
+      <h2 class="seccion__titulo" id="titulo-pasos">¿Cómo funciona?</h2>
+      <p class="seccion__bajada">Cuatro pasos y tu solicitud llega directo a nuestros técnicos.</p>
+      <div class="pasos">
+        <div class="tarjeta paso-info"><h3>Elige tu equipo</h3><p>Busca tu marca y modelo por su nombre comercial, como “Galaxy S23” o “iPhone 14”.</p></div>
+        <div class="tarjeta paso-info"><h3>Cuéntanos el problema</h3><p>Marca los servicios que necesitas y describe con tus palabras qué le pasa.</p></div>
+        <div class="tarjeta paso-info"><h3>Agenda y paga</h3><p>Escoge fecha, si lo traes o lo recogemos, y paga con tarjeta o en efectivo.</p></div>
+        <div class="tarjeta paso-info"><h3>Sigue tu orden</h3><p>Consulta el estado de tu reparación en “Mis solicitudes” en todo momento.</p></div>
+      </div>
+    </section>
+
+    <section class="seccion contenedor" id="servicios" aria-labelledby="titulo-servicios">
+      <h2 class="seccion__titulo" id="titulo-servicios">Todo lo que le podemos hacer a tu teléfono</h2>
+      <p class="seccion__bajada">Desde un cambio de pantalla hasta recuperar tus fotos. Los precios se ajustan a tu modelo.</p>
+      <div class="rejilla-categorias" id="rejilla-categorias"></div>
+    </section>
+
+    <section class="seccion contenedor" aria-labelledby="titulo-marcas">
+      <h2 class="seccion__titulo" id="titulo-marcas">Reparamos todas estas marcas</h2>
+      <p class="seccion__bajada">¿No ves tu modelo? Podrás escribirlo a mano al hacer la solicitud.</p>
+      <div class="rejilla-marcas" id="rejilla-marcas"></div>
+    </section>
+  </main>
+
+  <footer id="pie"></footer>
+</body>
+</html>
