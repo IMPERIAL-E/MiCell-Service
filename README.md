@@ -1,0 +1,1 @@
+Plataforma web para solicitar reparaciones y servicios técnicos de celulares. Permite elegir entre 36 marcas y sus modelos, describir la falla, iniciar sesión, simular el pago en efectivo o con tarjeta y generar tickets de servicio que se envían por correo al taller.
