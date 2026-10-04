@@ -37,7 +37,7 @@ function render() {
   );
 
   if (!ordenes.length) {
-    tabla.innerHTML = `<tr><td colspan="8" class="vacio">No hay órdenes que coincidan.</td></tr>`;
+    tabla.innerHTML = `<tr><td colspan="8" class="vacio">${todas.length ? "No hay órdenes que coincidan con el filtro." : "Todavía no hay órdenes. Cuando un cliente haga una solicitud, aparecerá aquí."}</td></tr>`;
     return;
   }
 

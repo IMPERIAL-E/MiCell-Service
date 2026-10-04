@@ -21,7 +21,7 @@ function generarNumero() {
   const d = new Date();
   const fecha = `${String(d.getFullYear()).slice(2)}${String(d.getMonth() + 1).padStart(2, "0")}${String(d.getDate()).padStart(2, "0")}`;
   const azar = Math.random().toString(36).slice(2, 6).toUpperCase();
-  return `RC-${fecha}-${azar}`;
+  return `MC-${fecha}-${azar}`;
 }
 
 export class Orden {

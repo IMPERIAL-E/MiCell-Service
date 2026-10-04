@@ -1,0 +1,645 @@
+{
+  "fuente": "Pexels (https://www.pexels.com) — licencia libre de Pexels",
+  "fotos": [
+    {
+      "archivo": "assets/img/servicios/portada-01.jpg",
+      "categoria": "portada",
+      "descripcion": "Detailed shot of smartphone repair with a screwdriver and hand close-up.",
+      "autor": "Tima Miroshnichenko",
+      "perfil_autor": "https://www.pexels.com/@tima-miroshnichenko",
+      "fuente": "https://www.pexels.com/photo/a-hand-fixing-an-electronic-device-using-screwdriver-6755075/",
+      "ancho": 1400,
+      "alto": 933
+    },
+    {
+      "archivo": "assets/img/servicios/portada-02.jpg",
+      "categoria": "portada",
+      "descripcion": "Technician works on smartphone repair under a microscope, indoors at a tech bench.",
+      "autor": "Tima Miroshnichenko",
+      "perfil_autor": "https://www.pexels.com/@tima-miroshnichenko",
+      "fuente": "https://www.pexels.com/photo/a-person-repairing-a-smartphone-6754839/",
+      "ancho": 1400,
+      "alto": 933
+    },
+    {
+      "archivo": "assets/img/servicios/portada-03.jpg",
+      "categoria": "portada",
+      "descripcion": "Professional technician repairing mobile devices using a microscope in a lab.",
+      "autor": "Tima Miroshnichenko",
+      "perfil_autor": "https://www.pexels.com/@tima-miroshnichenko",
+      "fuente": "https://www.pexels.com/photo/man-person-smartphone-broken-6755056/",
+      "ancho": 1400,
+      "alto": 933
+    },
+    {
+      "archivo": "assets/img/servicios/portada-04.jpg",
+      "categoria": "portada",
+      "descripcion": "Close-up of disassembled smartphone parts on a blue repair mat with tools.",
+      "autor": "Fotografia Lui Vlad",
+      "perfil_autor": "https://www.pexels.com/@fotografia-lui-vlad-1445510816",
+      "fuente": "https://www.pexels.com/photo/disassembled-smartphone-on-repair-workbench-31862950/",
+      "ancho": 1400,
+      "alto": 933
+    },
+    {
+      "archivo": "assets/img/servicios/portada-05.jpg",
+      "categoria": "portada",
+      "descripcion": "Close-up of hands holding a cracked smartphone against a yellow backdrop, highlighting mobile technology issues.",
+      "autor": "Towfiqu barbhuiya",
+      "perfil_autor": "https://www.pexels.com/@towfiqu-barbhuiya-3440682",
+      "fuente": "https://www.pexels.com/photo/close-up-shot-of-a-person-holding-a-broken-smartphone-10963256/",
+      "ancho": 1400,
+      "alto": 933
+    },
+    {
+      "archivo": "assets/img/servicios/portada-06.jpg",
+      "categoria": "portada",
+      "descripcion": "Detailed view of a technician using tweezers to fix an electronic circuit board.",
+      "autor": "Tima Miroshnichenko",
+      "perfil_autor": "https://www.pexels.com/@tima-miroshnichenko",
+      "fuente": "https://www.pexels.com/photo/person-using-tweezers-on-a-circuit-board-6755138/",
+      "ancho": 1400,
+      "alto": 933
+    },
+    {
+      "archivo": "assets/img/servicios/pantalla-01.jpg",
+      "categoria": "pantalla",
+      "descripcion": "Detailed image of a cracked smartphone screen highlighting damage to the device.",
+      "autor": "energepic.com",
+      "perfil_autor": "https://www.pexels.com/@energepic-com-27411",
+      "fuente": "https://www.pexels.com/photo/close-up-photo-of-iphone-tempered-glass-288479/",
+      "ancho": 1400,
+      "alto": 1050
+    },
+    {
+      "archivo": "assets/img/servicios/pantalla-02.jpg",
+      "categoria": "pantalla",
+      "descripcion": "Two broken smartphone screens on an orange background, illustrating device fragility.",
+      "autor": "Towfiqu barbhuiya",
+      "perfil_autor": "https://www.pexels.com/@towfiqu-barbhuiya-3440682",
+      "fuente": "https://www.pexels.com/photo/cracked-screen-of-a-smartphone-11921157/",
+      "ancho": 1400,
+      "alto": 934
+    },
+    {
+      "archivo": "assets/img/servicios/pantalla-03.jpg",
+      "categoria": "pantalla",
+      "descripcion": "A close-up view of a cracked smartphone lying on a sunlit asphalt road.",
+      "autor": "상덕 박",
+      "perfil_autor": "https://www.pexels.com/@471572265",
+      "fuente": "https://www.pexels.com/photo/damaged-cellphone-lying-down-on-sunlit-asphalt-16658257/",
+      "ancho": 1400,
+      "alto": 933
+    },
+    {
+      "archivo": "assets/img/servicios/pantalla-04.jpg",
+      "categoria": "pantalla",
+      "descripcion": "Close-up of a broken smartphone with a severely cracked screen.",
+      "autor": "ClickerHappy",
+      "perfil_autor": "https://www.pexels.com/@clickerhappy",
+      "fuente": "https://www.pexels.com/photo/wrecked-iphone-1388947/",
+      "ancho": 1400,
+      "alto": 865
+    },
+    {
+      "archivo": "assets/img/servicios/pantalla-05.jpg",
+      "categoria": "pantalla",
+      "descripcion": "Close-up of a broken smartphone on a wallet, showcasing damaged screen.",
+      "autor": "Towfiqu barbhuiya",
+      "perfil_autor": "https://www.pexels.com/@towfiqu-barbhuiya-3440682",
+      "fuente": "https://www.pexels.com/photo/a-wallet-and-a-broken-smart-phone-11591913/",
+      "ancho": 1400,
+      "alto": 934
+    },
+    {
+      "archivo": "assets/img/servicios/bateria-01.jpg",
+      "categoria": "bateria",
+      "descripcion": "Two smartphones charging side by side on a desk. Modern and technological setting.",
+      "autor": "Steve A Johnson",
+      "perfil_autor": "https://www.pexels.com/@steve",
+      "fuente": "https://www.pexels.com/photo/closed-up-photography-of-two-iphones-1028674/",
+      "ancho": 1400,
+      "alto": 933
+    },
+    {
+      "archivo": "assets/img/servicios/bateria-02.jpg",
+      "categoria": "bateria",
+      "descripcion": "Smartphone charging with a power bank on a wooden desk, showcasing modern technology essentials.",
+      "autor": "Towfiqu barbhuiya",
+      "perfil_autor": "https://www.pexels.com/@towfiqu-barbhuiya-3440682",
+      "fuente": "https://www.pexels.com/photo/a-smartphone-charging-with-a-power-bank-14706040/",
+      "ancho": 1400,
+      "alto": 933
+    },
+    {
+      "archivo": "assets/img/servicios/bateria-03.jpg",
+      "categoria": "bateria",
+      "descripcion": "Three smartphones connected to chargers on a wooden surface, showcasing modern technology",
+      "autor": "Stanley Ng",
+      "perfil_autor": "https://www.pexels.com/@stanley-ng-2850879",
+      "fuente": "https://www.pexels.com/photo/black-android-smartphones-on-brown-wooden-surface-4387770/",
+      "ancho": 1400,
+      "alto": 933
+    },
+    {
+      "archivo": "assets/img/servicios/carga-01.jpg",
+      "categoria": "carga",
+      "descripcion": "Minimalist image of a power bank with blue USB charging cables on a white background.",
+      "autor": "Markus Winkler",
+      "perfil_autor": "https://www.pexels.com/@markus-winkler-1430818",
+      "fuente": "https://www.pexels.com/photo/white-power-bank-and-blue-coated-wires-4072683/",
+      "ancho": 1400,
+      "alto": 933
+    },
+    {
+      "archivo": "assets/img/servicios/carga-02.jpg",
+      "categoria": "carga",
+      "descripcion": "A smartphone charging from a power bank with an orange cable on a wooden table.",
+      "autor": "Eleonora Vokueva",
+      "perfil_autor": "https://www.pexels.com/@eleonora-vokueva-2161345723",
+      "fuente": "https://www.pexels.com/photo/smartphone-charging-with-portable-power-bank-37475677/",
+      "ancho": 1400,
+      "alto": 787
+    },
+    {
+      "archivo": "assets/img/servicios/carga-03.jpg",
+      "categoria": "carga",
+      "descripcion": "Close-up of a smartphone being charged, displaying a modern interface on a dark backdrop.",
+      "autor": "Lum3n",
+      "perfil_autor": "https://www.pexels.com/@lum3n-44775",
+      "fuente": "https://www.pexels.com/photo/turned-on-android-smartphone-with-audio-jack-305084/",
+      "ancho": 1400,
+      "alto": 933
+    },
+    {
+      "archivo": "assets/img/servicios/camaras-01.jpg",
+      "categoria": "camaras",
+      "descripcion": "Macro shot of an electronic circuit design around a smartphone camera lens, showing intricate details.",
+      "autor": "Sebastian Luna",
+      "perfil_autor": "https://www.pexels.com/@sebastian-luna-736234668",
+      "fuente": "https://www.pexels.com/photo/close-up-of-electronic-circuit-design-on-device-36068862/",
+      "ancho": 1400,
+      "alto": 933
+    },
+    {
+      "archivo": "assets/img/servicios/camaras-02.jpg",
+      "categoria": "camaras",
+      "descripcion": "Macro shot of smartphone camera lens highlighting design and technology.",
+      "autor": "aloïs Siclon",
+      "perfil_autor": "https://www.pexels.com/@blooper",
+      "fuente": "https://www.pexels.com/photo/back-camera-of-a-smartphone-in-close-up-photography-12427611/",
+      "ancho": 1400,
+      "alto": 787
+    },
+    {
+      "archivo": "assets/img/servicios/camaras-03.jpg",
+      "categoria": "camaras",
+      "descripcion": "Detailed view of a sleek smartphone focusing on its camera lenses and modern design.",
+      "autor": "I'm Zion",
+      "perfil_autor": "https://www.pexels.com/@zion",
+      "fuente": "https://www.pexels.com/photo/photo-of-a-black-phone-with-cameras-12376011/",
+      "ancho": 1400,
+      "alto": 738
+    },
+    {
+      "archivo": "assets/img/servicios/audio-01.jpg",
+      "categoria": "audio",
+      "descripcion": "A close-up of someone talking on a smartphone, focusing on the lower face.",
+      "autor": "cottonbro studio",
+      "perfil_autor": "https://www.pexels.com/@cottonbro",
+      "fuente": "https://www.pexels.com/photo/close-up-shot-of-a-person-using-smartphone-6964143/",
+      "ancho": 1400,
+      "alto": 933
+    },
+    {
+      "archivo": "assets/img/servicios/audio-02.jpg",
+      "categoria": "audio",
+      "descripcion": "Back view of a man in a cap with a backpack talking on a smartphone outdoors.",
+      "autor": "Olanma Etigwe-uwa",
+      "perfil_autor": "https://www.pexels.com/@olanma-etigwe-uwa-2199781",
+      "fuente": "https://www.pexels.com/photo/man-talking-on-smartphone-outdoors-in-urban-setting-37901947/",
+      "ancho": 1400,
+      "alto": 933
+    },
+    {
+      "archivo": "assets/img/servicios/liquidos-01.jpg",
+      "categoria": "liquidos",
+      "descripcion": "A smartphone underwater displaying air bubbles and motion in vivid blue water.",
+      "autor": "Sergey  Meshkov",
+      "perfil_autor": "https://www.pexels.com/@19x14",
+      "fuente": "https://www.pexels.com/photo/a-smartphone-in-the-water-8481934/",
+      "ancho": 1400,
+      "alto": 933
+    },
+    {
+      "archivo": "assets/img/servicios/liquidos-02.jpg",
+      "categoria": "liquidos",
+      "descripcion": "A smartphone submerged in water with bubbles rising around it, showcasing a dynamic underwater scene.",
+      "autor": "Sergey  Meshkov",
+      "perfil_autor": "https://www.pexels.com/@19x14",
+      "fuente": "https://www.pexels.com/photo/black-mobile-phone-under-blue-water-8481931/",
+      "ancho": 1400,
+      "alto": 769
+    },
+    {
+      "archivo": "assets/img/servicios/liquidos-03.jpg",
+      "categoria": "liquidos",
+      "descripcion": "A smartphone underwater creating bubbles and movement in clear blue water.",
+      "autor": "Sergey  Meshkov",
+      "perfil_autor": "https://www.pexels.com/@19x14",
+      "fuente": "https://www.pexels.com/photo/close-up-shot-of-black-mobile-phone-in-the-water-8481951/",
+      "ancho": 1400,
+      "alto": 933
+    },
+    {
+      "archivo": "assets/img/servicios/placa-01.jpg",
+      "categoria": "placa",
+      "descripcion": "Technician performing precise soldering on a circuit board for electronics repair.",
+      "autor": "Maikol Herrera",
+      "perfil_autor": "https://www.pexels.com/@maiksax",
+      "fuente": "https://www.pexels.com/photo/close-up-of-circuit-board-soldering-process-38145576/",
+      "ancho": 1400,
+      "alto": 933
+    },
+    {
+      "archivo": "assets/img/servicios/placa-02.jpg",
+      "categoria": "placa",
+      "descripcion": "Hand soldering on a printed circuit board, showcasing electronic craftsmanship.",
+      "autor": "Blaz Erzetic",
+      "perfil_autor": "https://www.pexels.com/@www-erzetich-com",
+      "fuente": "https://www.pexels.com/photo/person-soldering-chip-2628105/",
+      "ancho": 1400,
+      "alto": 933
+    },
+    {
+      "archivo": "assets/img/servicios/placa-03.jpg",
+      "categoria": "placa",
+      "descripcion": "Close-up of technician using soldering iron on a circuit board in a lab setting.",
+      "autor": "Maikol Herrera",
+      "perfil_autor": "https://www.pexels.com/@maiksax",
+      "fuente": "https://www.pexels.com/photo/technician-soldering-circuit-board-in-lab-37426135/",
+      "ancho": 1400,
+      "alto": 933
+    },
+    {
+      "archivo": "assets/img/servicios/placa-04.jpg",
+      "categoria": "placa",
+      "descripcion": "Man working on an electronic circuit board with tools on a table, showing close-up of hands and components.",
+      "autor": "tnfeez desgin",
+      "perfil_autor": "https://www.pexels.com/@tanfeez",
+      "fuente": "https://www.pexels.com/photo/man-working-with-computer-components-10699351/",
+      "ancho": 1400,
+      "alto": 932
+    },
+    {
+      "archivo": "assets/img/servicios/software-01.jpg",
+      "categoria": "software",
+      "descripcion": "Close-up image of a smartphone screen displaying various app icons on a dark background.",
+      "autor": "El Jundi",
+      "perfil_autor": "https://www.pexels.com/@talal",
+      "fuente": "https://www.pexels.com/photo/a-close-up-shot-of-icons-on-a-screen-10920328/",
+      "ancho": 1400,
+      "alto": 933
+    },
+    {
+      "archivo": "assets/img/servicios/software-02.jpg",
+      "categoria": "software",
+      "descripcion": "Close-up of a hand holding a smartphone with app icons and a nature wallpaper.",
+      "autor": "FOX ^.ᆽ.^= ∫",
+      "perfil_autor": "https://www.pexels.com/@fox-58267",
+      "fuente": "https://www.pexels.com/photo/person-holding-black-android-smartphone-with-black-case-969462/",
+      "ancho": 1400,
+      "alto": 933
+    },
+    {
+      "archivo": "assets/img/servicios/software-03.jpg",
+      "categoria": "software",
+      "descripcion": "Detailed view of smartphone displaying multiple app icons on screen, highlighting technology use.",
+      "autor": "ready made",
+      "perfil_autor": "https://www.pexels.com/@readymade",
+      "fuente": "https://www.pexels.com/photo/black-smartphone-with-icons-3850263/",
+      "ancho": 1400,
+      "alto": 933
+    },
+    {
+      "archivo": "assets/img/servicios/mantenimiento-01.jpg",
+      "categoria": "mantenimiento",
+      "descripcion": "Close-up of hands holding a smartphone showing a mountain scene, captured outdoors in Banff.",
+      "autor": "Line Knipst",
+      "perfil_autor": "https://www.pexels.com/@line-knipst-574109081",
+      "fuente": "https://www.pexels.com/photo/man-holding-a-smart-phone-with-a-photo-18160079/",
+      "ancho": 1400,
+      "alto": 933
+    },
+    {
+      "archivo": "assets/img/servicios/mantenimiento-02.jpg",
+      "categoria": "mantenimiento",
+      "descripcion": "A smartphone lies on a dimly lit wooden table showcasing reflection and shadows.",
+      "autor": "Hasan Albari",
+      "perfil_autor": "https://www.pexels.com/@hasanalbari",
+      "fuente": "https://www.pexels.com/photo/selective-focus-photography-of-black-iphone-turned-off-on-table-1350462/",
+      "ancho": 1400,
+      "alto": 933
+    },
+    {
+      "archivo": "assets/img/servicios/diagnostico-01.jpg",
+      "categoria": "diagnostico",
+      "descripcion": "Technician in black gloves repairing a smartwatch with precision tools and equipment.",
+      "autor": "Miguel Galaz",
+      "perfil_autor": "https://www.pexels.com/@miguel-galaz-2969450",
+      "fuente": "https://www.pexels.com/photo/close-up-shot-of-a-person-holding-a-smart-watch-11715245/",
+      "ancho": 1400,
+      "alto": 932
+    },
+    {
+      "archivo": "assets/img/servicios/diagnostico-02.jpg",
+      "categoria": "diagnostico",
+      "descripcion": "Disassembled smartphone with tools on a workbench, emphasizing repair and technology.",
+      "autor": "Fotografia Lui Vlad",
+      "perfil_autor": "https://www.pexels.com/@fotografia-lui-vlad-1445510816",
+      "fuente": "https://www.pexels.com/photo/smartphone-repair-tools-on-a-workbench-31862953/",
+      "ancho": 1400,
+      "alto": 933
+    },
+    {
+      "archivo": "assets/img/servicios/diagnostico-03.jpg",
+      "categoria": "diagnostico",
+      "descripcion": "Close-up of a technician using a microscope for phone repair, highlighting precision work.",
+      "autor": "Tima Miroshnichenko",
+      "perfil_autor": "https://www.pexels.com/@tima-miroshnichenko",
+      "fuente": "https://www.pexels.com/photo/man-person-smartphone-broken-6755092/",
+      "ancho": 1400,
+      "alto": 933
+    },
+    {
+      "archivo": "assets/img/servicios/taller-01.jpg",
+      "categoria": "taller",
+      "descripcion": "Close-up of a man skillfully soldering electronics with tools on a workbench.",
+      "autor": "https://kaboompics.com/",
+      "perfil_autor": "https://www.pexels.com/@karola-g",
+      "fuente": "https://www.pexels.com/photo/man-doing-art-and-craft-at-table-at-home-7285977/",
+      "ancho": 1400,
+      "alto": 933
+    },
+    {
+      "archivo": "assets/img/servicios/taller-02.jpg",
+      "categoria": "taller",
+      "descripcion": "A detailed view of a technician using a soldering iron on a circuit board through a magnifying glass.",
+      "autor": "https://kaboompics.com/",
+      "perfil_autor": "https://www.pexels.com/@karola-g",
+      "fuente": "https://www.pexels.com/photo/repairing-of-circuit-board-7286009/",
+      "ancho": 1400,
+      "alto": 933
+    },
+    {
+      "archivo": "assets/img/servicios/taller-03.jpg",
+      "categoria": "taller",
+      "descripcion": "Hands-on electronics repair with tools, circuit board, and soldering station on workspace.",
+      "autor": "https://kaboompics.com/",
+      "perfil_autor": "https://www.pexels.com/@karola-g",
+      "fuente": "https://www.pexels.com/photo/tools-on-a-desktop-7286026/",
+      "ancho": 1400,
+      "alto": 933
+    },
+    {
+      "archivo": "assets/img/servicios/taller-04.jpg",
+      "categoria": "taller",
+      "descripcion": "Person working on electronics repair with soldering tools at a desk.",
+      "autor": "cottonbro studio",
+      "perfil_autor": "https://www.pexels.com/@cottonbro",
+      "fuente": "https://www.pexels.com/photo/person-holding-pen-and-scissors-4709391/",
+      "ancho": 1400,
+      "alto": 933
+    },
+    {
+      "archivo": "assets/img/servicios/equipos-01.jpg",
+      "categoria": "equipos",
+      "descripcion": "Top view of four colorful smartphones laid out on a white background, showcasing modern technology.",
+      "autor": "Andrey Matveev",
+      "perfil_autor": "https://www.pexels.com/@zeleboba",
+      "fuente": "https://www.pexels.com/photo/selection-of-smartphones-21854468/",
+      "ancho": 1400,
+      "alto": 1050
+    },
+    {
+      "archivo": "assets/img/servicios/equipos-02.jpg",
+      "categoria": "equipos",
+      "descripcion": "Close-up of a hand holding a smartphone displaying Android 11 interface indoors on patterned floor.",
+      "autor": "Zain Ali",
+      "perfil_autor": "https://www.pexels.com/@zaktech90",
+      "fuente": "https://www.pexels.com/photo/person-holding-black-mobile-phone-6901037/",
+      "ancho": 1400,
+      "alto": 933
+    },
+    {
+      "archivo": "assets/img/servicios/equipos-03.jpg",
+      "categoria": "equipos",
+      "descripcion": "Three modern smartphones displayed on a wooden surface with natural lighting.",
+      "autor": "Phong Thanh",
+      "perfil_autor": "https://www.pexels.com/@phong-thanh-3607237",
+      "fuente": "https://www.pexels.com/photo/comparison-of-modern-smartphones-on-wooden-surface-36680542/",
+      "ancho": 1400,
+      "alto": 933
+    },
+    {
+      "archivo": "assets/img/servicios/equipos-04.jpg",
+      "categoria": "equipos",
+      "descripcion": "A smartphone capturing vivid yellow flowers, showcasing technology and nature interaction.",
+      "autor": "Imad Clicks",
+      "perfil_autor": "https://www.pexels.com/@imadclicks",
+      "fuente": "https://www.pexels.com/photo/hand-holding-folding-cellphone-and-taking-pictures-of-flowers-19022735/",
+      "ancho": 1400,
+      "alto": 933
+    },
+    {
+      "archivo": "assets/img/servicios/equipos-05.jpg",
+      "categoria": "equipos",
+      "descripcion": "Close-up of hands holding a foldable smartphone showing a butterfly on the screen.",
+      "autor": "Zana Latif",
+      "perfil_autor": "https://www.pexels.com/@zana-latif-2772032",
+      "fuente": "https://www.pexels.com/photo/a-person-holding-a-smartphone-4313857/",
+      "ancho": 1400,
+      "alto": 1163
+    },
+    {
+      "archivo": "assets/img/equipos/iphone-01.jpg",
+      "categoria": "equipo-iphone",
+      "descripcion": "Close-up of a modern smartphone on a light wooden table surface.",
+      "autor": "thiago japyassu",
+      "perfil_autor": "https://www.pexels.com/@japy",
+      "fuente": "https://www.pexels.com/photo/modern-smartphone-on-wooden-surface-29020349/",
+      "ancho": 800,
+      "alto": 1200
+    },
+    {
+      "archivo": "assets/img/equipos/iphone-02.jpg",
+      "categoria": "equipo-iphone",
+      "descripcion": "Hand holding a sleek, silver smartphone with multiple rear cameras in focus.",
+      "autor": "thiago japyassu",
+      "perfil_autor": "https://www.pexels.com/@japy",
+      "fuente": "https://www.pexels.com/photo/close-up-of-hand-holding-a-modern-smartphone-34018284/",
+      "ancho": 675,
+      "alto": 1200
+    },
+    {
+      "archivo": "assets/img/equipos/iphone-03.jpg",
+      "categoria": "equipo-iphone",
+      "descripcion": "Hand holding a smartphone with triple camera lens against green leaves, showcasing modern design.",
+      "autor": "Zana Latif",
+      "perfil_autor": "https://www.pexels.com/@zana-latif-2772032",
+      "fuente": "https://www.pexels.com/photo/iphone-15-pro-max-box-in-natural-titanium-color-mention-zana_qaradaghy-on-instagram-while-use-this-photo-follow-on-instagram-zana_qaradaghy-18525573/",
+      "ancho": 1200,
+      "alto": 861
+    },
+    {
+      "archivo": "assets/img/equipos/iphone-04.jpg",
+      "categoria": "equipo-iphone",
+      "descripcion": "Detailed close-up of a smartphone with a triple camera lens, showcasing advanced photography features.",
+      "autor": "Nenyasha Manzvera",
+      "perfil_autor": "https://www.pexels.com/@nenmanz",
+      "fuente": "https://www.pexels.com/photo/close-up-shot-of-a-cellphone-12794501/",
+      "ancho": 675,
+      "alto": 1200
+    },
+    {
+      "archivo": "assets/img/equipos/iphone-05.jpg",
+      "categoria": "equipo-iphone",
+      "descripcion": "Sleek black smartphone on a vibrant yellow background emphasizing modern technology design.",
+      "autor": "Mateusz Taciak",
+      "perfil_autor": "https://www.pexels.com/@mateusz-taciak-41036954",
+      "fuente": "https://www.pexels.com/photo/the-back-of-a-black-iphone-7981660/",
+      "ancho": 800,
+      "alto": 1200
+    },
+    {
+      "archivo": "assets/img/equipos/samsung-01.jpg",
+      "categoria": "equipo-samsung",
+      "descripcion": "Samsung smartphone placed on a wooden surface outdoors during sunset.",
+      "autor": "MOHI SYED",
+      "perfil_autor": "https://www.pexels.com/@luckysam",
+      "fuente": "https://www.pexels.com/photo/silver-samsung-smartphone-47261/",
+      "ancho": 1200,
+      "alto": 800
+    },
+    {
+      "archivo": "assets/img/equipos/samsung-02.jpg",
+      "categoria": "equipo-samsung",
+      "descripcion": "Modern smartphone standing on a desk with green potted plants in a warm indoor setting.",
+      "autor": "Imad Clicks",
+      "perfil_autor": "https://www.pexels.com/@imadclicks",
+      "fuente": "https://www.pexels.com/photo/elegant-smartphone-beside-potted-plants-on-desk-30466740/",
+      "ancho": 960,
+      "alto": 1200
+    },
+    {
+      "archivo": "assets/img/equipos/samsung-03.jpg",
+      "categoria": "equipo-samsung",
+      "descripcion": "Close-up image of Samsung Galaxy S22 with its box in an outdoor setting.",
+      "autor": "DEBRAJ  ROY",
+      "perfil_autor": "https://www.pexels.com/@debraj-roy-282189167",
+      "fuente": "https://www.pexels.com/photo/a-samsung-galaxy-s22-13780425/",
+      "ancho": 800,
+      "alto": 1200
+    },
+    {
+      "archivo": "assets/img/equipos/pixel-01.jpg",
+      "categoria": "equipo-pixel",
+      "descripcion": "Close-up of Google Pixel 9 smartphone with the original packaging box, showcasing sleek design.",
+      "autor": "Richard L",
+      "perfil_autor": "https://www.pexels.com/@richard-l-2150581203",
+      "fuente": "https://www.pexels.com/photo/google-pixel-9-smartphone-and-box-on-display-32218867/",
+      "ancho": 800,
+      "alto": 1200
+    },
+    {
+      "archivo": "assets/img/equipos/pixel-02.jpg",
+      "categoria": "equipo-pixel",
+      "descripcion": "A smartphone displaying the Google homepage on a wooden surface, viewed from above.",
+      "autor": "BM Amaro",
+      "perfil_autor": "https://www.pexels.com/@bm-amaro-1100375333",
+      "fuente": "https://www.pexels.com/photo/google-name-on-smartphone-20716652/",
+      "ancho": 1200,
+      "alto": 811
+    },
+    {
+      "archivo": "assets/img/equipos/xiaomi-01.jpg",
+      "categoria": "equipo-xiaomi",
+      "descripcion": "Modern Xiaomi smartphone displaying HyperOS on a rustic wooden surface, showcasing technology innovation.",
+      "autor": "Andrey Matveev",
+      "perfil_autor": "https://www.pexels.com/@zeleboba",
+      "fuente": "https://www.pexels.com/photo/samsung-galaxy-s10e-review-27598326/",
+      "ancho": 1200,
+      "alto": 900
+    },
+    {
+      "archivo": "assets/img/equipos/xiaomi-02.jpg",
+      "categoria": "equipo-xiaomi",
+      "descripcion": "Close-up of a modern smartphone with a brand logo on a blue and gray background.",
+      "autor": "Mustafa ezz",
+      "perfil_autor": "https://www.pexels.com/@ezz7",
+      "fuente": "https://www.pexels.com/photo/close-up-of-a-xiaomi-smartphone-10902947/",
+      "ancho": 1200,
+      "alto": 960
+    },
+    {
+      "archivo": "assets/img/equipos/android-01.jpg",
+      "categoria": "equipo-android",
+      "descripcion": "Minimalist image of a smartphone on a vibrant geometric background, perfect for tech themes.",
+      "autor": "Atharva Whaval",
+      "perfil_autor": "https://www.pexels.com/@atharva-whaval-964041",
+      "fuente": "https://www.pexels.com/photo/close-up-shot-of-a-black-smartphone-9403824/",
+      "ancho": 676,
+      "alto": 1200
+    },
+    {
+      "archivo": "assets/img/equipos/android-02.jpg",
+      "categoria": "equipo-android",
+      "descripcion": "Top view of Samsung and iPhone placed on a grassy surface, showcasing modern smartphone design.",
+      "autor": "Chandan Kumar",
+      "perfil_autor": "https://www.pexels.com/@igchandankumar",
+      "fuente": "https://www.pexels.com/photo/smartphones-on-ground-16442035/",
+      "ancho": 900,
+      "alto": 1200
+    },
+    {
+      "archivo": "assets/img/equipos/plegable-01.jpg",
+      "categoria": "equipo-plegable",
+      "descripcion": "Close-up of a modern flip smartphone held in hand, showcasing innovative technology outdoors in a bustling city.",
+      "autor": "Zana Latif",
+      "perfil_autor": "https://www.pexels.com/@zana-latif-2772032",
+      "fuente": "https://www.pexels.com/photo/close-up-shot-of-a-person-holding-a-smartphone-4716356/",
+      "ancho": 1200,
+      "alto": 1191
+    },
+    {
+      "archivo": "assets/img/equipos/plegable-02.jpg",
+      "categoria": "equipo-plegable",
+      "descripcion": "Close-up of yellow flowers viewed on a folding smartphone screen outdoors.",
+      "autor": "Imad Clicks",
+      "perfil_autor": "https://www.pexels.com/@imadclicks",
+      "fuente": "https://www.pexels.com/photo/hand-holding-folding-smartphone-19022728/",
+      "ancho": 800,
+      "alto": 1200
+    },
+    {
+      "archivo": "assets/img/equipos/varios-01.jpg",
+      "categoria": "equipo-varios",
+      "descripcion": "Flat lay of five modern smartphones on a gray surface, showcasing various designs.",
+      "autor": "Andrey Matveev",
+      "perfil_autor": "https://www.pexels.com/@zeleboba",
+      "fuente": "https://www.pexels.com/photo/five-smartphones-on-a-gray-background-24181865/",
+      "ancho": 1200,
+      "alto": 900
+    },
+    {
+      "archivo": "assets/img/equipos/varios-02.jpg",
+      "categoria": "equipo-varios",
+      "descripcion": "A smartphone on a pastel blue surface with colorful elements, ideal for technology mockups.",
+      "autor": "Daria Liudnaya",
+      "perfil_autor": "https://www.pexels.com/@daria-liudnaya",
+      "fuente": "https://www.pexels.com/photo/a-smartphone-and-shape-cutouts-on-a-blue-background-8166409/",
+      "ancho": 960,
+      "alto": 1200
+    }
+  ]
+}

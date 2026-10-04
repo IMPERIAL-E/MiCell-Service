@@ -2,56 +2,123 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ReparaCel – Reparación de celulares</title>
-  <meta name="description" content="Solicita la reparación de tu celular en línea: pantallas, baterías, puertos de carga, cámaras, software y más para 36 marcas.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>MiCell – Servicio técnico de celulares</title>
+  <meta name="description" content="Solicita en línea la reparación de tu celular: pantallas, baterías, puertos de carga, cámaras, software y más para 36 marcas. Garantía de 90 días.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/aviso-archivo.js"></script>
   <script type="module" src="js/paginas/inicio.js"></script>
 </head>
 <body>
   <header id="encabezado"></header>
 
   <main>
-    <section class="hero">
-      <div class="contenedor hero__contenido">
+    <!-- Carrusel principal -->
+    <section class="carrusel" aria-roledescription="carrusel" aria-label="Destacados">
+      <div class="carrusel__ventana" id="carrusel"></div>
+    </section>
+
+    <div class="contenedor">
+      <div class="confianza" id="confianza"></div>
+    </div>
+
+    <!-- Problemas -->
+    <section class="seccion contenedor" aria-labelledby="titulo-problemas">
+      <div class="seccion__cabecera revelar">
         <div>
-          <h1>Tu celular como nuevo, sin complicaciones</h1>
-          <p>Elige tu marca y modelo, cuéntanos qué le pasa y recibe tu número de orden al instante. Puedes pagar con tarjeta o en efectivo al recogerlo.</p>
-          <div class="hero__acciones">
-            <a href="solicitud.html" class="boton boton--primario">Solicitar reparación</a>
-            <a href="#servicios" class="boton boton--secundario">Ver servicios</a>
+          <span class="seccion__antetitulo">Diagnóstico rápido</span>
+          <h2 class="seccion__titulo" id="titulo-problemas">¿Qué le pasa a tu teléfono?</h2>
+          <p class="seccion__bajada">Elige el problema y te llevamos directo a los servicios que lo resuelven.</p>
+        </div>
+        <a class="enlace-flecha" href="solicitud.html" id="enlace-todos-servicios">Ver todos los servicios</a>
+      </div>
+      <div class="problemas" id="problemas"></div>
+    </section>
+
+    <!-- Servicios con foto -->
+    <section class="seccion contenedor" aria-labelledby="titulo-servicios" id="servicios">
+      <div class="seccion__cabecera revelar">
+        <div>
+          <span class="seccion__antetitulo">Servicios</span>
+          <h2 class="seccion__titulo" id="titulo-servicios">Todo lo que le podemos hacer a tu equipo</h2>
+          <p class="seccion__bajada">Precios estimados que se ajustan a tu modelo. Sabes cuánto pagas antes de confirmar.</p>
+        </div>
+      </div>
+      <div class="servicios" id="rejilla-servicios"></div>
+    </section>
+
+    <!-- Equipos destacados -->
+    <section class="seccion--gris" aria-labelledby="titulo-equipos">
+      <div class="contenedor">
+        <div class="seccion__cabecera revelar">
+          <div>
+            <span class="seccion__antetitulo">Equipos</span>
+            <h2 class="seccion__titulo" id="titulo-equipos">Expertos en los teléfonos que más usas</h2>
+            <p class="seccion__bajada">Más de <strong id="dato-modelos">1,100</strong> modelos de <strong id="dato-marcas">36</strong> marcas, desde el más nuevo hasta el que ya no se fabrica.</p>
           </div>
         </div>
-        <div class="hero__datos">
-          <div class="hero__dato"><strong id="dato-marcas">36</strong>marcas</div>
-          <div class="hero__dato"><strong id="dato-modelos">+1,000</strong>modelos</div>
-          <div class="hero__dato"><strong id="dato-servicios">50+</strong>servicios</div>
-          <div class="hero__dato"><strong>90</strong>días de garantía</div>
+        <div class="equipos" id="equipos"></div>
+      </div>
+    </section>
+
+    <!-- Cómo funciona -->
+    <section class="seccion contenedor" aria-labelledby="titulo-pasos">
+      <div class="seccion__cabecera seccion__cabecera--centro revelar">
+        <span class="seccion__antetitulo">Así de fácil</span>
+        <h2 class="seccion__titulo" id="titulo-pasos">Tu reparación en cuatro pasos</h2>
+      </div>
+      <div class="pasos revelar">
+        <div class="paso-info"><h3>Elige tu equipo</h3><p>Búscalo por su nombre comercial, como “Galaxy S23” o “iPhone 14”. Si no aparece, lo escribes.</p></div>
+        <div class="paso-info"><h3>Cuéntanos qué pasó</h3><p>Marca los servicios y describe el problema con tus palabras. Llega directo a nuestros técnicos.</p></div>
+        <div class="paso-info"><h3>Agenda y paga</h3><p>Lo traes o lo recogemos a domicilio. Paga con tarjeta o en efectivo al recogerlo.</p></div>
+        <div class="paso-info"><h3>Sigue tu orden</h3><p>Recibe tu número de orden y mira cada avance en “Mis solicitudes”.</p></div>
+      </div>
+    </section>
+
+    <!-- Reseñas -->
+    <section class="seccion contenedor" aria-labelledby="titulo-resenas">
+      <div class="seccion__cabecera revelar">
+        <div>
+          <span class="seccion__antetitulo">Experiencias</span>
+          <h2 class="seccion__titulo" id="titulo-resenas">Lo que dicen nuestros clientes</h2>
+          <div class="resenas__resumen" id="resenas-resumen" style="margin-top:1rem"></div>
+        </div>
+        <div class="resenas__navegacion">
+          <button type="button" class="boton-circular" id="resenas-anterior" aria-label="Reseñas anteriores"></button>
+          <button type="button" class="boton-circular" id="resenas-siguiente" aria-label="Más reseñas"></button>
         </div>
       </div>
+      <div class="resenas__pista" id="resenas" tabindex="0" aria-label="Reseñas de clientes"></div>
     </section>
 
-    <section class="seccion contenedor" aria-labelledby="titulo-pasos">
-      <h2 class="seccion__titulo" id="titulo-pasos">¿Cómo funciona?</h2>
-      <p class="seccion__bajada">Cuatro pasos y tu solicitud llega directo a nuestros técnicos.</p>
-      <div class="pasos">
-        <div class="tarjeta paso-info"><h3>Elige tu equipo</h3><p>Busca tu marca y modelo por su nombre comercial, como “Galaxy S23” o “iPhone 14”.</p></div>
-        <div class="tarjeta paso-info"><h3>Cuéntanos el problema</h3><p>Marca los servicios que necesitas y describe con tus palabras qué le pasa.</p></div>
-        <div class="tarjeta paso-info"><h3>Agenda y paga</h3><p>Escoge fecha, si lo traes o lo recogemos, y paga con tarjeta o en efectivo.</p></div>
-        <div class="tarjeta paso-info"><h3>Sigue tu orden</h3><p>Consulta el estado de tu reparación en “Mis solicitudes” en todo momento.</p></div>
-      </div>
-    </section>
-
-    <section class="seccion contenedor" id="servicios" aria-labelledby="titulo-servicios">
-      <h2 class="seccion__titulo" id="titulo-servicios">Todo lo que le podemos hacer a tu teléfono</h2>
-      <p class="seccion__bajada">Desde un cambio de pantalla hasta recuperar tus fotos. Los precios se ajustan a tu modelo.</p>
-      <div class="rejilla-categorias" id="rejilla-categorias"></div>
-    </section>
-
+    <!-- Marcas -->
     <section class="seccion contenedor" aria-labelledby="titulo-marcas">
-      <h2 class="seccion__titulo" id="titulo-marcas">Reparamos todas estas marcas</h2>
-      <p class="seccion__bajada">¿No ves tu modelo? Podrás escribirlo a mano al hacer la solicitud.</p>
-      <div class="rejilla-marcas" id="rejilla-marcas"></div>
+      <div class="seccion__cabecera revelar">
+        <div>
+          <span class="seccion__antetitulo">Marcas</span>
+          <h2 class="seccion__titulo" id="titulo-marcas">Reparamos todas estas marcas</h2>
+          <p class="seccion__bajada">¿No ves la tuya? Igual la reparamos: escribe el modelo al hacer la solicitud.</p>
+        </div>
+      </div>
+      <div class="rejilla-marcas revelar" id="rejilla-marcas"></div>
+    </section>
+
+    <!-- Llamada final -->
+    <section class="seccion contenedor">
+      <div class="banda-cta revelar">
+        <div>
+          <h2>¿Listo para dejar tu celular como nuevo?</h2>
+          <p>Haz tu solicitud en menos de tres minutos o escríbenos por WhatsApp y te asesoramos sin compromiso.</p>
+          <div class="banda-cta__acciones" id="cta-acciones"></div>
+        </div>
+        <div class="banda-cta__imagen">
+          <img src="assets/img/servicios/portada-02.jpg" alt="Técnico reparando un teléfono con microscopio" loading="lazy" width="1400" height="934">
+        </div>
+      </div>
     </section>
   </main>
 

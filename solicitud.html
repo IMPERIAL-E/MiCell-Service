@@ -2,9 +2,13 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Solicitar reparación – ReparaCel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Solicitar reparación – MiCell</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/aviso-archivo.js"></script>
   <script type="module" src="js/paginas/solicitud.js"></script>
 </head>
 <body>
@@ -67,7 +71,7 @@
                   </select>
                 </div>
                 <div class="equipo-elegido oculto" id="equipo-elegido">
-                  <span class="equipo-elegido__icono" aria-hidden="true">📱</span>
+                  <span class="equipo-elegido__icono" aria-hidden="true"></span>
                   <div><strong id="equipo-elegido-nombre"></strong><p id="equipo-elegido-detalle"></p></div>
                 </div>
               </div>
@@ -177,11 +181,14 @@
           <div class="opciones-radio">
             <label class="opcion-radio">
               <input type="radio" name="metodo" value="efectivo" checked>
-              <span><strong>💵 Efectivo</strong><p>Pagas al recoger tu equipo reparado.</p></span>
+              <span><strong class="metodo-titulo"><svg class="icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 9.5v5M18 9.5v5"/></svg>Efectivo</strong><p>Pagas al recoger tu equipo reparado.</p></span>
             </label>
             <label class="opcion-radio">
               <input type="radio" name="metodo" value="tarjeta">
-              <span><strong>💳 Tarjeta de débito o crédito</strong><p>Visa, Mastercard, American Express o Discover.</p></span>
+              <span><strong class="metodo-titulo"><svg class="icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 9.5h19M6 15h4"/></svg>Tarjeta de débito o crédito</strong>
+                <span class="redes-mini" aria-label="Visa, Mastercard, American Express o Discover">
+                  <img src="assets/logos/pagos/visa.svg" alt="Visa"><img src="assets/logos/pagos/mastercard.svg" alt="Mastercard"><img src="assets/logos/pagos/amex.svg" alt="American Express"><img src="assets/logos/pagos/discover.svg" alt="Discover">
+                </span></span>
             </label>
           </div>
 
@@ -238,6 +245,7 @@
           <dt>ITBIS (18 %)</dt><dd id="total-itbis">RD$0</dd>
           <dt class="total">Total estimado</dt><dd class="total" id="total-total">RD$0</dd>
         </dl>
+        <div class="resumen__garantia" id="resumen-garantia"></div>
       </aside>
     </div>
   </main>

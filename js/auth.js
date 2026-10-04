@@ -131,7 +131,7 @@ export class Auth {
     return usuario;
   }
 
-  // Crea las cuentas de demostración la primera vez que se abre el sitio.
+  // Crea las cuentas iniciales la primera vez que se abre el sitio.
   static async sembrarCuentasDemo() {
     for (const cuenta of CUENTAS_DEMO) {
       if (!Auth.buscarPorEmail(cuenta.email)) {

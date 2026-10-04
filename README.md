@@ -1,8 +1,8 @@
 # MiCell-Service
 
-Este proyecto web es una demostración visual y funcional de un servicio en línea para solicitar reparaciones de teléfonos celulares. Su objetivo es facilitar y gestionar las solicitudes de cualquier persona que necesite reparar su equipo: desde elegir la marca y el modelo hasta describir el problema, simular el pago y recibir la confirmación de su orden.
+MiCell es un proyecto personal de desarrollo: un servicio en línea para solicitar reparaciones de teléfonos celulares. Su objetivo es facilitar y gestionar las solicitudes de cualquier persona que necesite reparar su equipo: desde elegir la marca y el modelo hasta describir el problema, simular el pago y recibir la confirmación de su orden.
 
-Proyecto de la materia **Interacción Humano-Computadora (IHC)**. Cada orden se envía por correo al taller.
+Cada orden se envía por correo al taller.
 
 - **Tecnologías:** HTML, CSS y JavaScript puro (módulos ES y clases), sin frameworks ni backend.
 - **Datos:** catálogo en archivos JSON dentro del proyecto (`data/`).
@@ -16,7 +16,7 @@ Proyecto de la materia **Interacción Humano-Computadora (IHC)**. Cada orden se 
 |---|---|
 | Catálogo | 36 marcas y más de 1,100 modelos por nombre comercial, agrupados por serie. Opción “Mi modelo no aparece” para escribirlo a mano. |
 | Menú de marcas | Al pasar el mouse por “Marcas” se despliegan las marcas; al pasar por una marca aparecen sus modelos. Incluye buscador. |
-| Servicios | 57 servicios en 12 categorías. Solo se muestran los compatibles con el modelo (por ejemplo, un iPhone no muestra microSD). El precio se ajusta a la gama del equipo. |
+| Servicios | 60 servicios en 13 categorías, incluida la pantalla Incell (económica), el servicio express y la garantía extendida. Solo se muestran los compatibles con el modelo (por ejemplo, un iPhone no muestra microSD). El precio se ajusta a la gama del equipo. |
 | Descripción del problema | Caja de texto con contador y ejemplos rápidos; se envía completa en el ticket. |
 | Inicio de sesión | Registro, login, “Recordarme”, contraseñas con hash SHA-256 y sal. |
 | Pago simulado | Efectivo o tarjeta con validación real de formato (Luhn, vencimiento, CVV) y detección de Visa, Mastercard, Amex y Discover. Solo se guardan los últimos 4 dígitos. |
@@ -25,16 +25,24 @@ Proyecto de la materia **Interacción Humano-Computadora (IHC)**. Cada orden se 
 | Mis solicitudes | Historial del cliente con filtro por estado y cancelación. |
 | Administración | Panel para ver todas las órdenes, buscar, filtrar y cambiar su estado. |
 
-## Cuentas de demostración
+## Diseño
+
+- Estética inspirada en mi.com (fondos blancos, tarjetas de producto, sombras sutiles) y principios de movimiento de Emil Kowalski: curvas `cubic-bezier(0.23, 1, 0.32, 1)`, animaciones de menos de 300 ms, `scale(0.97)` al presionar, hover solo con mouse y respeto a `prefers-reduced-motion`.
+- Inicio con carrusel, cuadrícula de problemas, servicios con foto, equipos destacados, reseñas y botón de WhatsApp.
+- Ilustraciones SVG generadas para los 1,164 modelos (`js/ilustraciones.js`) e íconos propios (`js/iconos.js`).
+- Logos SVG originales de las 36 marcas, 8 bancos y 4 redes de pago en `assets/logos/` (Simple Icons, Wikimedia Commons y sitios oficiales). Son marcas registradas de sus dueños, usadas solo para identificarlas.
+- Fotos de [Pexels](https://www.pexels.com) con créditos en `creditos.html`. Las reseñas son ilustrativas y sus rostros fueron generados con IA.
+
+## Cuentas iniciales
 
 Se crean automáticamente la primera vez que se abre el sitio:
 
 | Rol | Correo | Contraseña |
 |---|---|---|
-| Cliente | `demo@reparacel.demo` | `Demo1234` |
-| Administrador | `admin@reparacel.demo` | `Admin123` |
+| Cliente | `demo@micell.demo` | `Demo1234` |
+| Administrador | `admin@micell.demo` | `Admin123` |
 
-## Tarjetas de prueba
+## Números de tarjeta para el pago simulado
 
 | Número | Resultado |
 |---|---|
@@ -96,7 +104,7 @@ Estos valores son públicos por diseño. Tu correo personal queda guardado solo 
 │   └── servicios.json     Categorías, servicios, precios base y compatibilidad
 ├── emailjs/               Plantillas de correo para pegar en EmailJS
 └── js/
-    ├── config.js          Nombre del taller, EmailJS, precios, cuentas demo
+    ├── config.js          Nombre del taller, EmailJS, precios, cuentas iniciales
     ├── almacen.js         Acceso a localStorage / sessionStorage
     ├── auth.js            Clases Usuario y Auth
     ├── catalogo.js        Clases Modelo y Catalogo (filtros y precios)
@@ -118,4 +126,4 @@ En `data/marcas.json`, cada marca tiene `caracteristicas` por defecto y una list
 
 Características disponibles: `puerto` (`usb-c`, `lightning`, `micro-usb`), `jack`, `microsd`, `inalambrica`, `huella` (`pantalla`, `lateral`, `trasera`, `boton`, `faceid`, `ninguna`), `tapa` (`vidrio`, `plastico`, `metal`), `plegable` y `gama` (`basica`, `media`, `alta`, `premium`).
 
-> Las características y los precios son aproximados y sirven para la demostración.
+> Las características y los precios son aproximados.

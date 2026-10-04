@@ -2,16 +2,34 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Iniciar sesión – ReparaCel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Iniciar sesión – MiCell</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/aviso-archivo.js"></script>
   <script type="module" src="js/paginas/login.js"></script>
 </head>
 <body>
   <header id="encabezado"></header>
 
   <main class="contenedor">
-    <div class="acceso tarjeta">
+    <div class="acceso-pagina">
+     <div class="acceso-pagina__imagen">
+      <img src="assets/img/servicios/portada-03.jpg" alt="Técnico reparando un teléfono en su mesa de trabajo" width="1400" height="934">
+      <div class="acceso-pagina__texto">
+        <h2>Tu reparación, siempre a la vista</h2>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Sigue el estado de cada orden en tiempo real</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Guarda tus equipos y datos para la próxima vez</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Comprobantes con garantía de 90 días</li>
+        </ul>
+      </div>
+     </div>
+    <div class="acceso">
+      <h1 id="acceso-titulo">Bienvenido de nuevo</h1>
+      <p class="acceso__bajada" id="acceso-bajada">Entra para solicitar reparaciones y seguir tus órdenes.</p>
       <div class="pestanas" role="tablist">
         <button type="button" role="tab" id="tab-entrar" aria-selected="true" aria-controls="form-entrar">Iniciar sesión</button>
         <button type="button" role="tab" id="tab-registro" aria-selected="false" aria-controls="form-registro">Crear cuenta</button>
@@ -20,8 +38,7 @@
       <div id="mensaje-volver" class="alerta oculto">Inicia sesión o crea una cuenta para continuar con tu solicitud. No perderás lo que ya elegiste.</div>
 
       <form id="form-entrar" role="tabpanel" aria-labelledby="tab-entrar" novalidate>
-        <h1 class="solo-lectores">Iniciar sesión</h1>
-        <div class="grupo">
+                <div class="grupo">
           <label for="entrar-email">Correo electrónico</label>
           <input class="campo" type="email" id="entrar-email" autocomplete="email" required>
         </div>
@@ -31,12 +48,12 @@
         </div>
         <label class="casilla"><input type="checkbox" id="entrar-recordar" checked> Recordarme en este equipo</label>
         <p class="error-form alerta alerta--error oculto" role="alert"></p>
-        <button class="boton boton--primario boton--bloque" type="submit">Entrar</button>
+        <button class="boton boton--primario boton--bloque boton--grande" type="submit">Entrar</button>
 
         <div class="cuentas-demo alerta">
-          <strong>Cuentas de demostración</strong><br>
-          Cliente: <code>demo@reparacel.demo</code> / <code>Demo1234</code><br>
-          Administrador: <code>admin@reparacel.demo</code> / <code>Admin123</code>
+          <strong>Cuentas de acceso rápido</strong><br>
+          Cliente: <code>demo@micell.demo</code> / <code>Demo1234</code><br>
+          Administrador: <code>admin@micell.demo</code> / <code>Admin123</code>
         </div>
       </form>
 
@@ -70,6 +87,7 @@
         <p class="error-form alerta alerta--error oculto" role="alert"></p>
         <button class="boton boton--primario boton--bloque" type="submit">Crear cuenta</button>
       </form>
+    </div>
     </div>
   </main>
 

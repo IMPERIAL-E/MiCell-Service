@@ -17,7 +17,14 @@ if (parametros.get("volver")?.startsWith("solicitud.html")) {
 const pestanas = { entrar: document.querySelector("#tab-entrar"), registro: document.querySelector("#tab-registro") };
 const formularios = { entrar: document.querySelector("#form-entrar"), registro: document.querySelector("#form-registro") };
 
+const TEXTOS = {
+  entrar: ["Bienvenido de nuevo", "Entra para solicitar reparaciones y seguir tus órdenes."],
+  registro: ["Crea tu cuenta", "Solo te toma un minuto y podrás seguir tus reparaciones."],
+};
+
 function mostrar(cual) {
+  document.querySelector("#acceso-titulo").textContent = TEXTOS[cual][0];
+  document.querySelector("#acceso-bajada").textContent = TEXTOS[cual][1];
   for (const clave of Object.keys(pestanas)) {
     const activo = clave === cual;
     pestanas[clave].setAttribute("aria-selected", String(activo));

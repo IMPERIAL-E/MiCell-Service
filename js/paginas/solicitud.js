@@ -1,11 +1,13 @@
 // Asistente de solicitud: equipo → problema → entrega → pago → comprobante.
 
-import { iniciarPagina, aviso, escapar, dinero } from "../ui.js";
+import { iniciarPagina, aviso, escapar, dinero, logoMarca, logoPago } from "../ui.js";
 import { Almacen } from "../almacen.js";
 import { Orden } from "../orden.js";
 import { ValidadorTarjeta } from "../pago.js";
 import { enviarOrden } from "../correo.js";
-import { PRECIOS } from "../config.js";
+import { PRECIOS, NEGOCIO } from "../config.js";
+import { svgTelefono } from "../ilustraciones.js";
+import { icono, ICONO_CATEGORIA } from "../iconos.js";
 import { validar, marcarCampo, formatearTelefono } from "../validacion.js";
 
 const $ = (selector) => document.querySelector(selector);
@@ -42,8 +44,9 @@ const EJEMPLOS = [
 const { usuario, catalogo } = await iniciarPagina();
 const params = new URLSearchParams(location.search);
 let estado = cargarEstado();
+// Si se llega desde un problema del inicio (?categoria=pantalla), esa categoría se abre en el paso 2.
+estado.categoriaFoco = params.get("categoria") ?? estado.categoriaFoco ?? null;
 
-if (catalogo.marcas.length) iniciar();
 
 /* ---------- Estado ---------- */
 
@@ -169,11 +172,25 @@ function activarNavegacion() {
 
 /* ---------- Paso 1: equipo ---------- */
 
+// Con una marca ya elegida, la cuadrícula se compacta para dejar los modelos a la vista.
+let verTodasLasMarcas = false;
+
 function renderMarcas() {
+  const marca = marcaActual();
+  if (marca && !verTodasLasMarcas) {
+    $("#marcas").innerHTML = `
+      <div class="marca-elegida">
+        <span class="marca-tarjeta marca-tarjeta--estatica seleccionada">
+          <span class="marca-tarjeta__logo">${logoMarca(marca)}</span><span class="marca-tarjeta__nombre">${escapar(marca.nombre)}</span>
+        </span>
+        <button type="button" class="boton boton--secundario boton--chico" data-cambiar-marca>Cambiar marca</button>
+      </div>`;
+    return;
+  }
   $("#marcas").innerHTML = catalogo.marcas
     .map(
       (m) => `<button type="button" class="marca-tarjeta${m.id === estado.marcaId ? " seleccionada" : ""}" data-marca="${m.id}" aria-pressed="${m.id === estado.marcaId}">
-        <span class="marca-tarjeta__logo" style="background:${m.color}">${escapar(m.nombre[0])}</span>${escapar(m.nombre)}
+        <span class="marca-tarjeta__logo">${logoMarca(m)}</span><span class="marca-tarjeta__nombre">${escapar(m.nombre)}</span>
       </button>`
     )
     .join("");
@@ -189,7 +206,7 @@ function renderModelos() {
           (serie) => `<h4>${escapar(serie.nombre)}</h4>${serie.modelos
             .map((m) => {
               const sel = !estado.otro && m.slug === estado.modeloSlug;
-              return `<button type="button" role="option" data-modelo="${m.slug}" aria-selected="${sel}" class="${sel ? "seleccionado" : ""}">${escapar(m.nombre)}</button>`;
+              return `<button type="button" role="option" data-modelo="${m.slug}" aria-selected="${sel}" class="${sel ? "seleccionado" : ""}">${svgTelefono(m, marca.color, m.nombre)}<span>${escapar(m.nombre)}</span></button>`;
             })
             .join("")}`
         )
@@ -211,6 +228,7 @@ function renderEquipoElegido() {
   $("#equipo-elegido").classList.toggle("oculto", !visible);
   if (!visible) return;
   const modelo = modeloActual();
+  $("#equipo-elegido .equipo-elegido__icono").innerHTML = svgTelefono(modelo, marcaActual()?.color, nombreEquipo());
   $("#equipo-elegido-nombre").textContent = nombreEquipo();
   $("#equipo-elegido-detalle").textContent = modelo
     ? `${modelo.serie} · Te mostraremos solo los servicios compatibles con este modelo.`
@@ -238,8 +256,19 @@ function elegirModelo(marcaId, slug) {
 
 function activarPaso1() {
   $("#marcas").addEventListener("click", (e) => {
+    if (e.target.closest("[data-cambiar-marca]")) {
+      verTodasLasMarcas = true;
+      renderMarcas();
+      $("#marcas .marca-tarjeta.seleccionada")?.focus();
+      return;
+    }
     const boton = e.target.closest("[data-marca]");
-    if (!boton || boton.dataset.marca === estado.marcaId) return;
+    if (!boton) return;
+    verTodasLasMarcas = false;
+    if (boton.dataset.marca === estado.marcaId) {
+      renderMarcas();
+      return;
+    }
     estado.marcaId = boton.dataset.marca;
     estado.modeloSlug = null;
     estado.otro = false;
@@ -305,9 +334,9 @@ function renderServicios() {
     .map((cat, i) => {
       const elegidos = cat.servicios.filter((s) => estado.servicios.includes(s.id)).length;
       return `
-        <details class="categoria-servicios" data-categoria="${cat.id}" ${elegidos || (i === 0 && !estado.servicios.length) ? "open" : ""}>
+        <details class="categoria-servicios" data-categoria="${cat.id}" ${elegidos || cat.id === estado.categoriaFoco || (i === 0 && !estado.servicios.length && !estado.categoriaFoco) ? "open" : ""}>
           <summary>
-            <span aria-hidden="true">${cat.icono}</span>
+            <span class="categoria-servicios__icono">${icono(ICONO_CATEGORIA[cat.id])}</span>
             <span>${escapar(cat.nombre)}<br><small>${escapar(cat.descripcion)}</small></span>
             <span class="contador-categoria${elegidos ? "" : " oculto"}">${elegidos}</span>
           </summary>
@@ -470,7 +499,7 @@ function actualizarTarjetaVisual() {
   const red = ValidadorTarjeta.detectarRed(numero);
   const visual = $("#tarjeta-visual");
   visual.className = `tarjeta-visual${red ? ` tarjeta-visual--${CLASES_RED[red.id]}` : ""}`;
-  $("#tv-red").textContent = red?.nombre.toUpperCase() ?? "TARJETA";
+  $("#tv-red").innerHTML = red ? logoPago(red.id, red.nombre, "tarjeta-visual__logo") : "TARJETA";
   $("#tv-numero").textContent = numero || "•••• •••• •••• ••••";
   $("#tv-titular").textContent = $("#tarjeta-titular").value.toUpperCase() || "NOMBRE DEL TITULAR";
   $("#tv-vence").textContent = $("#tarjeta-vence").value || "MM/AA";
@@ -617,9 +646,15 @@ function iniciar() {
   renderMarcas();
   renderModelos();
   renderResumen();
+  $("#resumen-garantia").innerHTML = `${icono("escudo")}<span>Garantía de ${NEGOCIO.garantiaDias} días en piezas y mano de obra</span>`;
+  const categoria = catalogo.categorias.find((c) => c.id === params.get("categoria"));
+  if (categoria && !equipoElegido()) aviso(`${categoria.nombre}: primero dinos qué teléfono tienes.`);
   // No se puede saltar a un paso sin haber completado los anteriores.
   let paso = estado.paso;
   if (paso > 1 && !equipoElegido()) paso = 1;
   irA(paso);
   if (estado.modeloSlug && paso === 1) desplazarAModelo(estado.modeloSlug);
 }
+
+// El arranque va al final para que todas las declaraciones del módulo ya existan.
+if (catalogo.marcas.length) iniciar();

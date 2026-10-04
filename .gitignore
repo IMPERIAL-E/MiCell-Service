@@ -14,6 +14,13 @@ desktop.ini
 # Dependencias (por si se agregan herramientas más adelante)
 node_modules/
 
+# Referencias de diseño extraídas con skillui (contenido de sitios de terceros)
+.claude/skills/
+
+# Páginas de referencia guardadas desde el navegador
+*.mht
+*.mhtml
+
 # Archivos locales
 *.log
 .env

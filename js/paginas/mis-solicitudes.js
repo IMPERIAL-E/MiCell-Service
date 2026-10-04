@@ -1,8 +1,10 @@
 import { iniciarPagina, escapar, dinero, fechaLarga, aviso } from "../ui.js";
 import { Auth } from "../auth.js";
 import { Orden, ESTADOS, nombreEstado } from "../orden.js";
+import { svgTelefono } from "../ilustraciones.js";
+import { icono } from "../iconos.js";
 
-await iniciarPagina();
+const { catalogo } = await iniciarPagina();
 const usuario = Auth.exigirSesion();
 const lista = document.querySelector("#lista-ordenes");
 const filtro = document.querySelector("#filtro-estado");
@@ -13,6 +15,7 @@ function render() {
   const ordenes = Orden.deUsuario(usuario.id).filter((o) => !filtro.value || o.estado === filtro.value);
   if (!ordenes.length) {
     lista.innerHTML = `<div class="tarjeta vacio">
+      <span class="vacio__icono">${icono("pedido")}</span>
       <h2>${filtro.value ? "No hay solicitudes con ese estado" : "Aún no tienes solicitudes"}</h2>
       <p>Cuando hagas una solicitud de reparación, aparecerá aquí.</p>
       <a href="solicitud.html" class="boton boton--primario">Solicitar reparación</a>
@@ -23,6 +26,7 @@ function render() {
     .map(
       (o) => `
       <article class="tarjeta orden-tarjeta">
+        <div class="orden-tarjeta__equipo">${svgTelefono(o.equipo.modeloSlug ? catalogo.modelo(o.equipo.marcaId, o.equipo.modeloSlug) : null, catalogo.marca(o.equipo.marcaId)?.color, o.equipo.nombreCompleto)}</div>
         <div>
           <h3>${escapar(o.equipo.nombreCompleto)} <span class="insignia insignia--${o.estado}">${escapar(nombreEstado(o.estado))}</span></h3>
           <p>Orden <strong>${escapar(o.id)}</strong> · ${fechaLarga(o.creada)}</p>

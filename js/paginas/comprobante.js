@@ -2,15 +2,17 @@ import { iniciarPagina, escapar, dinero, fechaLarga } from "../ui.js";
 import { Auth } from "../auth.js";
 import { Orden, ESTADOS, nombreEstado } from "../orden.js";
 import { NEGOCIO } from "../config.js";
+import { svgTelefono } from "../ilustraciones.js";
+import { icono } from "../iconos.js";
 
-await iniciarPagina();
+const { catalogo } = await iniciarPagina();
 const usuario = Auth.exigirSesion();
 const params = new URLSearchParams(location.search);
 const contenedor = document.querySelector("#comprobante");
 
 const MENSAJES_CORREO = {
   enviado: ["exito", "📧 Enviamos el ticket completo a nuestro equipo por correo."],
-  "no configurado": ["aviso", "📧 El envío por correo aún no está configurado (modo demo). Tu orden quedó guardada igualmente."],
+  "no configurado": ["aviso", "📧 El envío por correo aún no está configurado. Tu orden quedó guardada igualmente."],
   error: ["aviso", "📧 No pudimos enviar el correo en este momento, pero tu orden quedó guardada."],
 };
 
@@ -33,6 +35,8 @@ function render(orden) {
   const { equipo, contacto, entrega, pago, totales } = orden;
   const [tipoCorreo, textoCorreo] = MENSAJES_CORREO[orden.correo?.taller] ?? [];
   const extras = [equipo.color, equipo.capacidad].filter(Boolean).join(" · ");
+  const modelo = equipo.marcaId && equipo.modeloSlug ? catalogo.modelo(equipo.marcaId, equipo.modeloSlug) : null;
+  const colorMarca = catalogo.marca(equipo.marcaId)?.color;
 
   contenedor.innerHTML = `
     ${params.has("nueva") ? `<div class="alerta alerta--exito no-imprimir"><strong>¡Solicitud creada!</strong> Guarda tu número de orden para darle seguimiento.</div>` : ""}
@@ -55,6 +59,7 @@ function render(orden) {
         </div>
         <div>
           <h4>Equipo</h4>
+          <div style="width:34px;margin:0.2rem 0 0.5rem">${svgTelefono(modelo, colorMarca, equipo.nombreCompleto)}</div>
           <p><strong>${escapar(equipo.nombreCompleto)}</strong>${extras ? `<br>${escapar(extras)}` : ""}${equipo.otro ? "<br><small>Modelo escrito por el cliente</small>" : ""}</p>
         </div>
         <div>
@@ -91,6 +96,12 @@ function render(orden) {
       <h3 style="margin-top:1.5rem">Estado de la reparación</h3>
       <ol class="linea-tiempo">${lineaDeTiempo(orden)}</ol>
 
+      <div class="sello-garantia">
+        ${icono("escudo")}
+        <div><strong>Garantía de ${orden.servicios.some((s) => s.id === "extra-garantia") ? "6 meses" : `${NEGOCIO.garantiaDias} días`}</strong>
+        <span>Cubre las piezas instaladas y la mano de obra a partir de la entrega. Presenta este número de orden.</span></div>
+      </div>
+
       <div class="paso__acciones no-imprimir">
         <a href="${usuario.esAdmin ? "admin.html" : "mis-solicitudes.html"}" class="boton boton--fantasma">← ${usuario.esAdmin ? "Panel de administración" : "Mis solicitudes"}</a>
         <div style="display:flex;gap:.5rem;flex-wrap:wrap">
@@ -105,7 +116,7 @@ if (usuario) {
   const orden = Orden.buscar(params.get("orden") ?? "");
   // Un cliente solo puede ver sus propias órdenes; el administrador puede ver todas.
   if (!orden || (orden.usuario.id !== usuario.id && !usuario.esAdmin)) {
-    contenedor.innerHTML = `<div class="tarjeta vacio"><h2>No encontramos esa orden</h2><p>Verifica el número o revisa tus solicitudes.</p><a class="boton boton--primario" href="mis-solicitudes.html">Ir a mis solicitudes</a></div>`;
+    contenedor.innerHTML = `<div class="tarjeta vacio"><span class="vacio__icono">${icono("pedido")}</span><h2>No encontramos esa orden</h2><p>Verifica el número o revisa tus solicitudes.</p><a class="boton boton--primario" href="mis-solicitudes.html">Ir a mis solicitudes</a></div>`;
   } else {
     render(orden);
   }

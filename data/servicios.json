@@ -2,7 +2,12 @@
   "version": "1.0",
   "moneda": "DOP",
   "nota": "precioBase corresponde a un equipo de gama media. Si escala es true, el precio se multiplica según la gama del modelo. 'requiere' indica qué característica debe tener el equipo para mostrar el servicio (un valor o una lista de valores permitidos).",
-  "multiplicadorGama": { "basica": 0.7, "media": 1, "alta": 1.4, "premium": 1.9 },
+  "multiplicadorGama": {
+    "basica": 0.7,
+    "media": 1,
+    "alta": 1.4,
+    "premium": 1.9
+  },
   "categorias": [
     {
       "id": "pantalla",
@@ -10,11 +15,69 @@
       "icono": "📱",
       "descripcion": "Cristal roto, líneas, manchas, táctil que no responde o pantalla en negro.",
       "servicios": [
-        { "id": "pantalla-completa", "nombre": "Cambio de pantalla completa", "descripcion": "Reemplazo del módulo completo (display + táctil). Para pantallas rotas, con líneas, manchas o en negro.", "precioBase": 4500, "escala": true, "tiempo": "2 a 4 horas", "requiere": { "plegable": false } },
-        { "id": "pantalla-cristal", "nombre": "Cambio de solo cristal", "descripcion": "Se sustituye únicamente el vidrio exterior cuando la imagen y el táctil funcionan bien.", "precioBase": 2500, "escala": true, "tiempo": "24 horas", "requiere": { "plegable": false } },
-        { "id": "pantalla-tactil", "nombre": "Reparación del táctil", "descripcion": "El táctil no responde, marca solo o responde en zonas.", "precioBase": 3000, "escala": true, "tiempo": "2 a 4 horas" },
-        { "id": "pantalla-interna-plegable", "nombre": "Pantalla interna plegable", "descripcion": "Reemplazo de la pantalla flexible interior de equipos plegables.", "precioBase": 12000, "escala": true, "tiempo": "2 a 3 días", "requiere": { "plegable": true } },
-        { "id": "pantalla-externa-plegable", "nombre": "Pantalla externa (cubierta) de plegable", "descripcion": "Reemplazo de la pantalla exterior de equipos plegables.", "precioBase": 5000, "escala": true, "tiempo": "24 horas", "requiere": { "plegable": true } }
+        {
+          "id": "pantalla-completa",
+          "nombre": "Cambio de pantalla completa",
+          "descripcion": "Pantalla de calidad original/OLED: mismos colores, brillo y respuesta táctil que la de fábrica. Para pantallas rotas, con líneas, manchas o en negro.",
+          "precioBase": 4500,
+          "escala": true,
+          "tiempo": "2 a 4 horas",
+          "requiere": {
+            "plegable": false
+          }
+        },
+        {
+          "id": "pantalla-incell",
+          "nombre": "Cambio de pantalla calidad Incell (económica)",
+          "descripcion": "Alternativa más económica a la original. Funciona perfecto, aunque los colores y el brillo pueden ser un poco menores.",
+          "precioBase": 3000,
+          "escala": true,
+          "tiempo": "2 a 4 horas",
+          "requiere": {
+            "plegable": false
+          }
+        },
+        {
+          "id": "pantalla-cristal",
+          "nombre": "Cambio de solo cristal",
+          "descripcion": "Se sustituye únicamente el vidrio exterior cuando la imagen y el táctil funcionan bien.",
+          "precioBase": 2500,
+          "escala": true,
+          "tiempo": "24 horas",
+          "requiere": {
+            "plegable": false
+          }
+        },
+        {
+          "id": "pantalla-tactil",
+          "nombre": "Reparación del táctil",
+          "descripcion": "El táctil no responde, marca solo o responde en zonas.",
+          "precioBase": 3000,
+          "escala": true,
+          "tiempo": "2 a 4 horas"
+        },
+        {
+          "id": "pantalla-interna-plegable",
+          "nombre": "Pantalla interna plegable",
+          "descripcion": "Reemplazo de la pantalla flexible interior de equipos plegables.",
+          "precioBase": 12000,
+          "escala": true,
+          "tiempo": "2 a 3 días",
+          "requiere": {
+            "plegable": true
+          }
+        },
+        {
+          "id": "pantalla-externa-plegable",
+          "nombre": "Pantalla externa (cubierta) de plegable",
+          "descripcion": "Reemplazo de la pantalla exterior de equipos plegables.",
+          "precioBase": 5000,
+          "escala": true,
+          "tiempo": "24 horas",
+          "requiere": {
+            "plegable": true
+          }
+        }
       ]
     },
     {
@@ -23,9 +86,30 @@
       "icono": "🔋",
       "descripcion": "Se descarga rápido, se apaga solo, está inflada o no carga al 100 %.",
       "servicios": [
-        { "id": "bateria-cambio", "nombre": "Cambio de batería", "descripcion": "Batería nueva de alta capacidad con prueba de salud y calibración.", "precioBase": 2200, "escala": true, "tiempo": "1 a 2 horas" },
-        { "id": "bateria-inflada", "nombre": "Batería inflada (cambio + revisión)", "descripcion": "Retiro seguro de batería hinchada, revisión de pantalla y carcasa, e instalación de batería nueva.", "precioBase": 2800, "escala": true, "tiempo": "2 a 3 horas" },
-        { "id": "bateria-consumo", "nombre": "Diagnóstico de consumo excesivo", "descripcion": "Detectamos qué está gastando la batería (hardware o aplicaciones).", "precioBase": 800, "escala": false, "tiempo": "1 hora" }
+        {
+          "id": "bateria-cambio",
+          "nombre": "Cambio de batería",
+          "descripcion": "Batería nueva de alta capacidad con prueba de salud y calibración.",
+          "precioBase": 2200,
+          "escala": true,
+          "tiempo": "1 a 2 horas"
+        },
+        {
+          "id": "bateria-inflada",
+          "nombre": "Batería inflada (cambio + revisión)",
+          "descripcion": "Retiro seguro de batería hinchada, revisión de pantalla y carcasa, e instalación de batería nueva.",
+          "precioBase": 2800,
+          "escala": true,
+          "tiempo": "2 a 3 horas"
+        },
+        {
+          "id": "bateria-consumo",
+          "nombre": "Diagnóstico de consumo excesivo",
+          "descripcion": "Detectamos qué está gastando la batería (hardware o aplicaciones).",
+          "precioBase": 800,
+          "escala": false,
+          "tiempo": "1 hora"
+        }
       ]
     },
     {
@@ -34,13 +118,80 @@
       "icono": "🔌",
       "descripcion": "No carga, carga lento, hay que mover el cable o no reconoce los audífonos.",
       "servicios": [
-        { "id": "puerto-usbc", "nombre": "Cambio de puerto de carga USB-C", "descripcion": "Reemplazo del conector o del flex de carga USB-C.", "precioBase": 1800, "escala": true, "tiempo": "1 a 2 horas", "requiere": { "puerto": "usb-c" } },
-        { "id": "puerto-lightning", "nombre": "Cambio de puerto Lightning", "descripcion": "Reemplazo del flex de carga Lightning (incluye micrófono inferior).", "precioBase": 2000, "escala": true, "tiempo": "1 a 2 horas", "requiere": { "puerto": "lightning" } },
-        { "id": "puerto-microusb", "nombre": "Cambio de puerto micro-USB", "descripcion": "Reemplazo del conector micro-USB o de la placa de carga.", "precioBase": 1300, "escala": false, "tiempo": "1 a 2 horas", "requiere": { "puerto": "micro-usb" } },
-        { "id": "carga-inalambrica", "nombre": "Bobina de carga inalámbrica", "descripcion": "El equipo no carga en bases inalámbricas o MagSafe.", "precioBase": 2500, "escala": true, "tiempo": "2 a 4 horas", "requiere": { "inalambrica": true } },
-        { "id": "puerto-audifonos", "nombre": "Puerto de audífonos (jack 3.5 mm)", "descripcion": "No detecta audífonos, sonido por un solo lado o falso contacto.", "precioBase": 1200, "escala": false, "tiempo": "1 a 2 horas", "requiere": { "jack": true } },
-        { "id": "lector-microsd", "nombre": "Lector de tarjeta microSD", "descripcion": "No reconoce la tarjeta de memoria.", "precioBase": 1000, "escala": false, "tiempo": "1 a 2 horas", "requiere": { "microsd": true } },
-        { "id": "bandeja-sim", "nombre": "Bandeja o lector de SIM", "descripcion": "Bandeja perdida, doblada o el equipo dice 'Sin SIM'.", "precioBase": 900, "escala": false, "tiempo": "1 hora" }
+        {
+          "id": "puerto-usbc",
+          "nombre": "Cambio de puerto de carga USB-C",
+          "descripcion": "Reemplazo del conector o del flex de carga USB-C.",
+          "precioBase": 1800,
+          "escala": true,
+          "tiempo": "1 a 2 horas",
+          "requiere": {
+            "puerto": "usb-c"
+          }
+        },
+        {
+          "id": "puerto-lightning",
+          "nombre": "Cambio de puerto Lightning",
+          "descripcion": "Reemplazo del flex de carga Lightning (incluye micrófono inferior).",
+          "precioBase": 2000,
+          "escala": true,
+          "tiempo": "1 a 2 horas",
+          "requiere": {
+            "puerto": "lightning"
+          }
+        },
+        {
+          "id": "puerto-microusb",
+          "nombre": "Cambio de puerto micro-USB",
+          "descripcion": "Reemplazo del conector micro-USB o de la placa de carga.",
+          "precioBase": 1300,
+          "escala": false,
+          "tiempo": "1 a 2 horas",
+          "requiere": {
+            "puerto": "micro-usb"
+          }
+        },
+        {
+          "id": "carga-inalambrica",
+          "nombre": "Bobina de carga inalámbrica",
+          "descripcion": "El equipo no carga en bases inalámbricas o MagSafe.",
+          "precioBase": 2500,
+          "escala": true,
+          "tiempo": "2 a 4 horas",
+          "requiere": {
+            "inalambrica": true
+          }
+        },
+        {
+          "id": "puerto-audifonos",
+          "nombre": "Puerto de audífonos (jack 3.5 mm)",
+          "descripcion": "No detecta audífonos, sonido por un solo lado o falso contacto.",
+          "precioBase": 1200,
+          "escala": false,
+          "tiempo": "1 a 2 horas",
+          "requiere": {
+            "jack": true
+          }
+        },
+        {
+          "id": "lector-microsd",
+          "nombre": "Lector de tarjeta microSD",
+          "descripcion": "No reconoce la tarjeta de memoria.",
+          "precioBase": 1000,
+          "escala": false,
+          "tiempo": "1 a 2 horas",
+          "requiere": {
+            "microsd": true
+          }
+        },
+        {
+          "id": "bandeja-sim",
+          "nombre": "Bandeja o lector de SIM",
+          "descripcion": "Bandeja perdida, doblada o el equipo dice 'Sin SIM'.",
+          "precioBase": 900,
+          "escala": false,
+          "tiempo": "1 hora"
+        }
       ]
     },
     {
@@ -49,11 +200,49 @@
       "icono": "📷",
       "descripcion": "Fotos borrosas, cámara en negro, lente rota, no enfoca o vibra la imagen.",
       "servicios": [
-        { "id": "camara-trasera", "nombre": "Cámara trasera principal", "descripcion": "Reemplazo del módulo de cámara trasera.", "precioBase": 3500, "escala": true, "tiempo": "2 a 3 horas" },
-        { "id": "camara-lente", "nombre": "Cristal o lente de cámara trasera", "descripcion": "Cambio del vidrio protector de las cámaras cuando está rajado.", "precioBase": 1200, "escala": true, "tiempo": "1 hora" },
-        { "id": "camara-frontal", "nombre": "Cámara frontal (selfie)", "descripcion": "La cámara frontal no abre, sale en negro o está borrosa.", "precioBase": 2500, "escala": true, "tiempo": "2 horas" },
-        { "id": "camara-flash", "nombre": "Flash / linterna", "descripcion": "El flash o la linterna no encienden.", "precioBase": 900, "escala": false, "tiempo": "1 hora" },
-        { "id": "face-id", "nombre": "Reparación de Face ID / reconocimiento facial", "descripcion": "Face ID no disponible o no reconoce el rostro.", "precioBase": 6000, "escala": true, "tiempo": "2 a 3 días", "requiere": { "huella": "faceid" } }
+        {
+          "id": "camara-trasera",
+          "nombre": "Cámara trasera principal",
+          "descripcion": "Reemplazo del módulo de cámara trasera.",
+          "precioBase": 3500,
+          "escala": true,
+          "tiempo": "2 a 3 horas"
+        },
+        {
+          "id": "camara-lente",
+          "nombre": "Cristal o lente de cámara trasera",
+          "descripcion": "Cambio del vidrio protector de las cámaras cuando está rajado.",
+          "precioBase": 1200,
+          "escala": true,
+          "tiempo": "1 hora"
+        },
+        {
+          "id": "camara-frontal",
+          "nombre": "Cámara frontal (selfie)",
+          "descripcion": "La cámara frontal no abre, sale en negro o está borrosa.",
+          "precioBase": 2500,
+          "escala": true,
+          "tiempo": "2 horas"
+        },
+        {
+          "id": "camara-flash",
+          "nombre": "Flash / linterna",
+          "descripcion": "El flash o la linterna no encienden.",
+          "precioBase": 900,
+          "escala": false,
+          "tiempo": "1 hora"
+        },
+        {
+          "id": "face-id",
+          "nombre": "Reparación de Face ID / reconocimiento facial",
+          "descripcion": "Face ID no disponible o no reconoce el rostro.",
+          "precioBase": 6000,
+          "escala": true,
+          "tiempo": "2 a 3 días",
+          "requiere": {
+            "huella": "faceid"
+          }
+        }
       ]
     },
     {
@@ -62,10 +251,38 @@
       "icono": "🔊",
       "descripcion": "No se escucha en llamadas, no se oye la música, no me escuchan o no vibra.",
       "servicios": [
-        { "id": "auricular", "nombre": "Auricular de llamadas", "descripcion": "No se escucha a la otra persona durante las llamadas.", "precioBase": 1200, "escala": true, "tiempo": "1 a 2 horas" },
-        { "id": "altavoz", "nombre": "Altavoz inferior (multimedia)", "descripcion": "Sin sonido en música, videos o tonos; sonido distorsionado.", "precioBase": 1400, "escala": true, "tiempo": "1 a 2 horas" },
-        { "id": "microfono", "nombre": "Micrófono", "descripcion": "La otra persona no te escucha o graba sin audio.", "precioBase": 1300, "escala": true, "tiempo": "1 a 2 horas" },
-        { "id": "vibrador", "nombre": "Motor de vibración", "descripcion": "El teléfono no vibra o vibra con ruido.", "precioBase": 1100, "escala": false, "tiempo": "1 hora" }
+        {
+          "id": "auricular",
+          "nombre": "Auricular de llamadas",
+          "descripcion": "No se escucha a la otra persona durante las llamadas.",
+          "precioBase": 1200,
+          "escala": true,
+          "tiempo": "1 a 2 horas"
+        },
+        {
+          "id": "altavoz",
+          "nombre": "Altavoz inferior (multimedia)",
+          "descripcion": "Sin sonido en música, videos o tonos; sonido distorsionado.",
+          "precioBase": 1400,
+          "escala": true,
+          "tiempo": "1 a 2 horas"
+        },
+        {
+          "id": "microfono",
+          "nombre": "Micrófono",
+          "descripcion": "La otra persona no te escucha o graba sin audio.",
+          "precioBase": 1300,
+          "escala": true,
+          "tiempo": "1 a 2 horas"
+        },
+        {
+          "id": "vibrador",
+          "nombre": "Motor de vibración",
+          "descripcion": "El teléfono no vibra o vibra con ruido.",
+          "precioBase": 1100,
+          "escala": false,
+          "tiempo": "1 hora"
+        }
       ]
     },
     {
@@ -74,10 +291,46 @@
       "icono": "🔘",
       "descripcion": "Botones hundidos o que no responden, huella o sensores que fallan.",
       "servicios": [
-        { "id": "boton-encendido", "nombre": "Botón de encendido", "descripcion": "Botón hundido, duro o que no responde.", "precioBase": 1300, "escala": true, "tiempo": "1 a 2 horas" },
-        { "id": "boton-volumen", "nombre": "Botones de volumen", "descripcion": "Volumen no sube o no baja, o el botón está trabado.", "precioBase": 1200, "escala": true, "tiempo": "1 a 2 horas" },
-        { "id": "lector-huella", "nombre": "Lector de huella", "descripcion": "La huella no registra o el sensor no aparece en ajustes.", "precioBase": 2500, "escala": true, "tiempo": "2 horas", "requiere": { "huella": ["pantalla", "lateral", "trasera", "boton"] } },
-        { "id": "sensor-proximidad", "nombre": "Sensor de proximidad", "descripcion": "La pantalla no se apaga en llamadas o se queda en negro.", "precioBase": 1500, "escala": true, "tiempo": "1 a 2 horas" }
+        {
+          "id": "boton-encendido",
+          "nombre": "Botón de encendido",
+          "descripcion": "Botón hundido, duro o que no responde.",
+          "precioBase": 1300,
+          "escala": true,
+          "tiempo": "1 a 2 horas"
+        },
+        {
+          "id": "boton-volumen",
+          "nombre": "Botones de volumen",
+          "descripcion": "Volumen no sube o no baja, o el botón está trabado.",
+          "precioBase": 1200,
+          "escala": true,
+          "tiempo": "1 a 2 horas"
+        },
+        {
+          "id": "lector-huella",
+          "nombre": "Lector de huella",
+          "descripcion": "La huella no registra o el sensor no aparece en ajustes.",
+          "precioBase": 2500,
+          "escala": true,
+          "tiempo": "2 horas",
+          "requiere": {
+            "huella": [
+              "pantalla",
+              "lateral",
+              "trasera",
+              "boton"
+            ]
+          }
+        },
+        {
+          "id": "sensor-proximidad",
+          "nombre": "Sensor de proximidad",
+          "descripcion": "La pantalla no se apaga en llamadas o se queda en negro.",
+          "precioBase": 1500,
+          "escala": true,
+          "tiempo": "1 a 2 horas"
+        }
       ]
     },
     {
@@ -86,10 +339,50 @@
       "icono": "🛠️",
       "descripcion": "Tapa trasera rota, marco doblado o bisagra floja en plegables.",
       "servicios": [
-        { "id": "tapa-vidrio", "nombre": "Tapa trasera de vidrio", "descripcion": "Reemplazo del vidrio trasero rajado o roto.", "precioBase": 2800, "escala": true, "tiempo": "24 horas", "requiere": { "tapa": "vidrio" } },
-        { "id": "tapa-plastico", "nombre": "Tapa trasera (plástico o metal)", "descripcion": "Reemplazo de la tapa trasera dañada o despegada.", "precioBase": 1800, "escala": true, "tiempo": "2 a 3 horas", "requiere": { "tapa": ["plastico", "metal"] } },
-        { "id": "chasis", "nombre": "Cambio de marco / chasis", "descripcion": "Marco doblado o golpeado; se traslada todo a un chasis nuevo.", "precioBase": 3500, "escala": true, "tiempo": "1 a 2 días" },
-        { "id": "bisagra", "nombre": "Bisagra de equipo plegable", "descripcion": "Bisagra floja, con ruido o que no cierra bien.", "precioBase": 6000, "escala": true, "tiempo": "2 a 3 días", "requiere": { "plegable": true } }
+        {
+          "id": "tapa-vidrio",
+          "nombre": "Tapa trasera de vidrio",
+          "descripcion": "Reemplazo del vidrio trasero rajado o roto.",
+          "precioBase": 2800,
+          "escala": true,
+          "tiempo": "24 horas",
+          "requiere": {
+            "tapa": "vidrio"
+          }
+        },
+        {
+          "id": "tapa-plastico",
+          "nombre": "Tapa trasera (plástico o metal)",
+          "descripcion": "Reemplazo de la tapa trasera dañada o despegada.",
+          "precioBase": 1800,
+          "escala": true,
+          "tiempo": "2 a 3 horas",
+          "requiere": {
+            "tapa": [
+              "plastico",
+              "metal"
+            ]
+          }
+        },
+        {
+          "id": "chasis",
+          "nombre": "Cambio de marco / chasis",
+          "descripcion": "Marco doblado o golpeado; se traslada todo a un chasis nuevo.",
+          "precioBase": 3500,
+          "escala": true,
+          "tiempo": "1 a 2 días"
+        },
+        {
+          "id": "bisagra",
+          "nombre": "Bisagra de equipo plegable",
+          "descripcion": "Bisagra floja, con ruido o que no cierra bien.",
+          "precioBase": 6000,
+          "escala": true,
+          "tiempo": "2 a 3 días",
+          "requiere": {
+            "plegable": true
+          }
+        }
       ]
     },
     {
@@ -98,8 +391,22 @@
       "icono": "💧",
       "descripcion": "Se mojó, cayó al agua o se derramó algún líquido.",
       "servicios": [
-        { "id": "liquido-limpieza", "nombre": "Limpieza ultrasónica por líquido", "descripcion": "Desarme completo, limpieza ultrasónica de la placa y secado profesional.", "precioBase": 2500, "escala": true, "tiempo": "24 a 48 horas" },
-        { "id": "liquido-corrosion", "nombre": "Tratamiento anticorrosión", "descripcion": "Eliminación de sulfatación y aplicación de protector en conectores.", "precioBase": 1800, "escala": false, "tiempo": "24 horas" }
+        {
+          "id": "liquido-limpieza",
+          "nombre": "Limpieza ultrasónica por líquido",
+          "descripcion": "Desarme completo, limpieza ultrasónica de la placa y secado profesional.",
+          "precioBase": 2500,
+          "escala": true,
+          "tiempo": "24 a 48 horas"
+        },
+        {
+          "id": "liquido-corrosion",
+          "nombre": "Tratamiento anticorrosión",
+          "descripcion": "Eliminación de sulfatación y aplicación de protector en conectores.",
+          "precioBase": 1800,
+          "escala": false,
+          "tiempo": "24 horas"
+        }
       ]
     },
     {
@@ -108,12 +415,54 @@
       "icono": "🧩",
       "descripcion": "No enciende, se reinicia solo, sin señal, sin WiFi o se calienta mucho.",
       "servicios": [
-        { "id": "placa-microsoldadura", "nombre": "Reparación de placa (microsoldadura)", "descripcion": "Reparación de componentes y pistas en la placa base.", "precioBase": 5500, "escala": true, "tiempo": "2 a 5 días" },
-        { "id": "placa-ic-carga", "nombre": "IC de carga", "descripcion": "Cambio del chip controlador de carga cuando el equipo no carga aunque el puerto funciona.", "precioBase": 3500, "escala": true, "tiempo": "2 a 3 días" },
-        { "id": "placa-no-enciende", "nombre": "Equipo no enciende (diagnóstico avanzado)", "descripcion": "Medición de consumo y localización de la falla en la placa.", "precioBase": 1000, "escala": false, "tiempo": "24 horas" },
-        { "id": "placa-senal", "nombre": "Señal / antena", "descripcion": "Sin servicio, señal débil o no hace llamadas.", "precioBase": 3000, "escala": true, "tiempo": "1 a 3 días" },
-        { "id": "placa-wifi", "nombre": "WiFi / Bluetooth", "descripcion": "El WiFi o Bluetooth no encienden o pierden conexión.", "precioBase": 3000, "escala": true, "tiempo": "1 a 3 días" },
-        { "id": "placa-calentamiento", "nombre": "Sobrecalentamiento", "descripcion": "El equipo se calienta en exceso aun sin uso intenso.", "precioBase": 1500, "escala": false, "tiempo": "24 horas" }
+        {
+          "id": "placa-microsoldadura",
+          "nombre": "Reparación de placa (microsoldadura)",
+          "descripcion": "Reparación de componentes y pistas en la placa base.",
+          "precioBase": 5500,
+          "escala": true,
+          "tiempo": "2 a 5 días"
+        },
+        {
+          "id": "placa-ic-carga",
+          "nombre": "IC de carga",
+          "descripcion": "Cambio del chip controlador de carga cuando el equipo no carga aunque el puerto funciona.",
+          "precioBase": 3500,
+          "escala": true,
+          "tiempo": "2 a 3 días"
+        },
+        {
+          "id": "placa-no-enciende",
+          "nombre": "Equipo no enciende (diagnóstico avanzado)",
+          "descripcion": "Medición de consumo y localización de la falla en la placa.",
+          "precioBase": 1000,
+          "escala": false,
+          "tiempo": "24 horas"
+        },
+        {
+          "id": "placa-senal",
+          "nombre": "Señal / antena",
+          "descripcion": "Sin servicio, señal débil o no hace llamadas.",
+          "precioBase": 3000,
+          "escala": true,
+          "tiempo": "1 a 3 días"
+        },
+        {
+          "id": "placa-wifi",
+          "nombre": "WiFi / Bluetooth",
+          "descripcion": "El WiFi o Bluetooth no encienden o pierden conexión.",
+          "precioBase": 3000,
+          "escala": true,
+          "tiempo": "1 a 3 días"
+        },
+        {
+          "id": "placa-calentamiento",
+          "nombre": "Sobrecalentamiento",
+          "descripcion": "El equipo se calienta en exceso aun sin uso intenso.",
+          "precioBase": 1500,
+          "escala": false,
+          "tiempo": "24 horas"
+        }
       ]
     },
     {
@@ -122,16 +471,86 @@
       "icono": "💻",
       "descripcion": "Lento, se reinicia, se quedó en el logo, virus o necesitas recuperar tus fotos.",
       "servicios": [
-        { "id": "sw-actualizacion", "nombre": "Actualización de sistema", "descripcion": "Actualización a la versión más reciente disponible para el equipo.", "precioBase": 800, "escala": false, "tiempo": "1 a 2 horas" },
-        { "id": "sw-flasheo", "nombre": "Flasheo / reinstalación del sistema", "descripcion": "Reinstalación del sistema operativo de fábrica para errores graves o equipo en bucle.", "precioBase": 1200, "escala": false, "tiempo": "2 a 3 horas" },
-        { "id": "sw-bucle", "nombre": "Reparación de bucle de reinicio / logo", "descripcion": "El equipo se queda en el logo o se reinicia continuamente.", "precioBase": 1500, "escala": false, "tiempo": "2 a 4 horas" },
-        { "id": "sw-virus", "nombre": "Eliminación de virus y publicidad", "descripcion": "Limpieza de aplicaciones maliciosas, anuncios invasivos y optimización.", "precioBase": 800, "escala": false, "tiempo": "1 a 2 horas" },
-        { "id": "sw-recuperacion", "nombre": "Recuperación de datos", "descripcion": "Recuperación de fotos, contactos y archivos de equipos dañados o borrados.", "precioBase": 3500, "escala": false, "tiempo": "2 a 5 días" },
-        { "id": "sw-respaldo", "nombre": "Respaldo y transferencia a equipo nuevo", "descripcion": "Copia de seguridad y paso de contactos, fotos y WhatsApp a otro teléfono.", "precioBase": 900, "escala": false, "tiempo": "1 a 2 horas" },
-        { "id": "sw-cuenta", "nombre": "Desbloqueo de cuenta propia", "descripcion": "Recuperación de acceso a tu cuenta (Google / Apple ID). Requiere factura o prueba de propiedad del equipo.", "precioBase": 1500, "escala": false, "tiempo": "24 a 72 horas" },
-        { "id": "sw-patron", "nombre": "Olvidé el patrón o la contraseña", "descripcion": "Restablecimiento del equipo cuando olvidaste el bloqueo de pantalla (requiere prueba de propiedad).", "precioBase": 1000, "escala": false, "tiempo": "2 a 3 horas" },
-        { "id": "sw-liberacion", "nombre": "Liberación de operador", "descripcion": "Liberación del equipo para usarlo con cualquier compañía telefónica, por vía oficial.", "precioBase": 1500, "escala": false, "tiempo": "1 a 5 días" },
-        { "id": "sw-configuracion", "nombre": "Configuración inicial y cuentas", "descripcion": "Configuración del equipo nuevo, correo, WhatsApp y aplicaciones.", "precioBase": 500, "escala": false, "tiempo": "1 hora" }
+        {
+          "id": "sw-actualizacion",
+          "nombre": "Actualización de sistema",
+          "descripcion": "Actualización a la versión más reciente disponible para el equipo.",
+          "precioBase": 800,
+          "escala": false,
+          "tiempo": "1 a 2 horas"
+        },
+        {
+          "id": "sw-flasheo",
+          "nombre": "Flasheo / reinstalación del sistema",
+          "descripcion": "Reinstalación del sistema operativo de fábrica para errores graves o equipo en bucle.",
+          "precioBase": 1200,
+          "escala": false,
+          "tiempo": "2 a 3 horas"
+        },
+        {
+          "id": "sw-bucle",
+          "nombre": "Reparación de bucle de reinicio / logo",
+          "descripcion": "El equipo se queda en el logo o se reinicia continuamente.",
+          "precioBase": 1500,
+          "escala": false,
+          "tiempo": "2 a 4 horas"
+        },
+        {
+          "id": "sw-virus",
+          "nombre": "Eliminación de virus y publicidad",
+          "descripcion": "Limpieza de aplicaciones maliciosas, anuncios invasivos y optimización.",
+          "precioBase": 800,
+          "escala": false,
+          "tiempo": "1 a 2 horas"
+        },
+        {
+          "id": "sw-recuperacion",
+          "nombre": "Recuperación de datos",
+          "descripcion": "Recuperación de fotos, contactos y archivos de equipos dañados o borrados.",
+          "precioBase": 3500,
+          "escala": false,
+          "tiempo": "2 a 5 días"
+        },
+        {
+          "id": "sw-respaldo",
+          "nombre": "Respaldo y transferencia a equipo nuevo",
+          "descripcion": "Copia de seguridad y paso de contactos, fotos y WhatsApp a otro teléfono.",
+          "precioBase": 900,
+          "escala": false,
+          "tiempo": "1 a 2 horas"
+        },
+        {
+          "id": "sw-cuenta",
+          "nombre": "Desbloqueo de cuenta propia",
+          "descripcion": "Recuperación de acceso a tu cuenta (Google / Apple ID). Requiere factura o prueba de propiedad del equipo.",
+          "precioBase": 1500,
+          "escala": false,
+          "tiempo": "24 a 72 horas"
+        },
+        {
+          "id": "sw-patron",
+          "nombre": "Olvidé el patrón o la contraseña",
+          "descripcion": "Restablecimiento del equipo cuando olvidaste el bloqueo de pantalla (requiere prueba de propiedad).",
+          "precioBase": 1000,
+          "escala": false,
+          "tiempo": "2 a 3 horas"
+        },
+        {
+          "id": "sw-liberacion",
+          "nombre": "Liberación de operador",
+          "descripcion": "Liberación del equipo para usarlo con cualquier compañía telefónica, por vía oficial.",
+          "precioBase": 1500,
+          "escala": false,
+          "tiempo": "1 a 5 días"
+        },
+        {
+          "id": "sw-configuracion",
+          "nombre": "Configuración inicial y cuentas",
+          "descripcion": "Configuración del equipo nuevo, correo, WhatsApp y aplicaciones.",
+          "precioBase": 500,
+          "escala": false,
+          "tiempo": "1 hora"
+        }
       ]
     },
     {
@@ -140,11 +559,46 @@
       "icono": "✨",
       "descripcion": "Limpieza, protectores de pantalla y cuidado preventivo.",
       "servicios": [
-        { "id": "mant-limpieza", "nombre": "Limpieza interna completa", "descripcion": "Desarme y limpieza de polvo, pelusa y residuos internos.", "precioBase": 800, "escala": false, "tiempo": "1 a 2 horas" },
-        { "id": "mant-puertos", "nombre": "Limpieza de puerto, altavoces y micrófono", "descripcion": "Limpieza externa de puertos y rejillas sin desarmar el equipo.", "precioBase": 400, "escala": false, "tiempo": "30 minutos" },
-        { "id": "mant-templado", "nombre": "Instalación de cristal templado", "descripcion": "Protector de pantalla de vidrio templado 9H instalado.", "precioBase": 500, "escala": false, "tiempo": "15 minutos" },
-        { "id": "mant-hidrogel", "nombre": "Protector de hidrogel", "descripcion": "Lámina flexible que cubre bordes curvos, ideal para pantallas curvas y plegables.", "precioBase": 600, "escala": false, "tiempo": "15 minutos" },
-        { "id": "mant-camara", "nombre": "Protector de cámaras", "descripcion": "Protector de vidrio para el módulo de cámaras trasero.", "precioBase": 300, "escala": false, "tiempo": "10 minutos" }
+        {
+          "id": "mant-limpieza",
+          "nombre": "Limpieza interna completa",
+          "descripcion": "Desarme y limpieza de polvo, pelusa y residuos internos.",
+          "precioBase": 800,
+          "escala": false,
+          "tiempo": "1 a 2 horas"
+        },
+        {
+          "id": "mant-puertos",
+          "nombre": "Limpieza de puerto, altavoces y micrófono",
+          "descripcion": "Limpieza externa de puertos y rejillas sin desarmar el equipo.",
+          "precioBase": 400,
+          "escala": false,
+          "tiempo": "30 minutos"
+        },
+        {
+          "id": "mant-templado",
+          "nombre": "Instalación de cristal templado",
+          "descripcion": "Protector de pantalla de vidrio templado 9H instalado.",
+          "precioBase": 500,
+          "escala": false,
+          "tiempo": "15 minutos"
+        },
+        {
+          "id": "mant-hidrogel",
+          "nombre": "Protector de hidrogel",
+          "descripcion": "Lámina flexible que cubre bordes curvos, ideal para pantallas curvas y plegables.",
+          "precioBase": 600,
+          "escala": false,
+          "tiempo": "15 minutos"
+        },
+        {
+          "id": "mant-camara",
+          "nombre": "Protector de cámaras",
+          "descripcion": "Protector de vidrio para el módulo de cámaras trasero.",
+          "precioBase": 300,
+          "escala": false,
+          "tiempo": "10 minutos"
+        }
       ]
     },
     {
@@ -153,8 +607,46 @@
       "icono": "🔍",
       "descripcion": "¿No sabes qué tiene tu teléfono? Lo revisamos completo.",
       "servicios": [
-        { "id": "diag-general", "nombre": "Diagnóstico general", "descripcion": "Revisión completa de hardware y software con informe. Se descuenta del total si apruebas la reparación.", "precioBase": 500, "escala": false, "tiempo": "24 horas" },
-        { "id": "diag-express", "nombre": "Diagnóstico express", "descripcion": "Revisión prioritaria en menos de 1 hora.", "precioBase": 900, "escala": false, "tiempo": "1 hora" }
+        {
+          "id": "diag-general",
+          "nombre": "Diagnóstico general",
+          "descripcion": "Revisión completa de hardware y software con informe. Se descuenta del total si apruebas la reparación.",
+          "precioBase": 500,
+          "escala": false,
+          "tiempo": "24 horas"
+        },
+        {
+          "id": "diag-express",
+          "nombre": "Diagnóstico express",
+          "descripcion": "Revisión prioritaria en menos de 1 hora.",
+          "precioBase": 900,
+          "escala": false,
+          "tiempo": "1 hora"
+        }
+      ]
+    },
+    {
+      "id": "extras",
+      "nombre": "Extras",
+      "icono": "⚡",
+      "descripcion": "Servicio prioritario y protección adicional para tu reparación.",
+      "servicios": [
+        {
+          "id": "extra-express",
+          "nombre": "Servicio express (mismo día)",
+          "descripcion": "Tu reparación pasa al frente de la fila. Si es posible, la entregamos en 30 a 60 minutos.",
+          "precioBase": 1000,
+          "escala": false,
+          "tiempo": "30 a 60 minutos"
+        },
+        {
+          "id": "extra-garantia",
+          "nombre": "Garantía extendida a 6 meses",
+          "descripcion": "Amplía la garantía estándar de 90 días a 6 meses en la pieza y la mano de obra.",
+          "precioBase": 800,
+          "escala": false,
+          "tiempo": "Inmediato"
+        }
       ]
     }
   ]

@@ -4,6 +4,7 @@
 import { NEGOCIO, PRECIOS } from "./config.js";
 import { Auth } from "./auth.js";
 import { catalogo } from "./catalogo.js";
+import { icono } from "./iconos.js";
 
 /* ---------- Formato ---------- */
 
@@ -22,6 +23,12 @@ export function dinero(valor) {
   return formatoDinero.format(valor).replace("DOP", "RD$");
 }
 
+export function fechaCorta(iso) {
+  if (!iso) return "—";
+  const fecha = /^\d{4}-\d{2}-\d{2}$/.test(iso) ? new Date(`${iso}T12:00:00`) : new Date(iso);
+  return fecha.toLocaleDateString("es-DO", { day: "numeric", month: "short", year: "numeric" });
+}
+
 export function fechaLarga(iso, conHora = false) {
   if (!iso) return "—";
   // Las fechas "AAAA-MM-DD" se interpretan como fecha local, no UTC.
@@ -38,6 +45,25 @@ export function iniciales(nombre) {
     .map((p) => p[0])
     .join("")
     .toUpperCase();
+}
+
+/* ---------- Logos ---------- */
+
+// Logos originales en SVG (assets/logos). El nombre ya acompaña al logo en pantalla,
+// por eso el alt va vacío y no se repite en lectores de pantalla.
+export function logoMarca(marca, clase = "logo-marca") {
+  return `<img class="${clase}" src="assets/logos/marcas/${escapar(marca.id)}.svg" alt="" loading="lazy" decoding="async">`;
+}
+
+export const REDES_PAGO = [
+  { id: "visa", nombre: "Visa" },
+  { id: "mastercard", nombre: "Mastercard" },
+  { id: "amex", nombre: "American Express" },
+  { id: "discover", nombre: "Discover" },
+];
+
+export function logoPago(id, nombre, clase = "logo-pago") {
+  return `<img class="${clase}" src="assets/logos/pagos/${escapar(id)}.svg" alt="${escapar(nombre)}" decoding="async">`;
 }
 
 /* ---------- Avisos ---------- */
@@ -59,6 +85,16 @@ export function aviso(mensaje, tipo = "info") {
 }
 
 /* ---------- Encabezado ---------- */
+
+// "MiCell" con la segunda parte resaltada en el color de la marca.
+function htmlNombre() {
+  const m = /^(Mi)(.+)$/.exec(NEGOCIO.nombre);
+  return `<span>${m ? `${m[1]}<b>${escapar(m[2])}</b>` : escapar(NEGOCIO.nombre)}</span>`;
+}
+
+export function enlaceWhatsApp(mensaje = `Hola ${NEGOCIO.nombre}, quiero información sobre una reparación.`) {
+  return `https://wa.me/${NEGOCIO.whatsapp}?text=${encodeURIComponent(mensaje)}`;
+}
 
 function enlace(href, texto, activo) {
   return `<a href="${href}" class="nav__enlace${activo ? " nav__enlace--activo" : ""}">${texto}</a>`;
@@ -84,13 +120,13 @@ function htmlEncabezado(usuario) {
   return `
     <div class="encabezado__contenido contenedor">
       <a href="index.html" class="logo" aria-label="${escapar(NEGOCIO.nombre)} – inicio">
-        <span class="logo__icono" aria-hidden="true">🔧</span>${escapar(NEGOCIO.nombre)}
+        <span class="logo__icono">${icono("logo")}</span>${htmlNombre()}
       </a>
-      <button class="nav__hamburguesa" aria-label="Abrir menú" aria-expanded="false">☰</button>
+      <button class="nav__hamburguesa" aria-label="Abrir menú" aria-expanded="false">${icono("menu")}</button>
       <nav class="nav" aria-label="Principal">
         ${enlace("index.html", "Inicio", pagina === "index.html")}
         <div class="nav__item nav__item--marcas">
-          <button class="nav__enlace" aria-haspopup="true" aria-expanded="false">Marcas ▾</button>
+          <button class="nav__enlace" aria-haspopup="true" aria-expanded="false">Marcas ${icono("chevron")}</button>
           <div class="mega" role="region" aria-label="Marcas y modelos">
             <div class="mega__buscador">
               <input type="search" class="campo" placeholder="Busca tu modelo, por ejemplo: Galaxy S23" aria-label="Buscar modelo">
@@ -147,7 +183,7 @@ function activarMegaMenu(raiz) {
   listaMarcas.innerHTML = catalogo.marcas
     .map(
       (m) => `<li><button type="button" data-marca="${m.id}">
-        <span class="marca-punto" style="background:${m.color}"></span>${escapar(m.nombre)}
+        <span class="marca-icono">${logoMarca(m)}</span>${escapar(m.nombre)}
       </button></li>`
     )
     .join("");
@@ -220,8 +256,17 @@ function activarMenuCuenta(raiz) {
 
 /* ---------- Pie de página ---------- */
 
-const REDES_PAGO = ["Visa", "Mastercard", "American Express", "Discover", "Efectivo"];
-const ENTIDADES = ["Banreservas", "Banco Popular", "BHD", "Scotiabank", "Banco Santa Cruz", "Asociación Popular (APAP)", "Banco Caribe", "Banesco"];
+// Cada entidad se muestra como una tarjeta con su color institucional y el logo en blanco.
+const ENTIDADES = [
+  { id: "banreservas", nombre: "Banreservas", fondo: "linear-gradient(135deg, #0a4ea2, #062f66)" },
+  { id: "popular", nombre: "Banco Popular", fondo: "linear-gradient(135deg, #1a4f8b, #0b2a52)" },
+  { id: "bhd", nombre: "Banco BHD", fondo: "linear-gradient(135deg, #3cae3f, #1f7a2c)" },
+  { id: "scotiabank", nombre: "Scotiabank", fondo: "linear-gradient(135deg, #ec111a, #a30c12)" },
+  { id: "santacruz", nombre: "Banco Santa Cruz", fondo: "linear-gradient(135deg, #1268b3, #0a3f73)" },
+  { id: "apap", nombre: "Asociación Popular (APAP)", fondo: "linear-gradient(135deg, #1d3f8f, #0e2458)" },
+  { id: "ademi", nombre: "Banco Ademi", fondo: "linear-gradient(135deg, #10a4b4, #08707d)" },
+  { id: "banesco", nombre: "Banesco", fondo: "linear-gradient(135deg, #00843d, #00562a)" },
+];
 
 function htmlPie() {
   const anio = new Date().getFullYear();
@@ -229,27 +274,84 @@ function htmlPie() {
     <section class="pagos" aria-label="Métodos de pago aceptados">
       <div class="contenedor">
         <h2 class="pagos__titulo">Métodos de pago aceptados</h2>
-        <ul class="pagos__lista">${REDES_PAGO.map((r) => `<li class="etiqueta-pago etiqueta-pago--${r.toLowerCase().replace(/\s+/g, "-")}">${r}</li>`).join("")}</ul>
+        <ul class="pagos__lista">
+          ${REDES_PAGO.map((r) => `<li class="etiqueta-pago" title="${r.nombre}">${logoPago(r.id, r.nombre)}</li>`).join("")}
+          <li class="etiqueta-pago etiqueta-pago--efectivo" title="Efectivo">${icono("efectivo")}<span>Efectivo</span></li>
+        </ul>
         <h3 class="pagos__subtitulo">Tarjetas de débito y crédito de las entidades</h3>
-        <ul class="pagos__lista pagos__lista--entidades">${ENTIDADES.map((e) => `<li class="etiqueta-pago etiqueta-pago--entidad">${e}</li>`).join("")}</ul>
-        <p class="pagos__nota">🔒 Sitio de demostración académica: no se realizan cobros reales ni se guardan datos completos de tarjetas.</p>
+        <ul class="pagos__lista">${ENTIDADES.map((e) => `<li class="entidad" style="background:${e.fondo}" title="${escapar(e.nombre)}">${logoPago(e.id, e.nombre, "entidad__logo")}</li>`).join("")}</ul>
+        <p class="pagos__nota">🔒 Los pagos con tarjeta no generan cobros reales y nunca se guardan los datos completos de tu tarjeta.</p>
       </div>
     </section>
     <div class="pie__contenido contenedor">
       <div>
-        <p class="logo"><span class="logo__icono" aria-hidden="true">🔧</span>${escapar(NEGOCIO.nombre)}</p>
-        <p>${escapar(NEGOCIO.eslogan)}</p>
+        <p class="logo"><span class="logo__icono">${icono("logo")}</span>${htmlNombre()}</p>
+        <p style="margin-top:1rem;max-width:300px">${escapar(NEGOCIO.eslogan)}. Garantía de ${NEGOCIO.garantiaDias} días en todas las reparaciones.</p>
+      </div>
+      <div>
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="solicitud.html?categoria=pantalla">Cambio de pantalla</a></li>
+          <li><a href="solicitud.html?categoria=bateria">Cambio de batería</a></li>
+          <li><a href="solicitud.html?categoria=carga">Puerto de carga</a></li>
+          <li><a href="solicitud.html?categoria=liquidos">Daño por líquidos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Tu cuenta</h4>
+        <ul>
+          <li><a href="solicitud.html">Solicitar reparación</a></li>
+          <li><a href="mis-solicitudes.html">Mis solicitudes</a></li>
+          <li><a href="login.html">Iniciar sesión</a></li>
+          <li><a href="creditos.html">Créditos de imágenes</a></li>
+        </ul>
       </div>
       <div>
         <h4>Contacto</h4>
-        <p>${escapar(NEGOCIO.telefono)}<br>${escapar(NEGOCIO.direccion)}<br>${escapar(NEGOCIO.horario)}</p>
-      </div>
-      <div>
-        <h4>Enlaces</h4>
-        <p><a href="solicitud.html">Solicitar reparación</a><br><a href="mis-solicitudes.html">Mis solicitudes</a><br><a href="index.html#servicios">Servicios</a></p>
+        <p>${escapar(NEGOCIO.telefono)}</p>
+        <p>${escapar(NEGOCIO.direccion)}</p>
+        <p>${escapar(NEGOCIO.horario)}</p>
       </div>
     </div>
-    <p class="pie__legal contenedor">© ${anio} ${escapar(NEGOCIO.nombre)} · Proyecto de Interacción Humano-Computadora (IHC)</p>`;
+    <div class="pie__legal contenedor">
+      <span>© ${anio} ${escapar(NEGOCIO.nombre)} · Proyecto personal de desarrollo</span>
+      <span>Fotos: Pexels · Rostros de reseñas generados con IA</span>
+    </div>`;
+}
+
+function htmlWhatsApp() {
+  return `<a class="whatsapp-flotante no-imprimir" href="${enlaceWhatsApp()}" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+    ${icono("chat")}<span>WhatsApp</span>
+  </a>`;
+}
+
+// Muestra con un desvanecimiento suave los bloques marcados con .revelar al entrar en pantalla.
+export function activarRevelado(raiz = document) {
+  const elementos = raiz.querySelectorAll(".revelar:not(.visible)");
+  if (!("IntersectionObserver" in window)) {
+    elementos.forEach((el) => el.classList.add("visible"));
+    return;
+  }
+  const observador = new IntersectionObserver(
+    (entradas) => {
+      for (const e of entradas) {
+        if (e.isIntersecting) {
+          const el = e.target;
+          el.classList.add("visible");
+          observador.unobserve(el);
+          // Al terminar la entrada se quitan la clase y el retraso escalonado,
+          // para que el hover y el press respondan al instante.
+          const retraso = parseFloat(getComputedStyle(el).transitionDelay) * 1000 || 0;
+          setTimeout(() => {
+            el.classList.remove("revelar", "visible");
+            el.style.transitionDelay = "";
+          }, 650 + retraso);
+        }
+      }
+    },
+    { rootMargin: "0px 0px -8% 0px" }
+  );
+  elementos.forEach((el) => observador.observe(el));
 }
 
 /* ---------- Arranque común de cada página ---------- */
@@ -264,7 +366,10 @@ export async function iniciarPagina() {
     encabezado.innerHTML = htmlEncabezado(usuario);
     activarMenuCuenta(encabezado);
   }
-  if (pie) pie.innerHTML = htmlPie();
+  if (pie) {
+    pie.innerHTML = htmlPie();
+    document.body.insertAdjacentHTML("beforeend", htmlWhatsApp());
+  }
 
   try {
     await catalogo.cargar();

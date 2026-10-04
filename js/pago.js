@@ -1,4 +1,4 @@
-// Validación y simulación de pagos con tarjeta. No se conecta a ningún banco real.
+// Validación de pagos con tarjeta (sin cobro real). No se conecta a ningún banco real.
 // Nunca se guarda el número completo ni el CVV: solo la red y los últimos 4 dígitos.
 
 const REDES = [
@@ -8,7 +8,7 @@ const REDES = [
   { id: "discover", nombre: "Discover", patron: /^(6011|65|64[4-9])/, largos: [16, 19], cvv: 3, grupos: [4, 4, 4, 4, 3] },
 ];
 
-// Tarjetas de prueba documentadas en el README que siempre se rechazan.
+// Números documentados en el README que siempre se rechazan.
 const TARJETAS_RECHAZADAS = {
   "4000000000000002": "Fondos insuficientes.",
   "4000000000009995": "Tarjeta reportada como robada o perdida.",
